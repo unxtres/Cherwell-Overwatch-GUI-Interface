@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -26,9 +28,12 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        private async void Button_Click(object sender, RoutedEventArgs e)
+        HttpClient client = new HttpClient();
+        public string link = "http://localhost:5000/api/";
+        public string token;
+
+        private async void Button_Get_Token(object sender, RoutedEventArgs e)
         {
-            var client = new HttpClient();
             string reglink = "http://localhost:5000/api/Registration/generate?key=" + regkey.Text;
             var request = new HttpRequestMessage
             {
@@ -38,11 +43,38 @@ namespace CherwellOVerwatch
             };
             var response = await client.SendAsync(request).ConfigureAwait(false);
             var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            string text = responsebody.ToString();
+            token = responsebody.ToString();
             this.Dispatcher.Invoke(() =>
             {
-                result.Text = text;
+                result.Text = token;
             });
+        }
+
+        private void Button_AppServerSettings(object sender, RoutedEventArgs e)
+        {
+            string url = link + "settings/AppServerSettings";
+            //var request = new HttpRequestMessage
+            //{
+            //    Method = HttpMethod.Get,
+            //    RequestUri = new Uri(url),
+            //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
+            //    Headers = new HttpRequestHeaders()
+            //};
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpRequest.Accept = "application/json";
+            httpRequest.Headers["Authorization"] = token;
+
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+            }
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
