@@ -28,6 +28,7 @@ namespace CherwellOVerwatch
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
+            var client = new HttpClient();
             string reglink = "http://localhost:5000/api/Registration/generate?key=" + regkey.Text;
             var request = new HttpRequestMessage
             {
@@ -35,9 +36,13 @@ namespace CherwellOVerwatch
                 RequestUri = new Uri(reglink),
                 Content = new StringContent("body", Encoding.UTF8, "application/json"),
             };
-            result.Text = await request.Content.ReadAsStringAsync();
-        }
-
+            var response = await client.SendAsync(request).ConfigureAwait(false);
+            var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            string text = responsebody.ToString();
+            this.Dispatcher.Invoke(() =>
+            {
+                result.Text = text;
+            });
         }
     }
 }
