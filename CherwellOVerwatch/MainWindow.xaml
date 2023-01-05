@@ -5,12 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CherwellOVerwatch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="484" Width="860">
-    <Grid Margin="0,0,0,33">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="699,9,0,0" VerticalAlignment="Top" Click="Button_Get_Token"/>
-        <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="400,10,0,0" TextWrapping="Wrap" Text="Registration Key" VerticalAlignment="Top" Width="282"/>
-        <TextBox x:Name="result" HorizontalAlignment="Left" Margin="400,55,0,0" TextWrapping="Wrap" Text="Token" VerticalAlignment="Top" Width="344" Height="105"/>
-        <Button Content="App Server Settings" HorizontalAlignment="Left" Margin="115,29,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings"/>
-        <TextBox x:Name="settings" HorizontalAlignment="Left" Margin="74,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="240" Height="300"/>
+        Title="MainWindow" Height="717" Width="875" Background="Black">
+        
+    <Grid Margin="0,0,0,-6">
+        <Button Content="Connect" HorizontalAlignment="Left" Margin="817,10,0,0" VerticalAlignment="Top" Click="Button_Get_Token" Height="20"/>
+        <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="530,10,0,0" TextWrapping="Wrap" Text="Registration Key" VerticalAlignment="Top" Width="282" Height="20"/>
+        <Frame Name="Main" Background="LightGray" Margin="166,34,0,10"/>
+        <!--<TextBox x:Name="result" HorizontalAlignment="Left" Margin="400,55,0,0" TextWrapping="Wrap" Text="Token" VerticalAlignment="Top" Width="344" Height="58"/>-->
+        
+        <!--<TextBox x:Name="settings" HorizontalAlignment="Left" Margin="115,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" Height="234"/>-->
+        <Button Content="New Window" HorizontalAlignment="Left" Margin="352,60,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+
+        <Button Content="App Server" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings" Width="70"/>
+        <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="30,60,0,0" VerticalAlignment="Top"/>
+        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="30,90,0,0" VerticalAlignment="Top"/>
+        
+
     </Grid>
+
 </Window>

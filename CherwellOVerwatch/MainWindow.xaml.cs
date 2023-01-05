@@ -45,10 +45,10 @@ namespace CherwellOVerwatch
             var response = await client.SendAsync(request).ConfigureAwait(false);
             var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
             token = responsebody.ToString();
-            this.Dispatcher.Invoke(() =>
-            {
-                result.Text = token;
-            });
+            //this.Dispatcher.Invoke(() =>
+            //{
+            //    result.Text = token;
+            //});
         }
 
         private void Button_AppServerSettings(object sender, RoutedEventArgs e)
@@ -69,10 +69,14 @@ namespace CherwellOVerwatch
             using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
                 var result = streamReader.ReadToEnd();
-                settings.Text = result;
+                //settings.Text = result;
 
             }
-            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Page1();
         }
     }
 }
