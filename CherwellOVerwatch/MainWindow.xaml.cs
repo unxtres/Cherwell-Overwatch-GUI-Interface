@@ -70,6 +70,7 @@ namespace CherwellOVerwatch
             {
                 var result = streamReader.ReadToEnd();
                 settings.Text = result;
+
             }
             
         }
