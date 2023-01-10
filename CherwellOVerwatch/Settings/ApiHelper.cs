@@ -12,7 +12,7 @@ namespace CherwellOVerwatch.Settings
     class ApiHelper
     {
         private string link = "http://localhost:5000/api/";
-        public string token;
+        public static string token;
         public async void get_token(string regkey)
         {
             HttpClient client = new HttpClient();

@@ -30,54 +30,56 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        //HttpClient client = new HttpClient();
-        //public string link = "http://localhost:5000/api/";
-        //public string token;
+        HttpClient client = new HttpClient();
+        public string link = "http://localhost:5000/api/";
+        public string token;
 
         private async void Button_Get_Token(object sender, RoutedEventArgs e)
         {
-            ApiHelper connect = new ApiHelper();
-            string registration_key = regkey.Text;
-            connect.get_token(registration_key);
-            TokenInterface.OWToken = connect.token;
-            //string reglink = "http://localhost:5000/api/Registration/generate?key=" + regkey.Text;
-            //var request = new HttpRequestMessage
-            //{
-            //    Method = HttpMethod.Get,
-            //    RequestUri = new Uri(reglink),
-            //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-            //};
-            //var response = await client.SendAsync(request).ConfigureAwait(false);
-            //var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            //token = responsebody.ToString();
-            //this.Dispatcher.Invoke(() =>
-            //{
-            //    result.Text = token;
-            //});
-        }
-
-        private void Button_AppServerSettings(object sender, RoutedEventArgs e)
-        {
-            string url = link + "settings/AppServerSettings";
-            //var request = new HttpRequestMessage
-            //{
-            //    Method = HttpMethod.Get,
-            //    RequestUri = new Uri(url),
-            //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-            //    Headers = new HttpRequestHeaders()
-            //};
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpRequest.Accept = "application/json";
-            httpRequest.Headers["Authorization"] = token;
-
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            //ApiHelper connect = new ApiHelper();
+            //string registration_key = regkey.Text;
+            //connect.get_token(registration_key);
+            //TokenInterface.OWToken = connect.token;
+            //regkey.Text = token;
+            string reglink = "http://localhost:5000/api/Registration/generate?key=" + regkey.Text;
+            var request = new HttpRequestMessage
             {
-                var result = streamReader.ReadToEnd();
-                //settings.Text = result;
-
-            }
+                Method = HttpMethod.Get,
+                RequestUri = new Uri(reglink),
+                Content = new StringContent("body", Encoding.UTF8, "application/json"),
+            };
+            var response = await client.SendAsync(request).ConfigureAwait(false);
+            var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            token = responsebody.ToString();
+            TokenInterface.OWToken = token;
+            this.Dispatcher.Invoke(() =>
+            {
+                regkey.Text = token;
+            });
         }
+
+        //private void Button_AppServerSettings(object sender, RoutedEventArgs e)
+        //{
+        //    string url = link + "settings/AppServerSettings";
+        //    //var request = new HttpRequestMessage
+        //    //{
+        //    //    Method = HttpMethod.Get,
+        //    //    RequestUri = new Uri(url),
+        //    //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
+        //    //    Headers = new HttpRequestHeaders()
+        //    //};
+        //    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+        //    httpRequest.Accept = "application/json";
+        //    httpRequest.Headers["Authorization"] = token;
+
+        //    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+        //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+        //    {
+        //        var result = streamReader.ReadToEnd();
+        //        //settings.Text = result;
+
+        //    }
+        //}
 
         private void Button_AppServerSettings(object sender, RoutedEventArgs e)
         {
