@@ -5,21 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CherwellOVerwatch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="717" Width="875" Background="Black">
-        
-    <Grid Margin="0,0,0,-6">
-        <Button Content="Connect" HorizontalAlignment="Left" Margin="817,10,0,0" VerticalAlignment="Top" Click="Button_Get_Token" Height="20"/>
-        <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="530,10,0,0" TextWrapping="Wrap" Text="Registration Key" VerticalAlignment="Top" Width="282" Height="20"/>
-        <Frame Name="Main" Background="LightGray" Margin="166,34,0,10"/>
-        <!--<TextBox x:Name="result" HorizontalAlignment="Left" Margin="400,55,0,0" TextWrapping="Wrap" Text="Token" VerticalAlignment="Top" Width="344" Height="58"/>-->
-        
-        <!--<TextBox x:Name="settings" HorizontalAlignment="Left" Margin="115,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" Height="234"/>-->
-        <Button Content="New Window" HorizontalAlignment="Left" Margin="352,60,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        Title="MainWindow" Height="526" Width="874" Background="Black">
 
-        <Button Content="App Server" HorizontalAlignment="Left" Margin="30,30,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings" Width="70"/>
-        <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="30,60,0,0" VerticalAlignment="Top"/>
-        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="30,90,0,0" VerticalAlignment="Top"/>
-        
+    <Grid Margin="0,0,0,-6">
+        <Button Content="Connect" HorizontalAlignment="Left" Margin="786,10,0,0" VerticalAlignment="Top" Click="Button_Get_Token" Height="20"/>
+        <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="499,9,0,0" TextWrapping="Wrap" Text="Registration Key" VerticalAlignment="Top" Width="282" Height="20"/>
+        <Frame Name="Main" Background="LightGray" Margin="171,34,9,32" Width="695" Height="450"/>
+        <!--<TextBox x:Name="result" HorizontalAlignment="Left" Margin="400,55,0,0" TextWrapping="Wrap" Text="Token" VerticalAlignment="Top" Width="344" Height="58"/>-->
+
+        <!--<TextBox x:Name="settings" HorizontalAlignment="Left" Margin="115,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" Height="234"/>-->
+
+        <Button Content="App Server" HorizontalAlignment="Left" Margin="25,30,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings" Width="125"/>
+        <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="25,60,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,90,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,120,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,150,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="CSM Service" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Message Que Settings" HorizontalAlignment="Left" Margin="25,240,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,270,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,300,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,330,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,360,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,390,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Advanced" HorizontalAlignment="Left" Margin="25,450,0,0" VerticalAlignment="Top" Width="125"/>
+
 
     </Grid>
 

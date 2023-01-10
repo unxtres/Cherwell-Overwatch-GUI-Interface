@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CherwellOVerwatch.Settings;
 
 namespace CherwellOVerwatch
 {
@@ -29,22 +30,26 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        HttpClient client = new HttpClient();
-        public string link = "http://localhost:5000/api/";
-        public string token;
+        //HttpClient client = new HttpClient();
+        //public string link = "http://localhost:5000/api/";
+        //public string token;
 
         private async void Button_Get_Token(object sender, RoutedEventArgs e)
         {
-            string reglink = "http://localhost:5000/api/Registration/generate?key=" + regkey.Text;
-            var request = new HttpRequestMessage
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri(reglink),
-                Content = new StringContent("body", Encoding.UTF8, "application/json"),
-            };
-            var response = await client.SendAsync(request).ConfigureAwait(false);
-            var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            token = responsebody.ToString();
+            ApiHelper connect = new ApiHelper();
+            string registration_key = regkey.Text;
+            connect.get_token(registration_key);
+            TokenInterface.OWToken = connect.token;
+            //string reglink = "http://localhost:5000/api/Registration/generate?key=" + regkey.Text;
+            //var request = new HttpRequestMessage
+            //{
+            //    Method = HttpMethod.Get,
+            //    RequestUri = new Uri(reglink),
+            //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
+            //};
+            //var response = await client.SendAsync(request).ConfigureAwait(false);
+            //var responsebody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+            //token = responsebody.ToString();
             //this.Dispatcher.Invoke(() =>
             //{
             //    result.Text = token;
@@ -74,9 +79,9 @@ namespace CherwellOVerwatch
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_AppServerSettings(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Page1();
+            Main.Content = new AppServer();
         }
     }
 }
