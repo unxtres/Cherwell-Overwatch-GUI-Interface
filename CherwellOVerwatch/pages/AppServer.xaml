@@ -72,10 +72,10 @@
         <TextBlock HorizontalAlignment="Left" Margin="518,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="url"/>
         <TextBlock HorizontalAlignment="Left" Margin="518,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="userName"/>
         <TextBox x:Name="lastError" HorizontalAlignment="Left" Margin="130,42,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="89,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="89,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox HorizontalAlignment="Left" Margin="89,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox x:Name="lastErrorDetails" HorizontalAlignment="Left" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox x:Name="minMessageSizeToCompressHigh" HorizontalAlignment="Left" Margin="89,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox x:Name="minMessageSizeToCompressLow" HorizontalAlignment="Left" Margin="89,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox x:Name="minMessageSizeToCompressMedium" HorizontalAlignment="Left" Margin="89,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox HorizontalAlignment="Left" Margin="232,204,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox HorizontalAlignment="Left" Margin="232,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox HorizontalAlignment="Left" Margin="232,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
