@@ -129,5 +129,6 @@
         <TextBox HorizontalAlignment="Left" Margin="624,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox HorizontalAlignment="Left" Margin="624,241,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox HorizontalAlignment="Left" Margin="624,259,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <ScrollBar Margin="675,360,3,0" VerticalAlignment="Top" ValueChanged="ScrollBar_ValueChanged"/>
     </Grid>
 </Page>
