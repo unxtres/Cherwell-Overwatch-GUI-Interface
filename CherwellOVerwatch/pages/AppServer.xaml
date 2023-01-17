@@ -8,10 +8,126 @@
       d:DesignHeight="450" d:DesignWidth="695"
       Title="App Server">
 
-    <Grid>
-        <Label Content="dsada" HorizontalAlignment="Left" Height="111" Margin="217,10,0,0" VerticalAlignment="Top" Width="392"/>
-        <TextBox x:Name="settings" HorizontalAlignment="Left" Margin="18,26,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" Height="234"/>
-
-
+    <Grid Background="#FFC5C5C5">
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Disable Compression"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" Text="Installed" VerticalAlignment="Top" RenderTransformOrigin="1.452,0.595"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Last Error" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,58,0,0" TextWrapping="Wrap" Text="Last Error Details" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="426,14,0,0" TextWrapping="Wrap" Text="Logger Settings" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,74,0,0" TextWrapping="Wrap" Text="Is Http" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" Text="Is TCP" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,139,0,0" TextWrapping="Wrap" Text="High" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Min Message Size to Compress"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="32,262,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,155,0,0" TextWrapping="Wrap" Text="Low" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="33,171,0,0" TextWrapping="Wrap" Text="Medium" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,204,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Buffer Pool Size"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Buffer Size"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Received Message Size"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max Name Table Char Count"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,268,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max String Content Length"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,284,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max Array Length"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Operation Timeout Override"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Use Message Compression"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Tcp Max Connections"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,348,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Calls"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,364,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Instances"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,380,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Sessions"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,396,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Enable Performance Counters"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,412,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Listen Backlog"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="app Server Host Mode"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="protocol"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Store Location"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Store Name"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Thumbprint"/>
+        <TextBlock HorizontalAlignment="Left" Margin="196,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="certificate Validation Mode "/><LineBreak/><Run Text="For Auto Client"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="320,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="connection"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,206,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="enable Tcp Option"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,222,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="instance Guid"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="old Tcp Port"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,255,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="port"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Method Timeout Overrides"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="security Mode"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,303,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="server Name"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="use Rest"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,335,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="server Config Tool Comments"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="logged In User Cache Expiry Mins"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,367,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="use Recovery File"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,383,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="recovery File Path"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="recovery File Name"/>
+        <TextBlock HorizontalAlignment="Left" Margin="320,415,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="recovery File Persist Interval Seconds"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="event Log Level"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="file Log Level"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="file Name Override"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="is Logging Enabled"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="is Server Settings"/>
+        <TextBlock HorizontalAlignment="Left" Margin="402,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="log File Path"/>
+        <TextBlock HorizontalAlignment="Left" Margin="494,138,0,0" TextWrapping="Wrap" Text="log Server Connection Settings" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="ignore Cert Errors"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="is Configured"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="is Server Settings"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="password"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="settingsType"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="url"/>
+        <TextBlock HorizontalAlignment="Left" Margin="518,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="userName"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,42,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="89,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="89,155,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="89,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,204,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,252,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,284,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,300,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,332,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,332,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,348,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,364,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,380,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="232,412,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="327,15,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="327,31,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="342,67,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="342,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="342,99,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="342,83,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="342,131,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <CheckBox x:Name="disableCompression" HorizontalAlignment="Left" Margin="130,11,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="130,26,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="130,75,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="130,90,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="232,317,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="232,396,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="422,207,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <CheckBox HorizontalAlignment="Left" Margin="422,272,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,222,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,239,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,256,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,287,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="422,303,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="518,336,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="518,352,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <CheckBox HorizontalAlignment="Left" Margin="518,368,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="518,383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="518,415,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="518,399,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <CheckBox HorizontalAlignment="Left" Margin="510,84,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="510,98,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="624,163,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="624,179,0,0" VerticalAlignment="Top"/>
+        <CheckBox HorizontalAlignment="Left" Margin="624,194,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="510,35,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="510,51,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="510,68,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="510,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="624,209,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="624,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="624,241,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox HorizontalAlignment="Left" Margin="624,259,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
     </Grid>
 </Page>

@@ -28,25 +28,32 @@ namespace CherwellOVerwatch
         public AppServer()
         {
             InitializeComponent();
-            
-            string url = "http://localhost:5000/api/settings/AppServerSettings";
-            //var request = new HttpRequestMessage
-            //{
-            //    Method = HttpMethod.Get,
-            //    RequestUri = new Uri(url),
-            //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-            //    Headers = new HttpRequestHeaders()
-            //};
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpRequest.Accept = "application/json";
-            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
-
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            try
             {
-                var result = streamReader.ReadToEnd();
-                settings.Text = result;
+                string url = "http://localhost:5000/api/settings/AppServerSettings";
+                //var request = new HttpRequestMessage
+                //{
+                //    Method = HttpMethod.Get,
+                //    RequestUri = new Uri(url),
+                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
+                //    Headers = new HttpRequestHeaders()
+                //};
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Accept = "application/json";
+                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
 
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var result = streamReader.ReadToEnd();
+                    settings.Text = result;
+
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Not Connected");
+                throw;
             }
         }
     }
