@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using CherwellOVerwatch.Settings;
 
 namespace CherwellOVerwatch
@@ -25,6 +26,7 @@ namespace CherwellOVerwatch
     /// </summary>
     public partial class AppServer : Page
     {
+        public string json;
         public AppServer()
         {
             InitializeComponent();
@@ -46,9 +48,9 @@ namespace CherwellOVerwatch
                 using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
                 {
                     var result = streamReader.ReadToEnd();
-                    settings.Text = result;
-
+                    json = result;
                 }
+                var data = (JObject)JsonConvert.DeserializeObject(json);
             }
             catch
             {
