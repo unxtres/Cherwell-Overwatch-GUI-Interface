@@ -58,10 +58,12 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-
-
             var data = (JObject)JsonConvert.DeserializeObject(json);
             lastError.Text = data["lastError"].Value<string>();
+            lastErrorDetails.Text = data["lastErrorDetails"].Value<string>();
+            minMessageSizeToCompressHigh.Text = data["minMessageSizeToCompressHigh"].Value<string>();
+            minMessageSizeToCompressLow.Text = data["minMessageSizeToCompressLow"].Value<string>();
+            minMessageSizeToCompressMedium.Text = data["minMessageSizeToCompressMedium"].Value<string>();
         }
     }
 }
