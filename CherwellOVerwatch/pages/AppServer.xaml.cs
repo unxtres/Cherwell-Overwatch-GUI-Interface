@@ -18,6 +18,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml.Linq;
 using CherwellOVerwatch.Settings;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
@@ -51,6 +53,7 @@ namespace CherwellOVerwatch
                     json = result;
                 }
                 var data = (JObject)JsonConvert.DeserializeObject(json);
+                lastError.Text = data["lastEror"].Value<string>();
             }
             catch
             {
