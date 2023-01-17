@@ -52,14 +52,16 @@ namespace CherwellOVerwatch
                     var result = streamReader.ReadToEnd();
                     json = result;
                 }
-                var data = (JObject)JsonConvert.DeserializeObject(json);
-                lastError.Text = data["lastEror"].Value<string>();
             }
             catch
             {
                 MessageBox.Show("Not Connected");
                 throw;
             }
+
+
+            var data = (JObject)JsonConvert.DeserializeObject(json);
+            lastError.Text = data["lastError"].Value<string>();
         }
     }
 }
