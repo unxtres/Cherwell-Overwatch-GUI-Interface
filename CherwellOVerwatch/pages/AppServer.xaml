@@ -17,31 +17,31 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,90,0,0" TextWrapping="Wrap" Text="Is TCP" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="31,392,0,0" TextWrapping="Wrap" Text="High" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Min Message Size to Compress"/>
-        <TextBlock HorizontalAlignment="Left" Margin="551,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="551,67,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="607,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="607,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="31,408,0,0" TextWrapping="Wrap" Text="Low" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="31,424,0,0" TextWrapping="Wrap" Text="Medium" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,18,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Buffer Pool Size"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Buffer Size"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Received Message Size"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max Name Table Char Count"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max String Content Length"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max Array Length"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Operation Timeout Override"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Use Message Compression"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Tcp Max Connections"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,162,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Calls"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Instances"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Sessions"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Enable Performance Counters"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,226,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Listen Backlog"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Buffer Pool Size"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,29,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Buffer Size"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Received Message Size"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,61,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max Name Table Char Count"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max String Content Length"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Reader Max Array Length"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Operation Timeout Override"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Use Message Compression"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,141,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Tcp Max Connections"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,157,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Calls"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Instances"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Max Concurrent Sessions"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,205,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Enable Performance Counters"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="wcf Listen Backlog"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,106,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="app Server Host Mode"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="protocol"/>
-        <TextBlock HorizontalAlignment="Left" Margin="304,270,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Store Location"/>
-        <TextBlock HorizontalAlignment="Left" Margin="304,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Store Name"/>
-        <TextBlock HorizontalAlignment="Left" Margin="305,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Subject"/>
-        <TextBlock HorizontalAlignment="Left" Margin="304,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Thumbprint"/>
-        <TextBlock HorizontalAlignment="Left" Margin="304,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="certificate Validation Mode "/><LineBreak/><Run Text="For Auto Client"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="362,286,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Store Location"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,302,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Store Name"/>
+        <TextBlock HorizontalAlignment="Left" Margin="363,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Subject"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="certificate Thumbprint"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,350,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="certificate Validation Mode "/><LineBreak/><Run Text="For Auto Client"/></TextBlock>
         <TextBlock HorizontalAlignment="Left" Margin="8,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="connection"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="enable Tcp Option"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="instance Guid"/>
@@ -56,51 +56,51 @@
         <TextBlock HorizontalAlignment="Left" Margin="8,326,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="recovery File Path"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,342,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="recovery File Name"/>
         <TextBlock HorizontalAlignment="Left" Margin="8,358,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="recovery File Persist Interval Seconds"/>
-        <TextBox x:Name="lastError" HorizontalAlignment="Left" Margin="130,42,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="lastErrorDetails" HorizontalAlignment="Left" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="minMessageSizeToCompressHigh" HorizontalAlignment="Left" Margin="87,392,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="minMessageSizeToCompressLow" HorizontalAlignment="Left" Margin="87,408,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="minMessageSizeToCompressMedium" HorizontalAlignment="Left" Margin="87,424,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfMaxBufferPoolSize" HorizontalAlignment="Left" Margin="527,18,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfMaxBufferSize" HorizontalAlignment="Left" Margin="527,34,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfMaxReceivedMessageSize" HorizontalAlignment="Left" Margin="527,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfReaderMaxNameTableCharCount" HorizontalAlignment="Left" Margin="527,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfReaderMaxStringContentLength" HorizontalAlignment="Left" Margin="527,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfReaderMaxArrayLength" HorizontalAlignment="Left" Margin="527,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfOperationTimeoutOverride" HorizontalAlignment="Left" Margin="527,114,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfTcpMaxConnections" HorizontalAlignment="Left" Margin="527,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfMaxConcurrentCalls" HorizontalAlignment="Left" Margin="527,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfMaxConcurrentInstances" HorizontalAlignment="Left" Margin="527,178,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfMaxConcurrentSessions" HorizontalAlignment="Left" Margin="527,194,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfListenBacklog" HorizontalAlignment="Left" Margin="527,226,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="appServerHostMode" HorizontalAlignment="Left" Margin="130,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <TextBox x:Name="protocol" HorizontalAlignment="Left" Margin="130,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <TextBox x:Name="certificateStoreLocation" HorizontalAlignment="Left" Margin="450,270,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" Height="16"/>
-        <TextBox x:Name="certificateThumbprint" HorizontalAlignment="Left" Margin="450,318,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" Height="16"/>
-        <TextBox x:Name="certificateSubject" HorizontalAlignment="Left" Margin="450,302,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" Height="16"/>
-        <TextBox x:Name="certificateStoreName" HorizontalAlignment="Left" Margin="450,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" Height="16"/>
-        <TextBox x:Name="certificateValidationModeForAutoClient" HorizontalAlignment="Left" Margin="450,350,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="50" Height="16"/>
+        <TextBox x:Name="lastError" HorizontalAlignment="Left" Margin="130,42,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="lastErrorDetails" HorizontalAlignment="Left" Margin="130,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="minMessageSizeToCompressHigh" HorizontalAlignment="Left" Margin="87,392,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="114" Height="16"/>
+        <TextBox x:Name="minMessageSizeToCompressLow" HorizontalAlignment="Left" Margin="87,408,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="114" Height="16"/>
+        <TextBox x:Name="minMessageSizeToCompressMedium" HorizontalAlignment="Left" Margin="87,424,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="114" Height="16"/>
+        <TextBox x:Name="wcfMaxBufferPoolSize" HorizontalAlignment="Left" Margin="583,13,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfMaxBufferSize" HorizontalAlignment="Left" Margin="583,29,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfMaxReceivedMessageSize" HorizontalAlignment="Left" Margin="583,45,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfReaderMaxNameTableCharCount" HorizontalAlignment="Left" Margin="583,61,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfReaderMaxStringContentLength" HorizontalAlignment="Left" Margin="583,77,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfReaderMaxArrayLength" HorizontalAlignment="Left" Margin="583,93,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfOperationTimeoutOverride" HorizontalAlignment="Left" Margin="583,109,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfTcpMaxConnections" HorizontalAlignment="Left" Margin="583,141,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfMaxConcurrentCalls" HorizontalAlignment="Left" Margin="583,157,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfMaxConcurrentInstances" HorizontalAlignment="Left" Margin="583,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfMaxConcurrentSessions" HorizontalAlignment="Left" Margin="583,189,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="wcfListenBacklog" HorizontalAlignment="Left" Margin="583,221,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="102" Height="16"/>
+        <TextBox x:Name="appServerHostMode" HorizontalAlignment="Left" Margin="130,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="protocol" HorizontalAlignment="Left" Margin="130,122,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="certificateStoreLocation" HorizontalAlignment="Left" Margin="508,286,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155" Height="16"/>
+        <TextBox x:Name="certificateThumbprint" HorizontalAlignment="Left" Margin="508,334,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155" Height="16"/>
+        <TextBox x:Name="certificateSubject" HorizontalAlignment="Left" Margin="508,318,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155" Height="16"/>
+        <TextBox x:Name="certificateStoreName" HorizontalAlignment="Left" Margin="508,302,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155" Height="16"/>
+        <TextBox x:Name="certificateValidationModeForAutoClient" HorizontalAlignment="Left" Margin="508,366,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="155" Height="16"/>
         <CheckBox x:Name="disableCompression" HorizontalAlignment="Left" Margin="130,11,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="installed" HorizontalAlignment="Left" Margin="130,26,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="isHttp" HorizontalAlignment="Left" Margin="130,75,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="isTcp" HorizontalAlignment="Left" Margin="130,90,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="wcfUseMessageCompression" HorizontalAlignment="Left" Margin="527,131,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="wcfEnablePerformanceCounters" HorizontalAlignment="Left" Margin="527,210,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="wcfUseMessageCompression" HorizontalAlignment="Left" Margin="583,126,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="wcfEnablePerformanceCounters" HorizontalAlignment="Left" Margin="583,205,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="enableTcpOption" HorizontalAlignment="Left" Margin="130,156,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="130,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="158" Height="16"/>
+        <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="130,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
         <CheckBox x:Name="useRest" HorizontalAlignment="Left" Margin="130,220,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="instanceGuid" HorizontalAlignment="Left" Margin="130,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="oldTcpPort" HorizontalAlignment="Left" Margin="130,188,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="port" HorizontalAlignment="Left" Margin="130,204,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="securityMode" HorizontalAlignment="Left" Margin="130,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="serverName" HorizontalAlignment="Left" Margin="130,252,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="serverConfigToolComments" HorizontalAlignment="Left" Margin="206,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <TextBox x:Name="loggedInUserCacheExpiryMins" HorizontalAlignment="Left" Margin="206,292,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
+        <TextBox x:Name="instanceGuid" HorizontalAlignment="Left" Margin="130,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="oldTcpPort" HorizontalAlignment="Left" Margin="130,188,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="port" HorizontalAlignment="Left" Margin="130,204,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="securityMode" HorizontalAlignment="Left" Margin="130,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="serverName" HorizontalAlignment="Left" Margin="130,252,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="218" Height="16"/>
+        <TextBox x:Name="serverConfigToolComments" HorizontalAlignment="Left" Margin="206,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
+        <TextBox x:Name="loggedInUserCacheExpiryMins" HorizontalAlignment="Left" Margin="206,292,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
         <CheckBox x:Name="useRecoveryFile" HorizontalAlignment="Left" Margin="206,310,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="recoveryFilePath" HorizontalAlignment="Left" Margin="206,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="206,358,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="206,342,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <Button Content="Load" HorizontalAlignment="Left" Margin="583,340,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,384,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <TextBox x:Name="recoveryFilePath" HorizontalAlignment="Left" Margin="206,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
+        <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="206,358,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
+        <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="206,342,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
     </Grid>
 </Page>
