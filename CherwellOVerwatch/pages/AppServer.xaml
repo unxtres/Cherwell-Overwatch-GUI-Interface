@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="695"
       Title="App Server">
 
-    <Grid Background="#FFC5C5C5">
+    <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Disable Compression"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" Text="Installed" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,42,0,0" TextWrapping="Wrap" Text="Last Error" VerticalAlignment="Top"/>
@@ -101,7 +101,7 @@
         <TextBox x:Name="recoveryFilePatch" HorizontalAlignment="Left" Margin="206,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="206,358,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="206,342,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
-        <Button Content="Load" HorizontalAlignment="Left" Margin="605,340,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="605,388,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="583,340,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,384,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
     </Grid>
 </Page>
