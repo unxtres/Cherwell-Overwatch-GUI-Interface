@@ -65,7 +65,7 @@
         <TextBox x:Name="wcfMaxBufferSize" HorizontalAlignment="Left" Margin="527,34,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox x:Name="wcfMaxReceivedMessageSize" HorizontalAlignment="Left" Margin="527,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox x:Name="wcfReaderMaxNameTableCharCount" HorizontalAlignment="Left" Margin="527,66,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
-        <TextBox x:Name="wcfReaderMaxSringContentLength" HorizontalAlignment="Left" Margin="527,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox x:Name="wcfReaderMaxStringContentLength" HorizontalAlignment="Left" Margin="527,82,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox x:Name="wcfReaderMaxArrayLength" HorizontalAlignment="Left" Margin="527,98,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox x:Name="wcfOperationTimeoutOverride" HorizontalAlignment="Left" Margin="527,114,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox x:Name="wcfTcpMaxConnections" HorizontalAlignment="Left" Margin="527,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
@@ -87,7 +87,7 @@
         <CheckBox x:Name="wcfUseMessageCompression" HorizontalAlignment="Left" Margin="527,131,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="wcfEnablePerformanceCounters" HorizontalAlignment="Left" Margin="527,210,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="enableTcpOption" HorizontalAlignment="Left" Margin="130,156,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="130,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
+        <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="130,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="158" Height="16"/>
         <CheckBox x:Name="useRest" HorizontalAlignment="Left" Margin="130,220,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="instanceGuid" HorizontalAlignment="Left" Margin="130,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
         <TextBox x:Name="oldTcpPort" HorizontalAlignment="Left" Margin="130,188,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="51" Height="16"/>
@@ -97,7 +97,7 @@
         <TextBox x:Name="serverConfigToolComments" HorizontalAlignment="Left" Margin="206,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <TextBox x:Name="loggedInUserCacheExpiryMins" HorizontalAlignment="Left" Margin="206,292,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <CheckBox x:Name="useRecoveryFile" HorizontalAlignment="Left" Margin="206,310,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="recoveryFilePatch" HorizontalAlignment="Left" Margin="206,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
+        <TextBox x:Name="recoveryFilePath" HorizontalAlignment="Left" Margin="206,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="206,358,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="206,342,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="52" Height="16"/>
         <Button Content="Load" HorizontalAlignment="Left" Margin="583,340,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>

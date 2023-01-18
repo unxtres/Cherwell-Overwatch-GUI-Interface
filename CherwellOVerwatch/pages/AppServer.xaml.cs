@@ -93,7 +93,7 @@ namespace CherwellOVerwatch
 
             useRecoveryFile.IsChecked = data["useRecoveryFile"].Value<bool>();
 
-            recoveryFilePatch.Text = data["recoveryFilePatch"].Value<string>();
+            recoveryFilePath.Text = data["recoveryFilePath"].Value<string>();
             recoveryFileName.Text = data["recoveryFileName"].Value<string>();
             recoveryFilePersistIntervalSeconds.Text = data["recoveryFilePersistIntervalSeconds"].Value<string>();
 
@@ -105,7 +105,7 @@ namespace CherwellOVerwatch
             wcfMaxBufferSize.Text = data["wcfMaxBufferSize"].Value<string>();
             wcfMaxReceivedMessageSize.Text = data["wcfMaxReceivedMessageSize"].Value<string>();
             wcfReaderMaxNameTableCharCount.Text = data["wcfReaderMaxNameTableCharCount"].Value<string>();
-            wcfReaderMaxSringContentLength.Text = data["wcfReaderMaxSringContentLength"].Value<string>();
+            wcfReaderMaxStringContentLength.Text = data["wcfReaderMaxStringContentLength"].Value<string>();
             wcfReaderMaxArrayLength.Text = data["wcfReaderMaxArrayLength"].Value<string>();
             wcfOperationTimeoutOverride.Text = data["wcfOperationTimeoutOverride"].Value<string>();
 
