@@ -62,7 +62,6 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-            string temp;
             var data = (JObject)JsonConvert.DeserializeObject(json);
 
             disableCompression.IsChecked = data["disableCompression"].Value<bool>();

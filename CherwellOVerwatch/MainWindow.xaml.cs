@@ -90,5 +90,10 @@ namespace CherwellOVerwatch
         {
             Main.Content = new Logger();
         }
+
+        private void Button_AutoDeploy(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new AutoDeploy();
+        }
     }
 }

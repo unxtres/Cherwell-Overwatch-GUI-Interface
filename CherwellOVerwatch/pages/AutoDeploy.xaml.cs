@@ -38,7 +38,7 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
+                string url = "http://localhost:5000/api/settings/AutoDeploySettings";
                 //var request = new HttpRequestMessage
                 //{
                 //    Method = HttpMethod.Get,
@@ -62,8 +62,26 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-            string temp;
+
             var data = (JObject)JsonConvert.DeserializeObject(json);
+
+
+            autoDeployDir.Text = data["autoDeployDir"].Value<string>();
+            autoDeploySite.Text = data["autoDeploySite"].Value<string>();
+            connectionName.Text = data["connectionName"].Value<string>();
+
+            displayDebugInfo.IsChecked = data["displayDebugInfo"].Value<bool>();
+
+            installAccounts.Text = data["installAccounts"].Value<string>();
+
+            installAllUsers.IsChecked = data["ininstallAllUsersstalled"].Value<bool>();
+            makeDefault.IsChecked = data["makeDefault"].Value<bool>();
+            noPrompt.IsChecked = data["noPrompt"].Value<bool>();
+            noUserOptions.IsChecked = data["noUserOptions"].Value<bool>();
+            overwrite.IsChecked = data["overwrite"].Value<bool>();
+            reqMinorReleases.IsChecked = data["reqMinorReleases"].Value<bool>();
+
+            selectedInstallOption.Text = data["selectedInstallOption"].Value<string>();
         }
     }
 }

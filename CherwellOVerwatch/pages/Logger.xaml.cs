@@ -64,8 +64,6 @@ namespace CherwellOVerwatch
             }
             string temp;
             var data = (JObject)JsonConvert.DeserializeObject(json);
-
-            test.Text = data["logFilePath"].Value<string>();
         }
     }
 }

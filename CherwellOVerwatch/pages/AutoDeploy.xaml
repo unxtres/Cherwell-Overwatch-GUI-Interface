@@ -11,5 +11,30 @@
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,114,0,0" TextWrapping="Wrap" Text="Auto Deploy Dir" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,135,0,0" TextWrapping="Wrap" Text="Auto Deploy Site" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,156,0,0" TextWrapping="Wrap" Text="Connection Name" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,177,0,0" TextWrapping="Wrap" Text="Display Debug Info" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,198,0,0" TextWrapping="Wrap" Text="Install Accounts" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,219,0,0" TextWrapping="Wrap" Text="Install All Users" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,240,0,0" TextWrapping="Wrap" Text="Make Default" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,261,0,0" TextWrapping="Wrap" Text="No Prompt" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,282,0,0" TextWrapping="Wrap" Text="No User Options" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,303,0,0" TextWrapping="Wrap" Text="Overwrite" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,324,0,0" TextWrapping="Wrap" Text="Req Minor Releases" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBlock HorizontalAlignment="Left" Margin="124,345,0,0" TextWrapping="Wrap" Text="Selected Install Option" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
+        <TextBox x:Name="autoDeployDir" HorizontalAlignment="Left" Margin="248,114,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
+        <TextBox x:Name="autoDeploySite" HorizontalAlignment="Left" Margin="248,134,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
+        <TextBox x:Name="connectionName" HorizontalAlignment="Left" Margin="248,154,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
+        <TextBox x:Name="installAccounts" HorizontalAlignment="Left" Margin="248,197,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
+        <TextBox x:Name="selectedInstallOption" HorizontalAlignment="Left" Margin="248,345,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
+        <CheckBox x:Name="displayDebugInfo" HorizontalAlignment="Left" Margin="248,178,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="installAllUsers" Content="CheckBox" HorizontalAlignment="Left" Margin="248,220,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="makeDefault" HorizontalAlignment="Left" Margin="248,241,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="noPrompt" HorizontalAlignment="Left" Margin="248,262,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="noUserOptions" HorizontalAlignment="Left" Margin="248,283,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="overwrite" HorizontalAlignment="Left" Margin="248,303,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="reqMinorReleases" HorizontalAlignment="Left" Margin="248,325,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Page>
