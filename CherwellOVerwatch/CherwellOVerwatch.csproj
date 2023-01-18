@@ -12,9 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="pages\AutoDeploy.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="pages\AutoUpdateService.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -42,13 +39,16 @@
     <Compile Update="pages\ServiceHost.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="pages\Advanced.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\AutoDeploy.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="pages\TAHub.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\TA Server.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="pages\Advanced.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\Logger.xaml.cs">

@@ -64,10 +64,6 @@ namespace CherwellOVerwatch
             }
             string temp;
             var data = (JObject)JsonConvert.DeserializeObject(json);
-
-            installed.IsChecked = data["installed"].Value<bool>();
-
-            lastError.Text = data["lastError"].Value<string>();
         }
     }
 }
