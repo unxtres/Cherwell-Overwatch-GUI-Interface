@@ -11,4 +11,49 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Update="pages\AutoDeploy.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\AutoUpdateService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\BrowserSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\ConnectionDefinitions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\CSMService.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\EEMServer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\MQSSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\PortalSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\SchedulingServer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\ServiceHost.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TAHub.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TA Server.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\Advanced.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\Logger.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
 </Project>

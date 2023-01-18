@@ -85,5 +85,10 @@ namespace CherwellOVerwatch
         {
             Main.Content = new AppServer();
         }
+
+        private void Button_Logger(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new Logger();
+        }
     }
 }
