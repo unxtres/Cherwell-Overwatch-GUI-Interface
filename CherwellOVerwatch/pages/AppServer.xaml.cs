@@ -65,16 +65,66 @@ namespace CherwellOVerwatch
             string temp;
             var data = (JObject)JsonConvert.DeserializeObject(json);
 
-            
+            disableCompression.IsChecked = data["disableCompression"].Value<bool>();
+            installed.IsChecked = data["installed"].Value<bool>();
+
             lastError.Text = data["lastError"].Value<string>();
             lastErrorDetails.Text = data["lastErrorDetails"].Value<string>();
+
+            isHttp.IsChecked = data["isHttp"].Value<bool>();
+            isTcp.IsChecked = data["isTcp"].Value<bool>();
+
+            appServerHostMode.Text = data["appServerHostMode"].Value<string>();
+            protocol.Text = data["protocol"].Value<string>();
+            connection.Text = data["connection"].Value<string>();
+
+            enableTcpOption.IsChecked = data["enableTcpOption"].Value<bool>();
+
+            instanceGuid.Text = data["instanceGuid"].Value<string>();
+            oldTcpPort.Text = data["oldTcpPort"].Value<string>();
+            port.Text = data["port"].Value<string>();
+
+            useRest.IsChecked = data["useRest"].Value<bool>();
+
+            securityMode.Text = data["securityMode"].Value<string>();
+            serverName.Text = data["serverName"].Value<string>();
+            serverConfigToolComments.Text = data["serverConfigToolComments"].Value<string>();
+            loggedInUserCacheExpiryMins.Text = data["loggedInUserCacheExpiryMins"].Value<string>();
+
+            useRecoveryFile.IsChecked = data["useRecoveryFile"].Value<bool>();
+
+            recoveryFilePatch.Text = data["recoveryFilePatch"].Value<string>();
+            recoveryFileName.Text = data["recoveryFileName"].Value<string>();
+            recoveryFilePersistIntervalSeconds.Text = data["recoveryFilePersistIntervalSeconds"].Value<string>();
+
             minMessageSizeToCompressHigh.Text = data["minMessageSizeToCompressHigh"].Value<string>();
             minMessageSizeToCompressLow.Text = data["minMessageSizeToCompressLow"].Value<string>();
             minMessageSizeToCompressMedium.Text = data["minMessageSizeToCompressMedium"].Value<string>();
-            //temp = data["wcfUseMessageCompression"].Value<string>();
-            //if (temp != "true") { wcfUseMessageCompression.IsChecked=true; }
-            //else wcfUseMessageCompression.IsChecked = false;
+
+            wcfMaxBufferPoolSize.Text = data["wcfMaxBufferPoolSize"].Value<string>();
+            wcfMaxBufferSize.Text = data["wcfMaxBufferSize"].Value<string>();
+            wcfMaxReceivedMessageSize.Text = data["wcfMaxReceivedMessageSize"].Value<string>();
+            wcfReaderMaxNameTableCharCount.Text = data["wcfReaderMaxNameTableCharCount"].Value<string>();
+            wcfReaderMaxSringContentLength.Text = data["wcfReaderMaxSringContentLength"].Value<string>();
+            wcfReaderMaxArrayLength.Text = data["wcfReaderMaxArrayLength"].Value<string>();
+            wcfOperationTimeoutOverride.Text = data["wcfOperationTimeoutOverride"].Value<string>();
+
             wcfUseMessageCompression.IsChecked = data["wcfUseMessageCompression"].Value<bool>();
+
+            wcfTcpMaxConnections.Text = data["wcfTcpMaxConnections"].Value<string>();
+            wcfMaxConcurrentCalls.Text = data["wcfMaxConcurrentCalls"].Value<string>();
+            wcfMaxConcurrentInstances.Text = data["wcfMaxConcurrentInstances"].Value<string>();
+            wcfMaxConcurrentSessions.Text = data["wcfMaxConcurrentSessions"].Value<string>();
+
+            wcfEnablePerformanceCounters.IsChecked = data["wcfEnablePerformanceCounters"].Value<bool>();
+
+            wcfListenBacklog.Text = data["wcfListenBacklog"].Value<string>();
+
+            certificateStoreLocation.Text = data["certificateStoreLocation"].Value<string>();
+            certificateStoreName.Text = data["certificateStoreName"].Value<string>();
+            certificateSubject.Text = data["certificateSubject"].Value<string>();
+            certificateThumbprint.Text = data["certificateThumbprint"].Value<string>();
+            certificateValidationModeForAutoClient.Text = data["certificateValidationModeForAutoClient"].Value<string>();
         }
     }
 }
