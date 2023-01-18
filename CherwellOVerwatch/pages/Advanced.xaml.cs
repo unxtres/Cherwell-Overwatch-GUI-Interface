@@ -29,6 +29,7 @@ namespace CherwellOVerwatch
     public partial class Advanced : Page
     {
         public string json;
+        public Advanced()
         {
             InitializeComponent();
         }
