@@ -70,7 +70,8 @@ namespace CherwellOVerwatch
             minMessageSizeToCompressLow.Text = data["minMessageSizeToCompressLow"].Value<string>();
             minMessageSizeToCompressMedium.Text = data["minMessageSizeToCompressMedium"].Value<string>();
             temp = data["wcfUseMessageCompression"].Value<string>();
-            if (temp != "true") { wcfUseMessageCompression.IsChecked==true };
+            if (temp != "true") { wcfUseMessageCompression.IsChecked=true; }
+            else wcfUseMessageCompression.IsChecked = false;
 
         }
     }
