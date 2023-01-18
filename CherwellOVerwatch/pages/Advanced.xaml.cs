@@ -29,7 +29,6 @@ namespace CherwellOVerwatch
     public partial class Advanced : Page
     {
         public string json;
-        public Advanced()
         {
             InitializeComponent();
         }
@@ -65,6 +64,9 @@ namespace CherwellOVerwatch
             string temp;
             var data = (JObject)JsonConvert.DeserializeObject(json);
 
+            installed.IsChecked = data["installed"].Value<bool>();
+
+            lastError.Text = data["lastError"].Value<string>();
         }
     }
 }
