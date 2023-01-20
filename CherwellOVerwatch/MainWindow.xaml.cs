@@ -95,5 +95,10 @@ namespace CherwellOVerwatch
         {
             Main.Content = new AutoDeploy();
         }
+
+        private void Button_AutoUpdate(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new AutoUpdateService();
+        }
     }
 }
