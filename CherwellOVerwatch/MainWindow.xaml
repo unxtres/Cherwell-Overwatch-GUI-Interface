@@ -19,7 +19,7 @@
         <Button Content="Logger Settings" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" Width="125" Click="Button_Logger
                 "/>
         <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" Width="125" Click="Button_AutoDeploy"/>
-        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top" Width="125" Click="Button_AutoUpdate"/>
         <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="CSM Service" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="125"/>

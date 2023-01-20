@@ -34,7 +34,7 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -64,10 +64,19 @@ namespace CherwellOVerwatch
             }
             //string temp;
             //var data = (JObject)JsonConvert.DeserializeObject(json);
-            AutoUpdate myDeserializedClass = JsonConvert.DeserializeObject<AutoUpdate>(json);
+            AutoUpdate DeserializedAutoUpdate = JsonConvert.DeserializeObject<AutoUpdate>(json);
 
-            test.Text = myDeserializedClass.updateCheckInterval.ToString();
-            test2.Text = myDeserializedClass.application.applicationType.ToString();
+            downloadPath.Text = DeserializedAutoUpdate.downloadPath.ToString();
+            updateCheckInterval.Text = DeserializedAutoUpdate.updateCheckInterval.ToString();
+            defaultUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.defaultUpdateCheckIntervalValue.ToString();
+            minimumUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.minimumUpdateCheckIntervalValue.ToString();
+
+            name.Text = DeserializedAutoUpdate.application.name.ToString();
+            applicationType.Text = DeserializedAutoUpdate.application.applicationType.ToString();
+            updatePath.Text = DeserializedAutoUpdate.application.updatePath.ToString();
+            versionFile.Text = DeserializedAutoUpdate.application.versionFile.ToString();
+            currentVersion.Text = DeserializedAutoUpdate.application.currentVersion.ToString();
+
         }
     }
 }
