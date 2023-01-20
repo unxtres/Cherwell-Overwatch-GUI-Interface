@@ -38,7 +38,7 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
+                string url = "http://localhost:5000/api/settings/AutoUpdateServiceSettings";
                 //var request = new HttpRequestMessage
                 //{
                 //    Method = HttpMethod.Get,
