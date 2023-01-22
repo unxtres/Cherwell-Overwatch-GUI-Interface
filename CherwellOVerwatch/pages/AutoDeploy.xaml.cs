@@ -74,7 +74,7 @@ namespace CherwellOVerwatch
 
             installAccounts.Text = data["installAccounts"].Value<string>();
 
-            installAllUsers.IsChecked = data["ininstallAllUsersstalled"].Value<bool>();
+            installAllUsers.IsChecked = data["installAllUsers"].Value<bool>();
             makeDefault.IsChecked = data["makeDefault"].Value<bool>();
             noPrompt.IsChecked = data["noPrompt"].Value<bool>();
             noUserOptions.IsChecked = data["noUserOptions"].Value<bool>();

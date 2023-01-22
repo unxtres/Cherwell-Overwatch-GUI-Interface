@@ -29,7 +29,7 @@
         <TextBox x:Name="installAccounts" HorizontalAlignment="Left" Margin="248,197,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
         <TextBox x:Name="selectedInstallOption" HorizontalAlignment="Left" Margin="248,345,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="299"/>
         <CheckBox x:Name="displayDebugInfo" HorizontalAlignment="Left" Margin="248,178,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="installAllUsers" Content="CheckBox" HorizontalAlignment="Left" Margin="248,220,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="installAllUsers" HorizontalAlignment="Left" Margin="248,220,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="makeDefault" HorizontalAlignment="Left" Margin="248,241,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="noPrompt" HorizontalAlignment="Left" Margin="248,262,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="noUserOptions" HorizontalAlignment="Left" Margin="248,283,0,0" VerticalAlignment="Top"/>
