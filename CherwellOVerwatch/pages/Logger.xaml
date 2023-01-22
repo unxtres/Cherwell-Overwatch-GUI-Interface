@@ -11,6 +11,71 @@
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
-        <TextBox x:Name="test" HorizontalAlignment="Left" Margin="155,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="270" Height="106"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Event Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,31,0,0" TextWrapping="Wrap" Text="File Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,52,0,0" TextWrapping="Wrap" Text="File Name Override" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,73,0,0" TextWrapping="Wrap" Text="Is Logging Enabled" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Is Server Settings" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,115,0,0" TextWrapping="Wrap" Text="Log File Path" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,157,0,0" TextWrapping="Wrap" Text="Log Server Connection Settings" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,186,0,0" TextWrapping="Wrap" Text="Ignore Cert Errors" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,207,0,0" TextWrapping="Wrap" Text="Is Configured" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,228,0,0" TextWrapping="Wrap" Text="Is Server Settings" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,249,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,270,0,0" TextWrapping="Wrap" Text="Settings Type" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,291,0,0" TextWrapping="Wrap" Text="Url" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,312,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,333,0,0" TextWrapping="Wrap" Text="Log Server Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,354,0,0" TextWrapping="Wrap" Text="Log to Compliance Log" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,375,0,0" TextWrapping="Wrap" Text="Log to Console" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,396,0,0" TextWrapping="Wrap" Text="Log to Console Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,417,0,0" TextWrapping="Wrap" Text="Log to Event Log" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,438,0,0" TextWrapping="Wrap" Text="Log to File" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,459,0,0" TextWrapping="Wrap" Text="Log to Log Server" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="180,438,0,0" TextWrapping="Wrap" Text="Max Files Before Rollover" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="180,459,0,0" TextWrapping="Wrap" Text="Max File Size in MB" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,10,0,0" TextWrapping="Wrap" Text="Sumo Logic Connection Settings" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,52,0,0" TextWrapping="Wrap" Text="Url" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,73,0,0" TextWrapping="Wrap" Text="Retry Interval" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,94,0,0" TextWrapping="Wrap" Text="Connection Timeout" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,115,0,0" TextWrapping="Wrap" Text="Flushing Accuracy" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,136,0,0" TextWrapping="Wrap" Text="Max Flush Interval" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,157,0,0" TextWrapping="Wrap" Text="Message per Request" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,177,0,0" TextWrapping="Wrap" Text="Max Que Size Bytes" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,198,0,0" TextWrapping="Wrap" Text="Log to Sumo Logic" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,219,0,0" TextWrapping="Wrap" Text="Sumo Logic Log level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="348,240,0,0" TextWrapping="Wrap" Text="Settings Type" VerticalAlignment="Top"/>
+        <TextBox x:Name="EventLogLevel" HorizontalAlignment="Left" Margin="126,10,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="fileLogLevel" HorizontalAlignment="Left" Margin="126,30,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="fileNameOverride" HorizontalAlignment="Left" Margin="126,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="isLoggingEnabled" HorizontalAlignment="Left" Margin="126,74,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="isServerSettings" HorizontalAlignment="Left" Margin="126,95,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="logFilePath" HorizontalAlignment="Left" Margin="126,113,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="ignoreCertErrors" HorizontalAlignment="Left" Margin="139,187,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="isConfigured" HorizontalAlignment="Left" Margin="139,207,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="isServerSettingsConnectionSettings" HorizontalAlignment="Left" Margin="139,227,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="password" HorizontalAlignment="Left" Margin="139,247,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="logServerConnectionSettingsType" HorizontalAlignment="Left" Margin="139,268,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="url" HorizontalAlignment="Left" Margin="139,289,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="userName" HorizontalAlignment="Left" Margin="139,310,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="logServerLogLevel" HorizontalAlignment="Left" Margin="139,331,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="logToComplianceLog" HorizontalAlignment="Left" Margin="139,356,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="logToConsole" HorizontalAlignment="Left" Margin="139,376,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="logToConsoleLEvel" HorizontalAlignment="Left" Margin="139,394,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="logToEventLog" HorizontalAlignment="Left" Margin="139,418,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="logToFile" HorizontalAlignment="Left" Margin="139,439,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="logToLogServer" HorizontalAlignment="Left" Margin="139,460,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="maxFilesBeforeRollover" HorizontalAlignment="Left" Margin="318,438,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="maxFileSizeInMB" HorizontalAlignment="Left" Margin="318,459,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="sumoLogicUrl" HorizontalAlignment="Left" Margin="465,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="retryInterval" HorizontalAlignment="Left" Margin="465,73,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="connectionTimeout" HorizontalAlignment="Left" Margin="465,94,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="flushingAccuracy" HorizontalAlignment="Left" Margin="465,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="maxFlushInterval" HorizontalAlignment="Left" Margin="465,136,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="messagePerRequest" HorizontalAlignment="Left" Margin="466,157,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="maxQueSizeBytes" HorizontalAlignment="Left" Margin="466,178,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="logToSumoLogic" HorizontalAlignment="Left" Margin="466,199,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="sumoLogicLogLevel" HorizontalAlignment="Left" Margin="465,220,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="settingsType" HorizontalAlignment="Left" Margin="466,241,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Page>

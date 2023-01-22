@@ -62,8 +62,18 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            //string temp;
+            //var data = (JObject)JsonConvert.DeserializeObject(json);
+            LoggerSettings DeserializedLogger = JsonConvert.DeserializeObject<LoggerSettings>(json);
+
+            EventLogLevel.Text = DeserializedLogger.eventLogLevel.ToString();
+            fileLogLevel.Text = DeserializedLogger.fileLogLevel.ToString();
+            if (DeserializedLogger.fileNameOverride != null) { fileNameOverride.Text = DeserializedLogger.fileNameOverride.ToString(); }
+            else { fileNameOverride.Text = ""; }
+            isLoggingEnabled.IsChecked = DeserializedLogger.isLoggingEnabled;
+            isServerSettings.IsChecked = DeserializedLogger.isServerSettings;
+            logFilePath.Text = DeserializedLogger.logFilePath;
+
         }
     }
 }
