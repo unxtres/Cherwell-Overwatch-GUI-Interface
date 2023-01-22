@@ -90,7 +90,7 @@ namespace CherwellOVerwatch
             maxFilesBeforeRollover.Text = DeserializedLogger.loggerSettings.maxFilesBeforeRollover.ToString();
             maxFileSizeInMB.Text = DeserializedLogger.loggerSettings.maxFileSizeInMB.ToString();
 
-            url.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+            sumoLogicUrl.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.url.ToString();
             retryInterval.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
             connectionTimeout.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
             flushingAccuracy.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
