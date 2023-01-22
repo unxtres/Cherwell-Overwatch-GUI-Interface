@@ -77,6 +77,30 @@ namespace CherwellOVerwatch
             ignoreCertErrors.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
             isConfigured.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.isConfigured;
             isServerSettingsConnectionSettings.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.isServerSettings;
+            password.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.password.ToString();
+            settingsType.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.settingsType.ToString();
+            userName.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.userName.ToString();
+            logServerLogLevel.Text = DeserializedLogger.loggerSettings.logServerLogLevel.ToString();
+            logToComplianceLog.IsChecked = DeserializedLogger.loggerSettings.logToComplianceLog;
+            logToConsole.IsChecked = DeserializedLogger.loggerSettings.logToConsole;
+            logToConsoleLEvel.Text = DeserializedLogger.loggerSettings.logToConsoleLevel.ToString();
+            logToEventLog.IsChecked = DeserializedLogger.loggerSettings.logToEventLog;
+            logToFile.IsChecked = DeserializedLogger.loggerSettings.logToFile;
+            logToLogServer.IsChecked = DeserializedLogger.loggerSettings.logToLogServer;
+            maxFilesBeforeRollover.Text = DeserializedLogger.loggerSettings.maxFilesBeforeRollover.ToString();
+            maxFileSizeInMB.Text = DeserializedLogger.loggerSettings.maxFileSizeInMB.ToString();
+
+            url.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+            retryInterval.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
+            connectionTimeout.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
+            flushingAccuracy.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
+            maxFlushInterval.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
+            messagePerRequest.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
+            maxQueSizeBytes.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
+
+            logToSumoLogic.IsChecked = DeserializedLogger.loggerSettings.logToSumoLogic;
+            sumoLogicLogLevel.Text = DeserializedLogger.loggerSettings.sumoLogicLogLevel.ToString();
+            settingsType.Text = DeserializedLogger.loggerSettings.settingsType.ToString();
         }
     }
 }
