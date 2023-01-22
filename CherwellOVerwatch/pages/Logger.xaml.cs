@@ -64,16 +64,19 @@ namespace CherwellOVerwatch
             }
             //string temp;
             //var data = (JObject)JsonConvert.DeserializeObject(json);
-            LoggerSettings DeserializedLogger = JsonConvert.DeserializeObject<LoggerSettings>(json);
+            ApplicationServer DeserializedLogger = JsonConvert.DeserializeObject<ApplicationServer>(json);
 
-            EventLogLevel.Text = DeserializedLogger.eventLogLevel.ToString();
-            fileLogLevel.Text = DeserializedLogger.fileLogLevel.ToString();
-            if (DeserializedLogger.fileNameOverride != null) { fileNameOverride.Text = DeserializedLogger.fileNameOverride.ToString(); }
+            EventLogLevel.Text = DeserializedLogger.loggerSettings.eventLogLevel.ToString();
+            fileLogLevel.Text = DeserializedLogger.loggerSettings.fileLogLevel.ToString();
+            if (DeserializedLogger.loggerSettings.fileNameOverride != null) { fileNameOverride.Text = DeserializedLogger.loggerSettings.fileNameOverride.ToString(); }
             else { fileNameOverride.Text = ""; }
-            isLoggingEnabled.IsChecked = DeserializedLogger.isLoggingEnabled;
-            isServerSettings.IsChecked = DeserializedLogger.isServerSettings;
-            logFilePath.Text = DeserializedLogger.logFilePath;
+            isLoggingEnabled.IsChecked = DeserializedLogger.loggerSettings.isLoggingEnabled;
+            isServerSettings.IsChecked = DeserializedLogger.loggerSettings.isServerSettings;
+            logFilePath.Text = DeserializedLogger.loggerSettings.logFilePath.ToString();
 
+            ignoreCertErrors.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
+            isConfigured.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.isConfigured;
+            isServerSettingsConnectionSettings.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.isServerSettings;
         }
     }
 }
