@@ -9,7 +9,7 @@
 
     <Grid Margin="0,0,0,-6">
         <Button Content="Connect" HorizontalAlignment="Left" Margin="786,10,0,0" VerticalAlignment="Top" Click="Button_Get_Token" Height="20"/>
-        <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="499,9,0,0" TextWrapping="Wrap" Text="Registration Key" VerticalAlignment="Top" Width="282" Height="20"/>
+        <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="499,9,0,0" TextWrapping="NoWrap" Text="Registration Key" VerticalAlignment="Top" Width="282" Height="20"/>
         <Frame Name="Main" Background="LightGray" Margin="171,35,8,10" Width="695"/>
         <!--<TextBox x:Name="result" HorizontalAlignment="Left" Margin="400,55,0,0" TextWrapping="Wrap" Text="Token" VerticalAlignment="Top" Width="344" Height="58"/>-->
 

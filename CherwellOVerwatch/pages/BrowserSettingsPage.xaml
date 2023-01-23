@@ -38,8 +38,8 @@
         <TextBlock HorizontalAlignment="Left" Margin="361,168,0,0" TextWrapping="Wrap" Text="Enable Insecure Deep Links" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="361,190,0,0" TextWrapping="Wrap" Text="Auto Size Labels" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="361,210,0,0" TextWrapping="Wrap" Text="Auth Log File" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="361,0,0,0" TextWrapping="Wrap" Text="Default Auth. Mode" VerticalAlignment="Center"/>
-        <TextBox x:Name="TrebuchetDataSource" TextWrapping="NoWrap" HorizontalAlignment="Left" Margin="206,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,232,0,0" TextWrapping="Wrap" Text="Default Auth. Mode" VerticalAlignment="Top"/>
+        <TextBox x:Name="TrebuchetDataSource" HorizontalAlignment="Left" Margin="206,64,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="TestMode" HorizontalAlignment="Left" Margin="206,86,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TabContentHEight" HorizontalAlignment="Left" Margin="206,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="DisableCertificateValidation" HorizontalAlignment="Left" Margin="206,128,0,0" VerticalAlignment="Top"/>
@@ -47,7 +47,7 @@
         <TextBox x:Name="InLineBrowserDisplayExtensions" HorizontalAlignment="Left" Margin="206,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="LookupAlwaysEnabled" HorizontalAlignment="Left" Margin="206,191,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="QueryRequestLimit" HorizontalAlignment="Left" Margin="206,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="UseCdn" HorizontalAlignment="Left" Margin="206,0,0,0" VerticalAlignment="Center"/>
+        <CheckBox x:Name="UseCdn" HorizontalAlignment="Left" Margin="206,235,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="UseHttpCompression" HorizontalAlignment="Left" Margin="206,254,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="LoadAllFilesIndividually" HorizontalAlignment="Left" Margin="206,275,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="EnableSessionSerialization" HorizontalAlignment="Left" Margin="206,296,0,0" VerticalAlignment="Top"/>
