@@ -39,31 +39,31 @@
         <TextBlock HorizontalAlignment="Left" Margin="361,190,0,0" TextWrapping="Wrap" Text="Auto Size Labels" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="361,210,0,0" TextWrapping="Wrap" Text="Auth Log File" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="361,0,0,0" TextWrapping="Wrap" Text="Default Auth. Mode" VerticalAlignment="Center"/>
-        <TextBox x:Name="TrebuchetDataSource" HorizontalAlignment="Left" Margin="206,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="TestMode" Margin="206,86,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TrebuchetDataSource" TextWrapping="NoWrap" HorizontalAlignment="Left" Margin="206,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="TestMode" HorizontalAlignment="Left" Margin="206,86,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="TabContentHEight" HorizontalAlignment="Left" Margin="206,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="DisableCertificateValidation" Margin="206,128,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="AllowUnsafeLabels" Margin="206,149,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DisableCertificateValidation" HorizontalAlignment="Left" Margin="206,128,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AllowUnsafeLabels" HorizontalAlignment="Left" Margin="206,149,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="InLineBrowserDisplayExtensions" HorizontalAlignment="Left" Margin="206,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="LookupAlwaysEnabled" Margin="206,191,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="LookupAlwaysEnabled" HorizontalAlignment="Left" Margin="206,191,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="QueryRequestLimit" HorizontalAlignment="Left" Margin="206,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="UseCdn" Margin="206,0,0,0" VerticalAlignment="Center"/>
-        <CheckBox x:Name="UseHttpCompression" Margin="206,254,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="LoadAllFilesIndividually" Margin="206,275,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="EnableSessionSerialization" Margin="206,296,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="AlwaysLoadKeys" Margin="206,317,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="UseCdn" HorizontalAlignment="Left" Margin="206,0,0,0" VerticalAlignment="Center"/>
+        <CheckBox x:Name="UseHttpCompression" HorizontalAlignment="Left" Margin="206,254,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="LoadAllFilesIndividually" HorizontalAlignment="Left" Margin="206,275,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="EnableSessionSerialization" HorizontalAlignment="Left" Margin="206,296,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AlwaysLoadKeys" HorizontalAlignment="Left" Margin="206,317,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="UiInteractionTimeoutInSeconds" HorizontalAlignment="Left" Margin="206,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="AllowScriptsInRecords" Margin="206,359,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="DisableAnchoring" Margin="206,380,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="DisableSplitters" Margin="206,401,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="UseLegacyCompleteResponse" Margin="206,422,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AllowScriptsInRecords" HorizontalAlignment="Left" Margin="206,359,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DisableAnchoring" HorizontalAlignment="Left" Margin="206,380,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DisableSplitters" HorizontalAlignment="Left" Margin="206,401,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="UseLegacyCompleteResponse" HorizontalAlignment="Left" Margin="206,422,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="SignalRConnectionTimeoutInSeconds" HorizontalAlignment="Left" Margin="556,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="SignalRDisconnectTimeoutInSeconds" HorizontalAlignment="Left" Margin="556,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="SignalRKeepAliveInSecconds" HorizontalAlignment="Left" Margin="556,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="ScanditLicenseKey" HorizontalAlignment="Left" Margin="556,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="RedirectHttpToHttps" Margin="556,150,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="EnableInsecureDeepLinks" Margin="556,170,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="AutoSizeLabels" Margin="556,191,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="RedirectHttpToHttps" HorizontalAlignment="Left" Margin="556,150,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="EnableInsecureDeepLinks" HorizontalAlignment="Left" Margin="556,170,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AutoSizeLabels" HorizontalAlignment="Left" Margin="556,191,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="AuthLogFile" HorizontalAlignment="Left" Margin="556,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="DefaultAuthMode" HorizontalAlignment="Left" Margin="556,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
