@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Text.Json.Nodes;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,9 +24,6 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class BrowserSettings : Page
     {
         public string json;
@@ -38,7 +36,7 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
+                string url = "http://localhost:5000/api/settings/BrowserSettings";
                 //var request = new HttpRequestMessage
                 //{
                 //    Method = HttpMethod.Get,
@@ -62,8 +60,38 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            //string temp;
+            //var data = (JObject)JsonConvert.DeserializeObject(json);
+
+            Browser_Settings DeserializedBrowserSettings = JsonConvert.DeserializeObject<Browser_Settings>(json);
+
+            TrebuchetDataSource.Text = DeserializedBrowserSettings.trebuchetDataSource.ToString();
+            TestMode.IsChecked = DeserializedBrowserSettings.testMode;
+            TabContentHEight.Text = DeserializedBrowserSettings.tabContentHeight.ToString();
+            DisableCertificateValidation.IsChecked = DeserializedBrowserSettings.disableCertificateValidation;
+            AllowUnsafeLabels.IsChecked= DeserializedBrowserSettings.allowUnsafeLabels;
+            InLineBrowserDisplayExtensions.Text = DeserializedBrowserSettings.inlineBrowserDisplayExtensions.ToString();
+            LookupAlwaysEnabled.IsChecked = DeserializedBrowserSettings.lookupAlwaysEnabled;
+            QueryRequestLimit.Text = DeserializedBrowserSettings.queryRequestLimit.ToString();
+            UseCdn.IsChecked = DeserializedBrowserSettings.useCdn;
+            UseHttpCompression.IsChecked = DeserializedBrowserSettings.useHttpCompression;
+            LoadAllFilesIndividually.IsChecked = DeserializedBrowserSettings.loadAllFilesIndividually;
+            EnableSessionSerialization.IsChecked= DeserializedBrowserSettings.enableSessionSerialization;
+            AlwaysLoadKeys.IsChecked = DeserializedBrowserSettings.alwaysLoadKeys;
+            UiInteractionTimeoutInSeconds.Text = DeserializedBrowserSettings.uiInteractionTimeoutInSeconds.ToString();
+            AllowScriptsInRecords.IsChecked = DeserializedBrowserSettings.allowScriptsInReports;
+            DisableAnchoring.IsChecked = DeserializedBrowserSettings.disableAnchoring;
+            DisableSplitters.IsChecked= DeserializedBrowserSettings.disableSplitters;
+            UseLegacyCompleteResponse.IsChecked = DeserializedBrowserSettings.useLegacyCompleteResponse;
+            SignalRConnectionTimeoutInSeconds.Text = DeserializedBrowserSettings.signalRConnectionTimeoutInSeconds.ToString();
+            SignalRDisconnectTimeoutInSeconds.Text = DeserializedBrowserSettings.signalRDisconnectTimeoutInSeconds.ToString();
+            SignalRKeepAliveInSecconds.Text = DeserializedBrowserSettings.signalRKeepAliveInSeconds.ToString();
+            ScanditLicenseKey.Text = DeserializedBrowserSettings.scanditLicenseKey.ToString();
+            RedirectHttpToHttps.IsChecked = DeserializedBrowserSettings.redirectHttpToHttps;
+            EnableInsecureDeepLinks.IsChecked = DeserializedBrowserSettings.enableInsecureDeepLinks;
+            AutoSizeLabels.IsChecked = DeserializedBrowserSettings.autoSizeLabels;
+            AuthLogFile.Text= DeserializedBrowserSettings.authLogFile.ToString();
+            DefaultAuthMode.Text = DeserializedBrowserSettings.defaultAuthMode.ToString();
         }
     }
 }

@@ -16,20 +16,21 @@
         <!--<TextBox x:Name="settings" HorizontalAlignment="Left" Margin="115,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" Height="234"/>-->
 
         <Button Content="App Server" HorizontalAlignment="Left" Margin="25,30,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings" Width="125"/>
-        <Button Content="Logger Settings" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" Width="125" Click="Button_Logger"/>
+        <Button Content="Server Log Settings" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" Width="125" Click="Button_Logger"/>
         <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" Width="125" Click="Button_AutoDeploy"/>
         <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top" Width="125" Click="Button_AutoUpdate"/>
         <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="CSM Service" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="Message Que Settings" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,305,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,330,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,355,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="Advanced" HorizontalAlignment="Left" Margin="25,450,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Browser Log Settings" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="CSM Service" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Message Que Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,305,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,330,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,355,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,380,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Advanced" HorizontalAlignment="Left" Margin="25,440,0,0" VerticalAlignment="Top" Width="125"/>
 
 
     </Grid>

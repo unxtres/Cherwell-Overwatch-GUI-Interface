@@ -11,5 +11,61 @@
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="BROWSER SETTINGS" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,64,0,0" TextWrapping="Wrap" Text="Trebuchet Data Source" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,85,0,0" TextWrapping="Wrap" Text="Test Mode" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,106,0,0" TextWrapping="Wrap" Text="Tab Content Height" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,127,0,0" TextWrapping="Wrap" Text="Disable Cert. Validation" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,148,0,0" TextWrapping="Wrap" Text="Allow Unsafe Labels" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,169,0,0" TextWrapping="Wrap" Text="In Line Browser Display Extensions" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,190,0,0" TextWrapping="Wrap" Text="Lookup Always Enabled" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,211,0,0" TextWrapping="Wrap" Text="Query Request Limit" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,232,0,0" TextWrapping="Wrap" Text="Use Cdn" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,253,0,0" TextWrapping="Wrap" Text="Use Http Compression" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,274,0,0" TextWrapping="Wrap" Text="Load All Files Individually" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,295,0,0" TextWrapping="Wrap" Text="Enable Session Serialization" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,316,0,0" TextWrapping="Wrap" Text="Always Load Keys" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,337,0,0" TextWrapping="Wrap" Text="UI Interaction Timeout in Secconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,358,0,0" TextWrapping="Wrap" Text="Allow Scripts in Reports" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,379,0,0" TextWrapping="Wrap" Text="Disable Anchoring" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,400,0,0" TextWrapping="Wrap" Text="Disable Splitters" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="12,421,0,0" TextWrapping="Wrap" Text="Use Legacy Complete Response" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,64,0,0" TextWrapping="Wrap" Text="Signal R Connection Timeout in sec." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,85,0,0" TextWrapping="Wrap" Text="Signal R Disconnect Timeout in sec." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,106,0,0" TextWrapping="Wrap" Text="Signal R Keep Alive in sec." VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="362,127,0,0" TextWrapping="Wrap" Text="Scandit License Key" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,148,0,0" TextWrapping="Wrap" Text="Redirect Http to Https" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,168,0,0" TextWrapping="Wrap" Text="Enable Insecure Deep Links" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,190,0,0" TextWrapping="Wrap" Text="Auto Size Labels" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,210,0,0" TextWrapping="Wrap" Text="Auth Log File" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="361,0,0,0" TextWrapping="Wrap" Text="Default Auth. Mode" VerticalAlignment="Center"/>
+        <TextBox x:Name="TrebuchetDataSource" HorizontalAlignment="Left" Margin="206,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="TestMode" Margin="206,86,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TabContentHEight" HorizontalAlignment="Left" Margin="206,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="DisableCertificateValidation" Margin="206,128,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AllowUnsafeLabels" Margin="206,149,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="InLineBrowserDisplayExtensions" HorizontalAlignment="Left" Margin="206,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="LookupAlwaysEnabled" Margin="206,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="QueryRequestLimit" HorizontalAlignment="Left" Margin="206,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="UseCdn" Margin="206,0,0,0" VerticalAlignment="Center"/>
+        <CheckBox x:Name="UseHttpCompression" Margin="206,254,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="LoadAllFilesIndividually" Margin="206,275,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="EnableSessionSerialization" Margin="206,296,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AlwaysLoadKeys" Margin="206,317,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="UiInteractionTimeoutInSeconds" HorizontalAlignment="Left" Margin="206,337,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="AllowScriptsInRecords" Margin="206,359,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DisableAnchoring" Margin="206,380,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DisableSplitters" Margin="206,401,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="UseLegacyCompleteResponse" Margin="206,422,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SignalRConnectionTimeoutInSeconds" HorizontalAlignment="Left" Margin="556,64,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SignalRDisconnectTimeoutInSeconds" HorizontalAlignment="Left" Margin="556,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="SignalRKeepAliveInSecconds" HorizontalAlignment="Left" Margin="556,106,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="ScanditLicenseKey" HorizontalAlignment="Left" Margin="556,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="RedirectHttpToHttps" Margin="556,150,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="EnableInsecureDeepLinks" Margin="556,170,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="AutoSizeLabels" Margin="556,191,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="AuthLogFile" HorizontalAlignment="Left" Margin="556,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="DefaultAuthMode" HorizontalAlignment="Left" Margin="556,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Page>

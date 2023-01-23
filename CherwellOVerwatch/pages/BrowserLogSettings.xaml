@@ -1,0 +1,34 @@
+﻿<Page x:Class="CherwellOVerwatch.BrowserLogSettings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CherwellOVerwatch"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="695"
+      Title="BrowserLogSettings">
+
+    <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,15,0,0" TextWrapping="Wrap" Text="Logger Settings" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,44,0,0" TextWrapping="Wrap" Text="Event Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,65,0,0" TextWrapping="Wrap" Text="File Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,86,0,0" TextWrapping="Wrap" Text="Filename Override" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,107,0,0" TextWrapping="Wrap" Text="Is Logging Enabled" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,128,0,0" TextWrapping="Wrap" Text="Is Server Settings" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,149,0,0" TextWrapping="Wrap" Text="Log File Path" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,170,0,0" TextWrapping="Wrap" Text="Log Server Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,191,0,0" TextWrapping="Wrap" Text="Log to Clompliance Log" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,212,0,0" TextWrapping="Wrap" Text="Log to Console" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,0,0,0" TextWrapping="Wrap" Text="Log to Console level" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,254,0,0" TextWrapping="Wrap" Text="Log to Event Log" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,275,0,0" TextWrapping="Wrap" Text="Log to File" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,296,0,0" TextWrapping="Wrap" Text="Log to Log Server" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,317,0,0" TextWrapping="Wrap" Text="Max Files Before Rollover" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,338,0,0" TextWrapping="Wrap" Text="Max File size in MB" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,359,0,0" TextWrapping="Wrap" Text="Log to Sumo Logic" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,380,0,0" TextWrapping="Wrap" Text="Sumo Logic Log Level" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="23,401,0,0" TextWrapping="Wrap" Text="Settings Type" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
