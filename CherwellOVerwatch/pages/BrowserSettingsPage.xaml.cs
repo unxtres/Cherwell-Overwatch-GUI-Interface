@@ -24,10 +24,10 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    public partial class BrowserSettings : Page
+    public partial class BrowserSettingsPage : Page
     {
         public string json;
-        public BrowserSettings()
+        public BrowserSettingsPage()
         {
             InitializeComponent();
         }

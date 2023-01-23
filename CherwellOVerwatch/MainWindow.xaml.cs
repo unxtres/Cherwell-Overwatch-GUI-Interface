@@ -100,5 +100,10 @@ namespace CherwellOVerwatch
         {
             Main.Content = new AutoUpdateService();
         }
+
+        private void Button_BrowserSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new BrowserSettingsPage();
+        }
     }
 }

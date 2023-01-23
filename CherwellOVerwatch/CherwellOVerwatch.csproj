@@ -18,7 +18,7 @@
     <Compile Update="pages\BrowserLogSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="pages\BrowserSettings.xaml.cs">
+    <Compile Update="pages\BrowserSettingsPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\ConnectionDefinitions.xaml.cs">
