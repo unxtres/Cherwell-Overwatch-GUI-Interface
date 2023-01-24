@@ -31,7 +31,6 @@ namespace CherwellOVerwatch
         public BrowserSettingsPage()
         {
             InitializeComponent();
-            Button_Click();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
