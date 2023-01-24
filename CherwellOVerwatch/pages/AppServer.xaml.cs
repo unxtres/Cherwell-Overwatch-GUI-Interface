@@ -29,6 +29,7 @@ namespace CherwellOVerwatch
     public partial class AppServer : Page
     {
         public string json;
+        public string url = "http://localhost:5000/api/settings/AppServerSettings";
         public AppServer()
         {
             InitializeComponent();
@@ -38,7 +39,6 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
                 //var request = new HttpRequestMessage
                 //{
                 //    Method = HttpMethod.Get,
@@ -128,6 +128,28 @@ namespace CherwellOVerwatch
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpRequest.Method = "POST";
+
+            httpRequest.Accept = "application/json";
+            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            httpRequest.ContentType = "application/json";
+
+            var data = @"{
+	""port"": 88, ""publish"": true} ";
+
+            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+            {
+                streamWriter.Write(data);
+            }
+
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+            }
+
+            save_status.Text = httpResponse.StatusCode.ToString();
 
         }
     }
