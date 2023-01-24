@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +30,7 @@ namespace CherwellOVerwatch
     public partial class BrowserLogSettings : Page
     {
         public string json;
+        public string url = "http://localhost:5000/api/settings/BrowserSettings";
         public BrowserLogSettings()
         {
             InitializeComponent();
@@ -38,7 +40,6 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
                 //var request = new HttpRequestMessage
                 //{
                 //    Method = HttpMethod.Get,
@@ -62,8 +63,51 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            //string temp;
+            //var data = (JObject)JsonConvert.DeserializeObject(json);
+
+            Browser_Settings DeserializedBrowserSettings = JsonConvert.DeserializeObject<Browser_Settings>(json);
+            
+            eventLogLevel.Text = DeserializedBrowserSettings.loggerSettings.eventLogLevel.ToString();
+            fileLogLevel.Text = DeserializedBrowserSettings.loggerSettings.fileLogLevel.ToString();
+            filenameOverride.Text = DeserializedBrowserSettings.loggerSettings.fileNameOverride.ToString();
+            isLoggingEnabled.IsChecked = DeserializedBrowserSettings.loggerSettings.isLoggingEnabled;
+            isServerSettings.IsChecked = DeserializedBrowserSettings.loggerSettings.isServerSettings;
+            logFilePath.Text = DeserializedBrowserSettings.loggerSettings.logFilePath.ToString();
+            logServerLogLevel.Text = DeserializedBrowserSettings.loggerSettings.logServerLogLevel.ToString();
+            logToComplianceLog.IsChecked = DeserializedBrowserSettings.loggerSettings.logToComplianceLog;
+            logToConsole.IsChecked = DeserializedBrowserSettings.loggerSettings.logToConsole;
+            logToConsoleLevel.Text = DeserializedBrowserSettings.loggerSettings.logToConsoleLevel.ToString();
+            LogToEventLog.IsChecked = DeserializedBrowserSettings.loggerSettings.logToEventLog;
+            logToFile.IsChecked = DeserializedBrowserSettings.loggerSettings.logToFile;
+            logToLogServer.IsChecked = DeserializedBrowserSettings.loggerSettings.logToLogServer;
+            maxFilesBeforeRollover.Text = DeserializedBrowserSettings.loggerSettings.maxFilesBeforeRollover.ToString();
+            maxFileSizeInMB.Text = DeserializedBrowserSettings.loggerSettings.maxFileSizeInMB.ToString();
+            logToSumoLogic.IsChecked = DeserializedBrowserSettings.loggerSettings.logToSumoLogic;
+            sumoLogicLogLevel.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicLogLevel.ToString();
+            settingsType.Text = DeserializedBrowserSettings.loggerSettings.settingsType.ToString();
+
+            //LOG SERVER CONNECTION SETTINGS
+
+            ignoreCertErrors.IsChecked = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
+            isConfigured.IsChecked = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.isConfigured;
+            isServerSettingsConnectionSettings.IsChecked = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.isServerSettings;
+            password.Text = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.password.ToString();
+            settingsTypeConnection.Text = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.settingsType.ToString();
+            urlLogServerConnection.Text = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.url.ToString();
+            userName.Text = DeserializedBrowserSettings.loggerSettings.logServerConnectionSettings.userName.ToString();
+
+            //SUMO LOGIC CONNECTION SETTINGS
+
+            urlSumoLogic.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+            retryInterval.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
+            connectionTimeout.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
+            flushingAccuracy.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
+            maxFlushInterval.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
+            messagePerRequest.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
+            maxQueueSizeBytes.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
+
+
         }
     }
 }

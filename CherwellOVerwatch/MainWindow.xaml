@@ -20,9 +20,8 @@
         <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" Width="125" Click="Button_AutoDeploy"/>
         <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top" Width="125" Click="Button_AutoUpdate"/>
         <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="125" Click="Button_BrowserSettings"/>
-        <Button Content="Browser Log Settings" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="Browser Log Settings" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="125" Click="Button_BrowserLogSettings"/>
         <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="125"/>
-        <Button Content="CSM Service" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="Message Que Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="125"/>
