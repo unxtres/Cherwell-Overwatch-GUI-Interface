@@ -27,6 +27,7 @@ namespace CherwellOVerwatch
     public partial class BrowserSettingsPage : Page
     {
         public string json;
+        public string url = "http://localhost:5000/api/settings/BrowserSettings";
         public BrowserSettingsPage()
         {
             InitializeComponent();
@@ -38,7 +39,6 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/BrowserSettings";
                 //var request = new HttpRequestMessage
                 //{
                 //    Method = HttpMethod.Get,

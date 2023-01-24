@@ -34,7 +34,7 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -124,6 +124,11 @@ namespace CherwellOVerwatch
             certificateSubject.Text = data["certificateSubject"].Value<string>();
             certificateThumbprint.Text = data["certificateThumbprint"].Value<string>();
             certificateValidationModeForAutoClient.Text = data["certificateValidationModeForAutoClient"].Value<string>();
+        }
+
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -100,7 +100,7 @@
         <TextBox x:Name="recoveryFilePath" HorizontalAlignment="Left" Margin="206,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
         <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="206,358,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
         <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="206,342,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="142" Height="16"/>
-        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="LoadButton_Click"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="SaveButton_Click"/>
     </Grid>
 </Page>
