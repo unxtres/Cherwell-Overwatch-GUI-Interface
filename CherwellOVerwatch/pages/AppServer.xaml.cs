@@ -23,48 +23,19 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class AppServer : Page
     {
-        public string json;
         public string url = "http://localhost:5000/api/settings/AppServerSettings";
         public AppServer()
         {
             InitializeComponent();
         }
 
-        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Load(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
-            //    //var request = new HttpRequestMessage
-            //    //{
-            //    //    Method = HttpMethod.Get,
-            //    //    RequestUri = new Uri(url),
-            //    //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-            //    //    Headers = new HttpRequestHeaders()
-            //    //};
-            //    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            //    httpRequest.Accept = "application/json";
-            //    httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-            //    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            //    {
-            //        var result = streamReader.ReadToEnd();
-            //        json = result;
-            //    }
-            //}
-            //catch
-            //{
-            //    MessageBox.Show("Not Connected");
-            //    throw;
-            //}
-
-            LoadSettings loaderek = new LoadSettings();
-            var data = (JObject)JsonConvert.DeserializeObject(loaderek.GetResult(url));
+            var data = (JObject)JsonConvert.DeserializeObject(loader.GetResult(url));
 
             disableCompression.IsChecked = data["disableCompression"].Value<bool>();
             installed.IsChecked = data["installed"].Value<bool>();
