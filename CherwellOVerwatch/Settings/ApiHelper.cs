@@ -41,7 +41,7 @@ namespace CherwellOVerwatch.Settings
     {
         public static string Result;
 
-        public static void GetResult(string url)
+        public static string GetResult(string url)
         {
             try
             {
@@ -60,6 +60,7 @@ namespace CherwellOVerwatch.Settings
                 MessageBox.Show("Not Connected");
                 throw;
             }
+            return Result;
         }
     }
 }

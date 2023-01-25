@@ -62,7 +62,7 @@ namespace CherwellOVerwatch
             //    MessageBox.Show("Not Connected");
             //    throw;
             //}
-
+            LoadSettings loadset = new LoadSettings();
             LoadSettings.GetResult(url);
 
             var data = (JObject)JsonConvert.DeserializeObject(LoadSettings.Result);
