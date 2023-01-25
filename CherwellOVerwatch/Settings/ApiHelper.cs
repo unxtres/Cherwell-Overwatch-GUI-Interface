@@ -37,11 +37,11 @@ namespace CherwellOVerwatch.Settings
         public static string OWToken;
     }
 
-    public static class LoadSettings
+    public class LoadSettings
     {
-        public static string Result;
+        string Result;
 
-        public static string GetResult(string url)
+        public string GetResult(string url)
         {
             try
             {
