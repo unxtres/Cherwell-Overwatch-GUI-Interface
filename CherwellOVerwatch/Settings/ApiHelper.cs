@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CherwellOVerwatch.Settings
 {
@@ -32,5 +35,31 @@ namespace CherwellOVerwatch.Settings
     public static class TokenInterface
     {
         public static string OWToken;
+    }
+
+    public static class LoadSettings
+    {
+        public static string Result;
+
+        public static void GetResult(string url)
+        {
+            try
+            {
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Accept = "application/json";
+                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    Result = streamReader.ReadToEnd();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Not Connected");
+                throw;
+            }
+        }
     }
 }

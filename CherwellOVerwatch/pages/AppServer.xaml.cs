@@ -37,32 +37,35 @@ namespace CherwellOVerwatch
 
         private void LoadButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            //try
+            //{
+            //    //var request = new HttpRequestMessage
+            //    //{
+            //    //    Method = HttpMethod.Get,
+            //    //    RequestUri = new Uri(url),
+            //    //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
+            //    //    Headers = new HttpRequestHeaders()
+            //    //};
+            //    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            //    httpRequest.Accept = "application/json";
+            //    httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            //    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            //    {
+            //        var result = streamReader.ReadToEnd();
+            //        json = result;
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Not Connected");
+            //    throw;
+            //}
+
+            LoadSettings.GetResult(url);
+
+            var data = (JObject)JsonConvert.DeserializeObject(LoadSettings.Result);
 
             disableCompression.IsChecked = data["disableCompression"].Value<bool>();
             installed.IsChecked = data["installed"].Value<bool>();
