@@ -110,5 +110,10 @@ namespace CherwellOVerwatch
         {
             Main.Content = new BrowserLogSettings();
         }
+
+        private void Button_ConnectionDefSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new BrowserLogSettings();
+        }
     }
 }
