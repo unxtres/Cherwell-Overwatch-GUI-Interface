@@ -11,23 +11,23 @@
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
-        <TextBox x:Name ="adminConn" HorizontalAlignment="Left" Margin="185,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="appServerHostMode" HorizontalAlignment="Left" Margin="185,68,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="certificationValidationMode" HorizontalAlignment="Left" Margin="185,89,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="connectionRemotingType" HorizontalAlignment="Left" Margin="185,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="createdDateTime" HorizontalAlignment="Left" Margin="185,131,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="dbConn" HorizontalAlignment="Left" Margin="185,152,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="dbOwner" HorizontalAlignment="Left" Margin="185,173,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="endCharForNameWithSpace" HorizontalAlignment="Left" Margin="185,194,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="engine" HorizontalAlignment="Left" Margin="185,215,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="maxTransactionLogSizeInMB" HorizontalAlignment="Left" Margin="185,236,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="name" HorizontalAlignment="Left" Margin="185,257,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="recoveryMode" HorizontalAlignment="Left" Margin="185,278,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="remotingSecurityMode" HorizontalAlignment="Left" Margin="185,299,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="source" HorizontalAlignment="Left" Margin="185,320,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="startCharForNameWithSpace" HorizontalAlignment="Left" Margin="185,341,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="transactionLogGrowth" HorizontalAlignment="Left" Margin="185,362,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="urltext" HorizontalAlignment="Left" Margin="185,383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="adminConn" HorizontalAlignment="Left" Margin="185,47,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="appServerHostMode" HorizontalAlignment="Left" Margin="185,68,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="certificationValidationMode" HorizontalAlignment="Left" Margin="185,89,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="connectionRemotingType" HorizontalAlignment="Left" Margin="185,110,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="createdDateTime" HorizontalAlignment="Left" Margin="185,131,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="dbConn" HorizontalAlignment="Left" Margin="185,152,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="dbOwner" HorizontalAlignment="Left" Margin="185,173,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="endCharForNameWithSpace" HorizontalAlignment="Left" Margin="185,194,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="engine" HorizontalAlignment="Left" Margin="185,215,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="maxTransactionLogSizeInMB" HorizontalAlignment="Left" Margin="185,236,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="name" HorizontalAlignment="Left" Margin="185,257,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="recoveryMode" HorizontalAlignment="Left" Margin="185,278,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="remotingSecurityMode" HorizontalAlignment="Left" Margin="185,299,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="source" HorizontalAlignment="Left" Margin="185,320,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="startCharForNameWithSpace" HorizontalAlignment="Left" Margin="185,341,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="transactionLogGrowth" HorizontalAlignment="Left" Margin="185,362,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="urltext" HorizontalAlignment="Left" Margin="185,383,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="NoWrap" Text="Admin Connection" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="App Server Host Mode" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,91,0,0" TextWrapping="Wrap" Text="Certification Validation Mode" VerticalAlignment="Top"/>
