@@ -50,15 +50,15 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,456,0,0" TextWrapping="Wrap" Text="Treats Empty String As Null" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="245,414,0,0" TextWrapping="Wrap" Text="Use Rest" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="245,435,0,0" TextWrapping="Wrap" Text="Use Soap" VerticalAlignment="Top"/>
-        <CheckBox x:Name="enableTransactionLogAutogrowth" Margin="209,416,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="enableTransactionLogAutogrowth" HorizontalAlignment="Left" Margin="209,416,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="transactionLogGrowthIsPercentage" HorizontalAlignment="Left" Margin="209,436,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="treatsEmptyStringAsNull" HorizontalAlignment="Left" Margin="209,456,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="useRest" HorizontalAlignment="Left" Margin="314,416,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="useSoap" HorizontalAlignment="Left" Margin="314,436,0,0" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="CONNECTION DEFINITIONS" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock x:Name="numberOfConnections" HorizontalAlignment="Left" Margin="368,128,0,0" TextWrapping="NoWrap" Text="Number of connections" VerticalAlignment="Top"/>
-        <Button x:Name="buttonPrevious" Content="Previous" HorizontalAlignment="Left" Margin="368,174,0,0" VerticalAlignment="Top" Height="17" Width="62" Click="Button_previous"/>
+        <Button x:Name="buttonPrevious" Content="Previous" HorizontalAlignment="Left" Margin="368,173,0,0" VerticalAlignment="Top" Height="18" Width="62" Click="Button_previous"/>
         <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" Margin="485,174,0,0" VerticalAlignment="Top" Height="17" Width="62" Click="Button_next"/>
-        <TextBlock x:Name="currCon" HorizontalAlignment="Left" Margin="437,175,0,0" TextWrapping="NoWrap" Text="curr.con" VerticalAlignment="Top"/>
+        <TextBlock x:Name="currCon" HorizontalAlignment="Left" Margin="442,175,0,0" TextWrapping="NoWrap" Text="curr.con" VerticalAlignment="Top"/>
     </Grid>
 </Page>
