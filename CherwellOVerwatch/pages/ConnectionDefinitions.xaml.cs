@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -29,6 +30,7 @@ namespace CherwellOVerwatch
     public partial class ConnectionDefinitions : Page
     {
         public string json;
+        public string url = "http://localhost:5000/api/settings/ConnectionDefSettings";
         public ConnectionDefinitions()
         {
             InitializeComponent();
@@ -36,34 +38,9 @@ namespace CherwellOVerwatch
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            var data = (JObject)JsonConvert.DeserializeObject(loader.GetResult(url));
         }
     }
 }

@@ -35,35 +35,37 @@ namespace CherwellOVerwatch
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            //try
+            //{
+            //    //var request = new HttpRequestMessage
+            //    //{
+            //    //    Method = HttpMethod.Get,
+            //    //    RequestUri = new Uri(url),
+            //    //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
+            //    //    Headers = new HttpRequestHeaders()
+            //    //};
+            //    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            //    httpRequest.Accept = "application/json";
+            //    httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
+            //    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            //    {
+            //        var result = streamReader.ReadToEnd();
+            //        json = result;
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Not Connected");
+            //    throw;
+            //}
             //string temp;
             //var data = (JObject)JsonConvert.DeserializeObject(json);
 
-            Browser_Settings DeserializedBrowserSettings = JsonConvert.DeserializeObject<Browser_Settings>(json);
+            LoadSettings loader = new LoadSettings();
+
+            Browser_Settings DeserializedBrowserSettings = JsonConvert.DeserializeObject<Browser_Settings>(loader.GetResult(url));
 
             TrebuchetDataSource.Text = DeserializedBrowserSettings.trebuchetDataSource.ToString();
             TestMode.IsChecked = DeserializedBrowserSettings.testMode;
