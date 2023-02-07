@@ -40,7 +40,9 @@ namespace CherwellOVerwatch
         {
             LoadSettings loader = new LoadSettings();
 
-            var data = (JObject)JsonConvert.DeserializeObject(loader.GetResult(url));
+            Connection_Definitions DeserializedConDefSettings = JsonConvert.DeserializeObject<Connection_Definitions>(loader.GetResult(url));
+            test.Text = DeserializedConDefSettings.connectionDefs.Count.ToString();
+            test2.Text = DeserializedConDefSettings.connectionDefs[1].adminConn.ToString();
         }
     }
 }

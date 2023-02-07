@@ -32,7 +32,7 @@ namespace CherwellOVerwatch.Settings
         public bool useSoap { get; set; }
     }
 
-    public class ConnectionDefinitions
+    public class Connection_Definitions
     {
         public List<ConnectionDef> connectionDefs { get; set; }
     }
