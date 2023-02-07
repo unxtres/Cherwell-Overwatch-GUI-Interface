@@ -38,7 +38,6 @@ namespace CherwellOVerwatch
             InitializeComponent();
             buttonPrevious.IsEnabled = false;
             buttonNext.IsEnabled = false;
-            loadData(Current_Connection);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -62,8 +61,9 @@ namespace CherwellOVerwatch
             {
                 Current_Connection++;
                 loadData(Current_Connection);
-                currCon.Text = (Current_Connection).ToString() + "/" + Number_of_Connections.ToString();
+                currCon.Text = (Current_Connection+1).ToString() + "/" + Number_of_Connections.ToString();
             }
+            if (Current_Connection == Number_of_Connections-1) { buttonNext.IsEnabled = false; }
         }
 
         private void loadData(int i)
