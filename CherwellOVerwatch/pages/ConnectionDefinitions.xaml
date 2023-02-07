@@ -27,7 +27,7 @@
         <TextBox x:Name ="source" HorizontalAlignment="Left" Margin="185,320,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name ="startCharForNameWithSpace" HorizontalAlignment="Left" Margin="185,341,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name ="transactionLogGrowth" HorizontalAlignment="Left" Margin="185,362,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="url" HorizontalAlignment="Left" Margin="185,383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="urltext" HorizontalAlignment="Left" Margin="185,383,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="NoWrap" Text="Admin Connection" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,70,0,0" TextWrapping="Wrap" Text="App Server Host Mode" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,91,0,0" TextWrapping="Wrap" Text="Certification Validation Mode" VerticalAlignment="Top"/>

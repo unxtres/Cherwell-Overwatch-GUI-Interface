@@ -47,7 +47,6 @@ namespace CherwellOVerwatch
             Connection_Definitions DeserializedConDefSettings = JsonConvert.DeserializeObject<Connection_Definitions>(loader.GetResult(url));
             Number_of_Connections = DeserializedConDefSettings.connectionDefs.Count;
 
-            test2.Text = DeserializedConDefSettings.connectionDefs[1].adminConn.ToString();
             if (Number_of_Connections == 1)
             {
                 numberOfConnections.Text = "1 Connection Found";
