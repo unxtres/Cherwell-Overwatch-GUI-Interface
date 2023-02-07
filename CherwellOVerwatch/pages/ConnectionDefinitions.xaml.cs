@@ -38,9 +38,35 @@ namespace CherwellOVerwatch
             InitializeComponent();
             buttonPrevious.IsEnabled = false;
             buttonNext.IsEnabled = false;
+            loadData(Current_Connection);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            loadData(Current_Connection);
+        }
+
+        private void Button_previous(object sender, RoutedEventArgs e)
+        {
+            if (Current_Connection > 0)
+            {
+                Current_Connection--;
+                loadData(Current_Connection);
+                currCon.Text = (Current_Connection + 1).ToString() + "/" + Number_of_Connections.ToString();
+            }
+        }
+
+        private void Button_next(object sender, RoutedEventArgs e)
+        {
+            if (Current_Connection >= 0 && Current_Connection<=(Number_of_Connections-1))
+            {
+                Current_Connection++;
+                loadData(Current_Connection);
+                currCon.Text = (Current_Connection).ToString() + "/" + Number_of_Connections.ToString();
+            }
+        }
+
+        private void loadData(int i)
         {
             LoadSettings loader = new LoadSettings();
 
@@ -52,31 +78,35 @@ namespace CherwellOVerwatch
                 numberOfConnections.Text = "1 Connection Found";
                 currCon.Text = "1/1";
             }
-            else 
-            { 
-                numberOfConnections.Text = Number_of_Connections.ToString()+" connections found";
-                currCon.Text = (Current_Connection+1).ToString()+"/"+Number_of_Connections.ToString();
+            else
+            {
+                numberOfConnections.Text = Number_of_Connections.ToString() + " connections found";
+                currCon.Text = (Current_Connection + 1).ToString() + "/" + Number_of_Connections.ToString();
                 buttonPrevious.IsEnabled = true;
                 buttonNext.IsEnabled = true;
             }
-        }
-
-        private void Button_previous(object sender, RoutedEventArgs e)
-        {
-            if (Current_Connection > 0)
-            {
-                Current_Connection--;
-                currCon.Text = (Current_Connection + 1).ToString() + "/" + Number_of_Connections.ToString();
-            }
-        }
-
-        private void Button_next(object sender, RoutedEventArgs e)
-        {
-            if (Current_Connection >= 0 && Current_Connection<=(Number_of_Connections-1))
-            {
-                Current_Connection++;
-                currCon.Text = (Current_Connection).ToString() + "/" + Number_of_Connections.ToString();
-            }
+            adminConn.Text = DeserializedConDefSettings.connectionDefs[i].adminConn.ToString();
+            appServerHostMode.Text = DeserializedConDefSettings.connectionDefs[i].appServerHostMode.ToString();
+            certificationValidationMode.Text = DeserializedConDefSettings.connectionDefs[i].certificationValidationMode.ToString();
+            connectionRemotingType.Text = DeserializedConDefSettings.connectionDefs[i].connectionRemotingType.ToString();
+            createdDateTime.Text = DeserializedConDefSettings.connectionDefs[i].createdDateTime.ToString();
+            dbConn.Text = DeserializedConDefSettings.connectionDefs[i].dbConn.ToString();
+            dbOwner.Text = DeserializedConDefSettings.connectionDefs[i].dbOwner.ToString();
+            endCharForNameWithSpace.Text = DeserializedConDefSettings.connectionDefs[i].endCharForNameWithSpace.ToString();
+            engine.Text = DeserializedConDefSettings.connectionDefs[i].engine.ToString();
+            maxTransactionLogSizeInMB.Text = DeserializedConDefSettings.connectionDefs[i].maxTransactionLogSizeInMB.ToString();
+            name.Text = DeserializedConDefSettings.connectionDefs[i].name.ToString();
+            recoveryMode.Text = DeserializedConDefSettings.connectionDefs[i].recoveryMode.ToString();
+            remotingSecurityMode.Text = DeserializedConDefSettings.connectionDefs[i].remotingSecurityMode.ToString();
+            source.Text = DeserializedConDefSettings.connectionDefs[i].source.ToString();
+            startCharForNameWithSpace.Text = DeserializedConDefSettings.connectionDefs[i].startCharForNameWithSpace.ToString();
+            transactionLogGrowth.Text = DeserializedConDefSettings.connectionDefs[i].transactionLogGrowth.ToString();
+            urltext.Text = DeserializedConDefSettings.connectionDefs[i].url.ToString();
+            enableTransactionLogAutogrowth.IsChecked = DeserializedConDefSettings.connectionDefs[i].enableTransactionLogAutogrowth;
+            transactionLogGrowthIsPercentage.IsChecked = DeserializedConDefSettings.connectionDefs[i].transactionLogGrowthIsPercentage;
+            treatsEmptyStringAsNull.IsChecked = DeserializedConDefSettings.connectionDefs[i].treatsEmptyStringAsNull;
+            useRest.IsChecked = DeserializedConDefSettings.connectionDefs[i].useRest;
+            useSoap.IsChecked = DeserializedConDefSettings.connectionDefs[i].useSoap;
         }
     }
 }
