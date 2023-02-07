@@ -113,7 +113,7 @@ namespace CherwellOVerwatch
 
         private void Button_ConnectionDefSettings(object sender, RoutedEventArgs e)
         {
-            Main.Content = new ConnectionDefinitionss();
+            Main.Content = new ConnectionDefinitions();
         }
     }
 }
