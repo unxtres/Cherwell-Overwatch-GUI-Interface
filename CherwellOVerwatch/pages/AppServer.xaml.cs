@@ -99,30 +99,30 @@ namespace CherwellOVerwatch
             certificateValidationModeForAutoClient.Text = data["certificateValidationModeForAutoClient"].Value<string>();
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Save(object sender, RoutedEventArgs e)
         {
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpRequest.Method = "POST";
+ //           var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+ //           httpRequest.Method = "POST";
 
-            httpRequest.Accept = "application/json";
-            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
-            httpRequest.ContentType = "application/json";
+ //           httpRequest.Accept = "application/json";
+ //           httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+ //           httpRequest.ContentType = "application/json";
 
-            var data = @"{
-	""port"": 88, ""publish"": true} ";
+ //           var data = @"{
+	//""port"": 88, ""publish"": true} ";
 
-            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
-            {
-                streamWriter.Write(data);
-            }
+ //           using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+ //           {
+ //               streamWriter.Write(data);
+ //           }
 
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-            {
-                var result = streamReader.ReadToEnd();
-            }
+ //           var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+ //           using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+ //           {
+ //               var result = streamReader.ReadToEnd();
+ //           }
 
-            save_status.Text = httpResponse.StatusCode.ToString();
+ //           save_status.Text = httpResponse.StatusCode.ToString();
 
         }
     }
