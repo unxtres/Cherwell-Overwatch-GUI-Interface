@@ -72,7 +72,7 @@ namespace CherwellOVerwatch
 
         private void Button_next(object sender, RoutedEventArgs e)
         {
-            if (Current_Connection > 0 && Current_Connection<=(Number_of_Connections-1))
+            if (Current_Connection >= 0 && Current_Connection<=(Number_of_Connections-1))
             {
                 Current_Connection++;
                 currCon.Text = (Current_Connection + 1).ToString() + "/" + Number_of_Connections.ToString();
