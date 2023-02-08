@@ -59,6 +59,6 @@
         <TextBlock x:Name="numberOfConnections" HorizontalAlignment="Left" Margin="368,128,0,0" TextWrapping="NoWrap" Text="Number of connections" VerticalAlignment="Top"/>
         <Button x:Name="buttonPrevious" Content="Previous" HorizontalAlignment="Left" Margin="368,173,0,0" VerticalAlignment="Top" Height="18" Width="62" Click="Button_previous"/>
         <Button x:Name="buttonNext" Content="Next" HorizontalAlignment="Left" Margin="485,174,0,0" VerticalAlignment="Top" Height="17" Width="62" Click="Button_next"/>
-        <TextBlock x:Name="currCon" HorizontalAlignment="Left" Margin="442,175,0,0" TextWrapping="NoWrap" Text="curr.con" VerticalAlignment="Top"/>
+        <TextBlock x:Name="currCon" HorizontalAlignment="Left" Margin="445,173,0,0" TextWrapping="NoWrap" Text="" VerticalAlignment="Top"/>
     </Grid>
 </Page>

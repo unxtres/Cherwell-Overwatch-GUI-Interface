@@ -65,5 +65,10 @@ namespace CherwellOVerwatch
             string temp;
             var data = (JObject)JsonConvert.DeserializeObject(json);
         }
+
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

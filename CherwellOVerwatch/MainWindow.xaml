@@ -22,7 +22,7 @@
         <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="125" Click="Button_BrowserSettings"/>
         <Button Content="Browser Log Settings" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="125" Click="Button_BrowserLogSettings"/>
         <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="125" Click="Button_ConnectionDefSettings"/>
-        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="125" Click="Button_EEMServerSettings"/>
         <Button Content="Message Que Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,280,0,0" VerticalAlignment="Top" Width="125"/>
         <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,305,0,0" VerticalAlignment="Top" Width="125"/>
