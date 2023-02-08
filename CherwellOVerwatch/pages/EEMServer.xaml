@@ -49,7 +49,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="493,255,0,0" TextWrapping="Wrap" Text="Total Miliseconds" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,276,0,0" TextWrapping="Wrap" Text="Total Minutes" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,297,0,0" TextWrapping="Wrap" Text="Total Seconds" VerticalAlignment="Top"/>
-        <CheckBox x:Name="disableCompression" HorizontalAlignment="Left" Margin="145,87,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="DisableCompression" HorizontalAlignment="Left" Margin="145,87,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="installed" HorizontalAlignment="Left" Margin="145,107,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="lastError" HorizontalAlignment="Left" Margin="145,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="lastErrorDetails" HorizontalAlignment="Left" Margin="145,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
