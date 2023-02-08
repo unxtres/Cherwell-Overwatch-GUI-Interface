@@ -23,52 +23,61 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class EEMServer : Page
     {
-        public string json;
+        public string url = "http://localhost:5000/api/settings/ConnectionDefSettings";
         public EEMServer()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadData()
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            EEM_Server DeserializedEEMServer = JsonConvert.DeserializeObject<EEM_Server>(loader.GetResult(url));
+
+            DisableCompression.IsChecked = DeserializedEEMServer.disableCompression;
+            installed.IsChecked = DeserializedEEMServer.installed;
+            lastError.Text = DeserializedEEMServer.lastError.ToString();
+            lastErrorDetails.Text = DeserializedEEMServer.lastErrorDetails.ToString();
+            connection.Text = DeserializedEEMServer.connection.ToString();
+            encryptedPassword.Text = DeserializedEEMServer.encryptedPassword.ToString();
+            useDefaultRoleOfUser.IsChecked = DeserializedEEMServer.useDefaultRoleOfUser;
+            userId.Text = DeserializedEEMServer.userId.ToString();
+            useWindowsLogin.IsChecked = DeserializedEEMServer.useWindowsLogin;
+            emailReadLimit.Text = DeserializedEEMServer.emailReadLimit.ToString();
+            monitorRepeatLimit.Text = DeserializedEEMServer.monitorRepeatLimit.ToString();
+            showRegEx.IsChecked = DeserializedEEMServer.showRegEx;
+
+            ticks.Text = DeserializedEEMServer.addlItemsWait.ticks.ToString();
+            days.Text = DeserializedEEMServer.addlItemsWait.days.ToString();
+            hours.Text = DeserializedEEMServer.addlItemsWait.hours.ToString();
+            milliseconds.Text = DeserializedEEMServer.addlItemsWait.milliseconds.ToString();
+            minutes.Text = DeserializedEEMServer.addlItemsWait.minutes.ToString();
+            seconds.Text = DeserializedEEMServer.addlItemsWait.seconds.ToString();
+            totalDays.Text = DeserializedEEMServer.addlItemsWait.totalDays.ToString();
+            totalHours.Text = DeserializedEEMServer.addlItemsWait.totalHours.ToString();
+            totalMilliseconds.Text = DeserializedEEMServer.addlItemsWait.totalMilliseconds.ToString();
+            totalMinutes.Text = DeserializedEEMServer.addlItemsWait.totalMinutes.ToString();
+            totalSeconds.Text = DeserializedEEMServer.addlItemsWait.totalSeconds.ToString();
+
+            no_ticks.Text = DeserializedEEMServer.noItemsWait.ticks.ToString();
+            no_days.Text = DeserializedEEMServer.noItemsWait.days.ToString();
+            no_hours.Text = DeserializedEEMServer.noItemsWait.hours.ToString();
+            no_milliseconds.Text = DeserializedEEMServer.noItemsWait.milliseconds.ToString();
+            no_minutes.Text = DeserializedEEMServer.noItemsWait.minutes.ToString();
+            no_seconds.Text = DeserializedEEMServer.noItemsWait.seconds.ToString();
+            no_totalDays.Text = DeserializedEEMServer.noItemsWait.totalDays.ToString();
+            no_totalHours.Text = DeserializedEEMServer.noItemsWait.totalHours.ToString();
+            no_totalMilliseconds.Text = DeserializedEEMServer.noItemsWait.totalMilliseconds.ToString();
+            no_totalMinutes.Text = DeserializedEEMServer.noItemsWait.totalMinutes.ToString();
+            no_totalSeconds.Text = DeserializedEEMServer.noItemsWait.totalSeconds.ToString();
         }
 
         private void Button_Load(object sender, RoutedEventArgs e)
         {
-
+            loadData();
         }
     }
 }

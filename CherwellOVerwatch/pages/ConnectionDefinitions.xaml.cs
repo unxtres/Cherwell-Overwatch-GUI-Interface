@@ -24,12 +24,8 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class ConnectionDefinitions : Page
     {
-        public string json;
         public string url = "http://localhost:5000/api/settings/ConnectionDefSettings";
         public int Current_Connection = 0;
         public int Number_of_Connections;

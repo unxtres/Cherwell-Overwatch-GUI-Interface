@@ -9,7 +9,79 @@
       Title="EEMServer">
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
-        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="EEM Server" VerticalAlignment="Top" FontSize="24"/>
+        <TextBlock HorizontalAlignment="Left" Margin="74,50,0,0" TextWrapping="Wrap" Text="EEM Server" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="291,50,0,0" TextWrapping="Wrap" Text="ADD ITEMS WAIT" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="523,50,0,0" TextWrapping="Wrap" Text="NO ITEMS WAIT" VerticalAlignment="Top" FontSize="18"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,87,0,0" TextWrapping="Wrap" Text="Disable Compression" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,108,0,0" TextWrapping="Wrap" Text="Installed" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="Last Error" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,150,0,0" TextWrapping="Wrap" Text="Last Error Details" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,171,0,0" TextWrapping="Wrap" Text="Connection" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,192,0,0" TextWrapping="Wrap" Text="Encrypted Password" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="Use Default Role of User" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="User ID" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" Text="Use Windows Login" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,276,0,0" TextWrapping="Wrap" Text="Email Read Limit" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,297,0,0" TextWrapping="Wrap" Text="Monitor Repeat Limit" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,318,0,0" TextWrapping="Wrap" Text="Show Reg Ex" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,87,0,0" TextWrapping="Wrap" Text="Ticks" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,108,0,0" TextWrapping="Wrap" Text="Days" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,129,0,0" TextWrapping="Wrap" Text="Hours" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,150,0,0" TextWrapping="Wrap" Text="Miliseconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,171,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,192,0,0" TextWrapping="Wrap" Text="Seconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,213,0,0" TextWrapping="Wrap" Text="Total Days" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,0,0,0" TextWrapping="Wrap" Text="Total Hours" VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Left" Margin="275,255,0,0" TextWrapping="Wrap" Text="Total Miliseconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,276,0,0" TextWrapping="Wrap" Text="Total Minutes" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="275,297,0,0" TextWrapping="Wrap" Text="Total Seconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,87,0,0" TextWrapping="Wrap" Text="Ticks" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,108,0,0" TextWrapping="Wrap" Text="Days" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,129,0,0" TextWrapping="Wrap" Text="Hours" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,150,0,0" TextWrapping="Wrap" Text="Miliseconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,171,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,192,0,0" TextWrapping="Wrap" Text="Seconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,213,0,0" TextWrapping="Wrap" Text="Total Days" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,0,0,0" TextWrapping="Wrap" Text="Total Hours" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,255,0,0" TextWrapping="Wrap" Text="Total Miliseconds" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,276,0,0" TextWrapping="Wrap" Text="Total Minutes" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,297,0,0" TextWrapping="Wrap" Text="Total Seconds" VerticalAlignment="Top"/>
+        <CheckBox x:Name="disableCompression" HorizontalAlignment="Left" Margin="145,87,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="installed" HorizontalAlignment="Left" Margin="145,107,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="lastError" HorizontalAlignment="Left" Margin="145,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="lastErrorDetails" HorizontalAlignment="Left" Margin="145,148,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="145,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="encryptedPassword" HorizontalAlignment="Left" Margin="145,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="useDefaultRoleOfUser" HorizontalAlignment="Left" Margin="145,214,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="userId" HorizontalAlignment="Left" Margin="145,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <CheckBox x:Name="useWindowsLogin" HorizontalAlignment="Left" Margin="145,256,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="emailReadLimit" HorizontalAlignment="Left" Margin="145,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="monitorRepeatLimit" HorizontalAlignment="Left" Margin="145,299,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="showRegEx" HorizontalAlignment="Left" Margin="145,322,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="ticks" HorizontalAlignment="Left" Margin="373,87,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="days" HorizontalAlignment="Left" Margin="373,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="hours" HorizontalAlignment="Left" Margin="373,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="milliseconds" HorizontalAlignment="Left" Margin="373,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="minutes" HorizontalAlignment="Left" Margin="373,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="seconds" HorizontalAlignment="Left" Margin="373,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="totalDays" HorizontalAlignment="Left" Margin="373,213,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="totalHours" HorizontalAlignment="Left" Margin="373,234,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="totalMilliseconds" HorizontalAlignment="Left" Margin="373,255,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="totalMinutes" HorizontalAlignment="Left" Margin="373,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="totalSeconds" HorizontalAlignment="Left" Margin="373,297,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_ticks" HorizontalAlignment="Left" Margin="593,87,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_days" HorizontalAlignment="Left" Margin="593,108,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_hours" HorizontalAlignment="Left" Margin="593,129,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_milliseconds" HorizontalAlignment="Left" Margin="593,150,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_minutes" HorizontalAlignment="Left" Margin="593,171,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_seconds" HorizontalAlignment="Left" Margin="593,192,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_totalDays" HorizontalAlignment="Left" Margin="593,213,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_totalHours" HorizontalAlignment="Left" Margin="593,234,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_totalMilliseconds" HorizontalAlignment="Left" Margin="593,255,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_totalMinutes" HorizontalAlignment="Left" Margin="593,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
+        <TextBox x:Name="no_totalSeconds" HorizontalAlignment="Left" Margin="593,297,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
     </Grid>
 </Page>
