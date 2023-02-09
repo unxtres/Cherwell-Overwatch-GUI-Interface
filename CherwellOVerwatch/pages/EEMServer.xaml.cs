@@ -25,7 +25,7 @@ namespace CherwellOVerwatch
 {
     public partial class EEMServer : Page
     {
-        public string url = "http://localhost:5000/api/settings/ConnectionDefSettings";
+        public string url = "http://localhost:5000/api/settings/EEMServerSettings";
         public EEMServer()
         {
             InitializeComponent();

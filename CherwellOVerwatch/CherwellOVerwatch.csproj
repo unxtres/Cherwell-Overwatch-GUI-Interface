@@ -30,6 +30,9 @@
     <Compile Update="pages\EEMServer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="pages\EEMServerLogs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="pages\MQSSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>

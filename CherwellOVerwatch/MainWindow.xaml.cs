@@ -120,5 +120,10 @@ namespace CherwellOVerwatch
         {
             Main.Content = new EEMServer();
         }
+
+        private void Button_EEMServerLogSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new EEMServerLogs();
+        }
     }
 }
