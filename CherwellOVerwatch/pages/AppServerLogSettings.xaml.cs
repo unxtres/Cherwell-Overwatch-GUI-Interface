@@ -26,10 +26,10 @@ namespace CherwellOVerwatch
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Logger : Page
+    public partial class AppServerLogSettings : Page
     {
         public string json;
-        public Logger()
+        public AppServerLogSettings()
         {
             InitializeComponent();
         }

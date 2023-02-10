@@ -9,7 +9,27 @@
       Title="MQSSettings">
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
-        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,160,0,0" TextWrapping="NoWrap" Text="Decrypted Password" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,181,0,0" TextWrapping="NoWrap" Text="Encrypted Password" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,202,0,0" TextWrapping="NoWrap" Text="Hostname" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,223,0,0" TextWrapping="NoWrap" Text="Port" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,244,0,0" TextWrapping="NoWrap" Text="Is Configured" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,265,0,0" TextWrapping="NoWrap" Text="Username" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,286,0,0" TextWrapping="NoWrap" Text="Virtual Host" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,307,0,0" TextWrapping="NoWrap" Text="RabbitMQ Path" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="228,328,0,0" TextWrapping="NoWrap" Text="Erlang Path" VerticalAlignment="Top"/>
+        <TextBox x:Name="decryptedPassword" HorizontalAlignment="Left" Margin="348,160,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="encryptedPassword" HorizontalAlignment="Left" Margin="348,180,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="hostName" HorizontalAlignment="Left" Margin="348,200,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="port" HorizontalAlignment="Left" Margin="348,220,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="isConfigured" HorizontalAlignment="Left" Margin="348,244,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="userName" HorizontalAlignment="Left" Margin="348,265,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="virtualHost" HorizontalAlignment="Left" Margin="348,286,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="rabbitMQPath" HorizontalAlignment="Left" Margin="348,306,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="erlangPath" HorizontalAlignment="Left" Margin="348,328,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="NoWrap" Text="MQS Settings" VerticalAlignment="Top" FontSize="24"/>
+
     </Grid>
 </Page>

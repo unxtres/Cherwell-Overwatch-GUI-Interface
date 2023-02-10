@@ -88,7 +88,7 @@ namespace CherwellOVerwatch
 
         private void Button_Logger(object sender, RoutedEventArgs e)
         {
-            Main.Content = new Logger();
+            Main.Content = new AppServerLogSettings();
         }
 
         private void Button_AutoDeploy(object sender, RoutedEventArgs e)
@@ -124,6 +124,16 @@ namespace CherwellOVerwatch
         private void Button_EEMServerLogSettings(object sender, RoutedEventArgs e)
         {
             Main.Content = new EEMServerLogs();
+        }
+
+        private void Button_MQSSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MQSSettings();
+        }
+
+        private void Button_MQSLogSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MQSLogSettings();
         }
     }
 }

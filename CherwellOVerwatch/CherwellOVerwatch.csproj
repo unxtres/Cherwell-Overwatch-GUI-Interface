@@ -33,6 +33,9 @@
     <Compile Update="pages\EEMServerLogs.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="pages\MQSLogSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="pages\MQSSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -57,7 +60,7 @@
     <Compile Update="pages\TA Server.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="pages\Logger.xaml.cs">
+    <Compile Update="pages\AppServerLogSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
