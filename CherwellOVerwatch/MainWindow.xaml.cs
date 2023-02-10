@@ -125,5 +125,15 @@ namespace CherwellOVerwatch
         {
             Main.Content = new EEMServerLogs();
         }
+
+        private void Button_MQSSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MQSSettings();
+        }
+
+        private void Button_MQSLogSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new MQSLogSettings();
+        }
     }
 }

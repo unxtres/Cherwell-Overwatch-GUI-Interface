@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,47 +24,34 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class MQSSettings : Page
     {
-        public string json;
+        public string url = "http://localhost:5000/api/settings/MessageQueueSettings";
         public MQSSettings()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadData()
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            MQS_Settings DeserializedMQSServer = JsonConvert.DeserializeObject<MQS_Settings>(loader.GetResult(url));
+
+            decryptedPassword.Text = DeserializedMQSServer.decryptedPassword.ToString();
+            encryptedPassword.Text = DeserializedMQSServer.encryptedPassword.ToString();
+            hostName.Text = DeserializedMQSServer.hostName.ToString();
+            port.Text = DeserializedMQSServer.port.ToString();
+            isConfigured.IsChecked = DeserializedMQSServer.isConfigured;
+            userName.Text = DeserializedMQSServer.userName.ToString();
+            virtualHost.Text = DeserializedMQSServer.virtualHost.ToString();
+            rabbitMQPath.Text = DeserializedMQSServer.rabbitMQPath.ToString();
+            erlangPath.Text = DeserializedMQSServer.erlangPath.ToString();
+        }
+
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+            loadData();
         }
     }
 }

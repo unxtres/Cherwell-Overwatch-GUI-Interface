@@ -24,12 +24,13 @@
         <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="141" Click="Button_ConnectionDefSettings"/>
         <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top" Width="141" Click="Button_EEMServerSettings"/>
         <Button Content="EEM Server Log Settings" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="141" Click="Button_EEMServerLogSettings"/>
-        <Button Content="Message Que Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Center" Width="141"/>
-        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,305,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,330,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,355,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,380,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button Content="MQS Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="141" Click="Button_MQSSettings"/>
+        <Button Content="MQS Log Settings" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Center" Width="141" Click="Button_MQSLogSettings"/>
+        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,304,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,354,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,404,0,0" VerticalAlignment="Top" Width="141"/>
         <Button Content="Other Settings" HorizontalAlignment="Left" Margin="25,440,0,0" VerticalAlignment="Top" Width="125"/>
 
 
