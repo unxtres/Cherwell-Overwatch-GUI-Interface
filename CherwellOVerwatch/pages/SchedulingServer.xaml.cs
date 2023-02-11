@@ -23,47 +23,34 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class SchedulingServer : Page
     {
-        public string json;
+        public string url = "http://localhost:5000/api/settings/SchedulingServerSettings";
         public SchedulingServer()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadData()
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            Scheduling_server DeserializeSchedulingserver = JsonConvert.DeserializeObject<Scheduling_server>(loader.GetResult(url));
+
+            disableCompression.IsChecked = DeserializeSchedulingserver.disableCompression;
+            installed.IsChecked = DeserializeSchedulingserver.installed;
+            lastError.Text = DeserializeSchedulingserver.lastError.ToString();
+            lastErrorDetails.Text = DeserializeSchedulingserver.lastErrorDetails.ToString();
+            connection.Text = DeserializeSchedulingserver.connection.ToString();
+            encryptedPassword.Text = DeserializeSchedulingserver.encryptedPassword.ToString();
+            useDefaultRoleOfUser.IsChecked = DeserializeSchedulingserver.useDefaultRoleOfUser;
+            userId.Text = DeserializeSchedulingserver.userId.ToString();
+            useWindowsLogin.IsChecked = DeserializeSchedulingserver.useWindowsLogin;
+            groupId.Text = DeserializeSchedulingserver.groupId.ToString();
+            groupName.Text = DeserializeSchedulingserver.groupName.ToString();
+        }
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+            loadData();
         }
     }
 }

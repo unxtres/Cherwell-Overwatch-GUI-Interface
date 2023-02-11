@@ -23,47 +23,32 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class TAHub : Page
     {
-        public string json;
+        public string url = "http://localhost:5000/api/settings/TrustedAgentHubSettings";
         public TAHub()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadData()
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            TA_Hub DeserializedTAHub = JsonConvert.DeserializeObject<TA_Hub>(loader.GetResult(url));
+
+            disableCompression.IsChecked = DeserializedTAHub.disableCompression;
+            installed.IsChecked = DeserializedTAHub.installed;
+            lastError.Text = DeserializedTAHub.lastError.ToString();
+            lastErrorDetails.Text = DeserializedTAHub.lastErrorDetails.ToString();
+            operationTimeout.Text = DeserializedTAHub.operationTimeout.ToString();
+            registrationTimeout.Text = DeserializedTAHub.registrationTimeout.ToString();
+            sharedKey.Text = DeserializedTAHub.sharedKey.ToString();
+            signalRHubUrl.Text = DeserializedTAHub.signalRHubUrl.ToString();
+            useTrustedAgents.IsChecked = DeserializedTAHub.useTrustedAgents;
+        }
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+            loadData();
         }
     }
 }

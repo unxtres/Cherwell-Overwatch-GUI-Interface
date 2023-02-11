@@ -5,35 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CherwellOVerwatch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="589" Width="874" Background="Black">
+        Title="MainWindow" Height="629" Width="890" Background="Black">
 
     <Grid Margin="0,0,0,-6">
         <Button Content="Connect" HorizontalAlignment="Left" Margin="786,10,0,0" VerticalAlignment="Top" Click="Button_Get_Token" Height="20"/>
         <TextBox x:Name="regkey" HorizontalAlignment="Left" Margin="499,9,0,0" TextWrapping="NoWrap" Text="Registration Key" VerticalAlignment="Top" Width="282" Height="20"/>
-        <Frame Name="Main" Background="LightGray" Margin="171,35,8,10" Width="695"/>
+        <Frame Name="Main" Background="LightGray" Margin="179,35,10,30"/>
         <!--<TextBox x:Name="result" HorizontalAlignment="Left" Margin="400,55,0,0" TextWrapping="Wrap" Text="Token" VerticalAlignment="Top" Width="344" Height="58"/>-->
 
         <!--<TextBox x:Name="settings" HorizontalAlignment="Left" Margin="115,168,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="199" Height="234"/>-->
 
-        <Button Content="App Server" HorizontalAlignment="Left" Margin="25,30,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings" Width="141"/>
-        <Button Content="App Server Log Settings" HorizontalAlignment="Left" Margin="25,55,0,0" VerticalAlignment="Top" Width="141" Click="Button_Logger"/>
-        <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="25,80,0,0" VerticalAlignment="Top" Width="141" Click="Button_AutoDeploy"/>
-        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,105,0,0" VerticalAlignment="Top" Width="141" Click="Button_AutoUpdate"/>
-        <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,130,0,0" VerticalAlignment="Top" Width="141" Click="Button_BrowserSettings"/>
-        <Button Content="Browser Log Settings" HorizontalAlignment="Left" Margin="25,155,0,0" VerticalAlignment="Top" Width="141" Click="Button_BrowserLogSettings"/>
-        <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,180,0,0" VerticalAlignment="Top" Width="141" Click="Button_ConnectionDefSettings"/>
-        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,205,0,0" VerticalAlignment="Top" Width="141" Click="Button_EEMServerSettings"/>
-        <Button Content="EEM Server Log Settings" HorizontalAlignment="Left" Margin="25,230,0,0" VerticalAlignment="Top" Width="141" Click="Button_EEMServerLogSettings"/>
-        <Button Content="MQS Settings" HorizontalAlignment="Left" Margin="25,255,0,0" VerticalAlignment="Top" Width="141" Click="Button_MQSSettings"/>
-        <Button Content="MQS Log Settings" HorizontalAlignment="Left" Margin="25,0,0,0" VerticalAlignment="Center" Width="141" Click="Button_MQSLogSettings"/>
-        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,304,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,329,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,354,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,379,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,404,0,0" VerticalAlignment="Top" Width="141"/>
-        <Button Content="Other Settings" HorizontalAlignment="Left" Margin="25,440,0,0" VerticalAlignment="Top" Width="125"/>
+        <Button Content="App Server" HorizontalAlignment="Left" Margin="25,35,0,0" VerticalAlignment="Top" Click="Button_AppServerSettings" Width="141"/>
+        <Button Content="Auto Deploy" HorizontalAlignment="Left" Margin="25,60,0,0" VerticalAlignment="Top" Width="141" Click="Button_AutoDeploy"/>
+        <Button Content="Auto Update Service" HorizontalAlignment="Left" Margin="25,85,0,0" VerticalAlignment="Top" Width="141" Click="Button_AutoUpdate"/>
+        <Button Content="Browser Settings" HorizontalAlignment="Left" Margin="25,110,0,0" VerticalAlignment="Top" Width="141" Click="Button_BrowserSettings"/>
+        <Button Content="Connection Definitions" HorizontalAlignment="Left" Margin="25,135,0,0" VerticalAlignment="Top" Width="141" Click="Button_ConnectionDefSettings"/>
+        <Button Content="EEM Server" HorizontalAlignment="Left" Margin="25,160,0,0" VerticalAlignment="Top" Width="141" Click="Button_EEMServerSettings"/>
+        <Button Content="MQS Settings" HorizontalAlignment="Left" Margin="25,185,0,0" VerticalAlignment="Top" Width="141" Click="Button_MQSSettings"/>
+        <Button Content="Portal Settings" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top" Width="141" Click="Button_PortalSettings"/>
+        <Button Content="Scheduling Server" HorizontalAlignment="Left" Margin="25,235,0,0" VerticalAlignment="Top" Width="141" Click="Button_SchedulingServer"/>
+        <Button Content="Service Host" HorizontalAlignment="Left" Margin="25,260,0,0" VerticalAlignment="Top" Width="141" Click="Button_SH"/>
+        <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,285,0,0" VerticalAlignment="Top" Width="141" Click="Button_TAHub"/>
+        <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,312,0,0" VerticalAlignment="Top" Width="141" Click="Button_TAServer"/>
+        <Button Content="Web API" HorizontalAlignment="Left" Margin="25,337,0,0" VerticalAlignment="Top" Width="141" Click="Button_API"/>
+        <Button Content="Web Hooks Leader" HorizontalAlignment="Left" Margin="25,362,0,0" VerticalAlignment="Top" Width="141" Click="Button_WHL"/>
+        <Button Content="Logs Settings" HorizontalAlignment="Left" Margin="25,422,0,0" VerticalAlignment="Top" Width="141" Click="Button_LogsSettings"/>
+        <Button Content="Other Settings" HorizontalAlignment="Left" Margin="25,467,0,0" VerticalAlignment="Top" Width="125"/>
 
 
     </Grid>
-
 </Window>

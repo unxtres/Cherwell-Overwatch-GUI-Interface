@@ -23,47 +23,33 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class ServiceHost : Page
     {
-        public string json;
+        public string url = "http://localhost:5000/api/settings/ServiceHostSettings";
         public ServiceHost()
         {
             InitializeComponent();
         }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadData()
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            Service_host DeserializedSH = JsonConvert.DeserializeObject<Service_host>(loader.GetResult(url));
+
+            disableCompression.IsChecked = DeserializedSH.disableCompression;
+            installed.IsChecked = DeserializedSH.installed;
+            lastError.Text = DeserializedSH.lastError.ToString();
+            lastErrorDetails.Text = DeserializedSH.lastErrorDetails.ToString();
+            connection.Text = DeserializedSH.connection.ToString();
+            encryptedPassword.Text = DeserializedSH.encryptedPassword.ToString();
+            useDefaultRoleOfUser.IsChecked = DeserializedSH.useDefaultRoleOfUser;
+            userId.Text = DeserializedSH.userId.ToString();
+            useWindowsLogin.IsChecked = DeserializedSH.useWindowsLogin;
+            hostMaxWorkers.Text = DeserializedSH.hostMaxWorkers.ToString();
+        }
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+            loadData();
         }
     }
 }

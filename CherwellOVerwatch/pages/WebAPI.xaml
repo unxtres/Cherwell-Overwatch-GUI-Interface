@@ -1,0 +1,70 @@
+﻿<Page x:Class="CherwellOVerwatch.WebAPI"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CherwellOVerwatch"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="695"
+      Title="WebAPI">
+
+    <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="NoWrap" Text="WEB API SERVICE SETTINGS" VerticalAlignment="Top" FontSize="24"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="53,76,0,0" TextWrapping="Wrap" Text="Api Client Id" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,401,0,0" TextWrapping="Wrap" Text="Authorization Code Expiration Minutes" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,95,0,0" TextWrapping="Wrap" Text="Rate Limiting Enabled" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,116,0,0" TextWrapping="Wrap" Text="Max Concurrent Requests" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,137,0,0" TextWrapping="Wrap" Text="Load From File From Bin" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,158,0,0" TextWrapping="Wrap" Text="Authentication Provider" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,179,0,0" TextWrapping="Wrap" Text="Trebuchet Data Source" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,200,0,0" TextWrapping="Wrap" Text="Use Saml Adfs Redirect" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,221,0,0" TextWrapping="Wrap" Text="Idp Is Adfs" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,242,0,0" TextWrapping="Wrap" Text="Saml Adfs Idp Initiated Url" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,263,0,0" TextWrapping="Wrap" Text="Saml Server Time Allowance" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,284,0,0" TextWrapping="Wrap" Text="Certificate User Email" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,305,0,0" TextWrapping="Wrap" Text="Cert Subject Name" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,326,0,0" TextWrapping="Wrap" Text="Cert Issuer" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,347,0,0" TextWrapping="Wrap" Text="Cert Thumbprint" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,76,0,0" TextWrapping="Wrap" Text="Tenant" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,97,0,0" TextWrapping="Wrap" Text="Audience" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,118,0,0" TextWrapping="Wrap" Text="AAD Client Id" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,139,0,0" TextWrapping="Wrap" Text="AAD Client User Email" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,160,0,0" TextWrapping="Wrap" Text="Grant Type" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,181,0,0" TextWrapping="Wrap" Text="Authorization Url" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,202,0,0" TextWrapping="Wrap" Text="Use Recovery File" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,223,0,0" TextWrapping="Wrap" Text="Recovery File Path" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="383,244,0,0" TextWrapping="Wrap" Text="Recovery File Name" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="53,422,0,0" TextWrapping="Wrap" Text="Recovery File Persist Interval Seconds" VerticalAlignment="Top"/>
+
+        <TextBox x:Name="apiClientId" HorizontalAlignment="Left" Margin="217,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="authorizationCodeExpirationMinutes" HorizontalAlignment="Left" Margin="265,400,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="rateLimitingEnabled" HorizontalAlignment="Left" Margin="217,96,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="maxConcurrentRequests" HorizontalAlignment="Left" Margin="217,116,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="loadFromFileFromBin" HorizontalAlignment="Left" Margin="217,138,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="authenticationProvider" HorizontalAlignment="Left" Margin="217,156,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="trebuchetDataSource" HorizontalAlignment="Left" Margin="217,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="useSamlAdfsRedirect" HorizontalAlignment="Left" Margin="217,202,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="idpIsAdfs" HorizontalAlignment="Left" Margin="217,221,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="samlAdfsIdpInitiatedUrl" HorizontalAlignment="Left" Margin="217,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="samlServerTimeAllowance" HorizontalAlignment="Left" Margin="217,261,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="certificateUserEmail" HorizontalAlignment="Left" Margin="217,283,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="certSubjectName" HorizontalAlignment="Left" Margin="217,305,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="certIssuer" HorizontalAlignment="Left" Margin="217,326,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="certThumbprint" HorizontalAlignment="Left" Margin="217,347,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tenant" HorizontalAlignment="Left" Margin="523,76,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="audience" HorizontalAlignment="Left" Margin="523,97,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="aadClientId" HorizontalAlignment="Left" Margin="523,118,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="aadClientUserEmail" HorizontalAlignment="Left" Margin="523,139,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="grantType" HorizontalAlignment="Left" Margin="523,160,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="authorizationUrl" HorizontalAlignment="Left" Margin="523,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="useRecoveryFile" HorizontalAlignment="Left" Margin="523,204,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="recoveryFilePath" HorizontalAlignment="Left" Margin="523,223,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="523,244,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="265,422,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+
+    </Grid>
+</Page>

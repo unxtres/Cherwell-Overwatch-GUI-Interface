@@ -1,0 +1,24 @@
+﻿<Page x:Class="CherwellOVerwatch.LogsSettings"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:CherwellOVerwatch"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="695"
+      Title="LogsSettings">
+
+    <Grid x:Name="mypage" Background="#FFC5C5C5" Margin="0,0,0,-33">
+        <Button Content="APP SERVER" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Click="Button_Logger" Margin="38,45,0,0" Height="95"/>
+        <Button Content="BROWSER" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top" Width="190" Click="Button_BrowserLogSettings" Height="95"/>
+        <Button Content="EEM SERVER" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Click="Button_EEMServerLogSettings" Margin="466,45,0,0" Height="95"/>
+        <Button Content="MQS" HorizontalAlignment="Left" Margin="38,150,0,0" VerticalAlignment="Top" Width="190" Click="Button_MQSLogSettings" Height="95"/>
+        <Button Content="PORTAL" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Width="190" Click="Button_PortalLogSettings" Height="95"/>
+        <Button Content="SCHEDULING SERVER" HorizontalAlignment="Left" Margin="466,150,0,0" VerticalAlignment="Top" Width="190" Click="Button_SchedulingLogSettings" Height="95"/>
+        <Button Content="SERVICE HOST" HorizontalAlignment="Left" Margin="38,255,0,0" VerticalAlignment="Top" Width="190" Click="Button_SHLogSettings" Height="95"/>
+        <Button Content="TA HUB" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Width="190" Click="Button_TAHubLogs" Height="95"/>
+        <Button Content="TA SERVER" HorizontalAlignment="Left" Margin="466,255,0,0" VerticalAlignment="Top" Width="190" Click="Button_TAServerLogs" Height="95"/>
+        <Button Content="WEB API" HorizontalAlignment="Left" Margin="38,360,0,0" VerticalAlignment="Top" Width="190" Click="Button_WebApi" Height="95"/>
+        <Button Content="WEB HOOKS LEADER" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Width="190" Click="Button_WebHooks" Height="95"/>
+    </Grid>
+</Page>

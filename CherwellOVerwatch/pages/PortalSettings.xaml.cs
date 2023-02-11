@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,47 +24,52 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class PortalSettings : Page
     {
-        public string json;
+        public string url = "http://localhost:5000/api/settings/PortalSettings";
         public PortalSettings()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void loadData()
         {
-            try
-            {
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            LoadSettings loader = new LoadSettings();
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Not Connected");
-                throw;
-            }
-            string temp;
-            var data = (JObject)JsonConvert.DeserializeObject(json);
+            Portal_Settings DeserializedPortalSettings = JsonConvert.DeserializeObject<Portal_Settings>(loader.GetResult(url));
+
+            trebuchetDataSource.Text = DeserializedPortalSettings.trebuchetDataSource.ToString();
+            testMode.IsChecked = DeserializedPortalSettings.testMode;
+            tabContentHeight.Text = DeserializedPortalSettings.tabContentHeight.ToString();
+            disableCertificateValidation.IsChecked = DeserializedPortalSettings.disableCertificateValidation;
+            allowUnsafeLabels.IsChecked = DeserializedPortalSettings.allowUnsafeLabels;
+            inlineBrowserDisplayExtensions.Text = DeserializedPortalSettings.inlineBrowserDisplayExtensions.ToString();
+            lookupAlwaysEnabled.IsChecked = DeserializedPortalSettings.lookupAlwaysEnabled;
+            queryRequestLimit.Text = DeserializedPortalSettings.queryRequestLimit.ToString();
+            useCdn.IsChecked = DeserializedPortalSettings.useCdn;
+            useHttpCompression.IsChecked = DeserializedPortalSettings.useHttpCompression;
+            loadAllFilesIndividually.IsChecked = DeserializedPortalSettings.loadAllFilesIndividually;
+            enableSessionSerialization.IsChecked = DeserializedPortalSettings.enableSessionSerialization;
+            alwaysLoadKeys.IsChecked= DeserializedPortalSettings.alwaysLoadKeys;
+            uiInteractionTimeoutInSeconds.Text = DeserializedPortalSettings.uiInteractionTimeoutInSeconds.ToString();
+            allowScriptsInReports.IsChecked = DeserializedPortalSettings.allowScriptsInReports;
+            signalRConnectionTimeoutInSeconds.Text = DeserializedPortalSettings.signalRConnectionTimeoutInSeconds.ToString();
+            signalRDisconnectTimeoutInSeconds.Text = DeserializedPortalSettings.signalRDisconnectTimeoutInSeconds.ToString();
+            signalRKeepAliveInSeconds.Text = DeserializedPortalSettings.signalRKeepAliveInSeconds.ToString();
+            disableAnchoring.IsChecked = DeserializedPortalSettings.disableAnchoring;
+            disableSplitters.IsChecked = DeserializedPortalSettings.disableSplitters;
+            useLegacyCompleteResponse.IsChecked = DeserializedPortalSettings.useLegacyCompleteResponse;
+            scanditLicenseKey.Text = DeserializedPortalSettings.scanditLicenseKey.ToString();
+            redirectHttpToHttps.IsChecked = DeserializedPortalSettings.redirectHttpToHttps;
+            enableInsecureDeepLinks.IsChecked = DeserializedPortalSettings.enableInsecureDeepLinks;
+            autoSizeLabels.IsChecked = DeserializedPortalSettings.autoSizeLabels;
+            authLogFile.Text = DeserializedPortalSettings.authLogFile.ToString();
+            defaultAuthMode.Text = DeserializedPortalSettings.defaultAuthMode.ToString();
+        }
+
+        private void Button_Load(object sender, RoutedEventArgs e)
+        {
+            loadData();
         }
     }
 }

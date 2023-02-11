@@ -58,29 +58,6 @@ namespace CherwellOVerwatch
             });
         }
 
-        //private void Button_AppServerSettings(object sender, RoutedEventArgs e)
-        //{
-        //    string url = link + "settings/AppServerSettings";
-        //    //var request = new HttpRequestMessage
-        //    //{
-        //    //    Method = HttpMethod.Get,
-        //    //    RequestUri = new Uri(url),
-        //    //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-        //    //    Headers = new HttpRequestHeaders()
-        //    //};
-        //    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-        //    httpRequest.Accept = "application/json";
-        //    httpRequest.Headers["Authorization"] = token;
-
-        //    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-        //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-        //    {
-        //        var result = streamReader.ReadToEnd();
-        //        //settings.Text = result;
-
-        //    }
-        //}
-
         private void Button_AppServerSettings(object sender, RoutedEventArgs e)
         {
             Main.Content = new AppServer();
@@ -134,6 +111,51 @@ namespace CherwellOVerwatch
         private void Button_MQSLogSettings(object sender, RoutedEventArgs e)
         {
             Main.Content = new MQSLogSettings();
+        }
+
+        private void Button_PortalSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PortalSettings();
+        }
+
+        private void Button_PortalLogSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new PortalLogSettings();
+        }
+
+        private void Button_LogsSettings(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new LogsSettings();
+        }
+
+        private void Button_SchedulingServer(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new SchedulingServer();
+        }
+
+        private void Button_SH(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new ServiceHost();
+        }
+
+        private void Button_TAHub(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new TAHub();
+        }
+
+        private void Button_TAServer(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new TAServer();
+        }
+
+        private void Button_API(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new WebAPI();
+        }
+
+        private void Button_WHL(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new WebHooks();
         }
     }
 }

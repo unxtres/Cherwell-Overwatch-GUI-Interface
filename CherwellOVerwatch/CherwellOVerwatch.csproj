@@ -33,19 +33,52 @@
     <Compile Update="pages\EEMServerLogs.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="pages\MQSLogSettings.xaml.cs">
+    <Compile Update="pages\WebHooksLogs.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="pages\MQSSettings.xaml.cs">
+    <Compile Update="pages\WebHooks.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\WebAPILogs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\WebAPI.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TAServerLogs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TAServer.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TAHubLogs.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\TAHub.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\ServiceHostLog.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\SchedulingLogSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\PortalLogSettings.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\MQSLogSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\PortalSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="pages\SchedulingServer.xaml.cs">
+    <Compile Update="pages\MQSSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\ServiceHost.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="pages\SchedulingServer.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\Advanced.xaml.cs">
@@ -54,10 +87,7 @@
     <Compile Update="pages\AutoDeploy.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="pages\TAHub.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="pages\TA Server.xaml.cs">
+    <Compile Update="pages\LogsSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="pages\AppServerLogSettings.xaml.cs">
