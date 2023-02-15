@@ -37,8 +37,10 @@ namespace CherwellOVerwatch
             Web_Hooks DeserializedWH = JsonConvert.DeserializeObject<Web_Hooks>(loader.GetResult(url));
 
             enabled.IsChecked = DeserializedWH.enabled;
-            groupId.Text = DeserializedWH.groupId.ToString();
-            groupName.Text= DeserializedWH.groupName.ToString();
+            if (DeserializedWH.groupId != null) { groupId.Text = DeserializedWH.groupId.ToString(); }
+            else { groupId.Text = ""; }
+            if (DeserializedWH.groupName != null) { groupName.Text = DeserializedWH.groupName.ToString(); }
+            else { groupName.Text = ""; }
             heartbeatInterval.Text = DeserializedWH.heartbeatInterval.ToString();
             maxWorkers.Text= DeserializedWH.maxWorkers.ToString();
             waitTime.Text = DeserializedWH.waitTime.ToString();

@@ -44,15 +44,19 @@ namespace CherwellOVerwatch
             else { fileNameOverride.Text = ""; }
             isLoggingEnabled.IsChecked = DeserializedMQSLogServer.loggerSettings.isLoggingEnabled;
             isLogServerSettings.IsChecked = DeserializedMQSLogServer.loggerSettings.isServerSettings;
-            logFilePath.Text = DeserializedMQSLogServer.loggerSettings.logFilePath.ToString();
+            if (DeserializedMQSLogServer.loggerSettings.logFilePath != null) { logFilePath.Text = DeserializedMQSLogServer.loggerSettings.logFilePath.ToString(); }
+            else { logFilePath.Text = ""; }
 
             ignoreCertErrors.IsChecked = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
             isConfigured.IsChecked = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.isConfigured;
             isServerSettingsConnectionSettings.IsChecked = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.isServerSettings;
-            password.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.password.ToString();
+            if (DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.password != null) { password.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.password.ToString(); }
+            else { password.Text = ""; }
             settingsType.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.settingsType.ToString();
-            urlLogServerConnectionSettings.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.url.ToString();
-            userName.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.userName.ToString();
+            if (DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.url != null) { urlLogServerConnectionSettings.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.url.ToString(); }
+            else { urlLogServerConnectionSettings.Text = ""; }
+            if (DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.userName != null) { userName.Text = DeserializedMQSLogServer.loggerSettings.logServerConnectionSettings.userName.ToString(); }
+            else { userName.Text = ""; }
             logServerLogLevel.Text = DeserializedMQSLogServer.loggerSettings.logServerLogLevel.ToString();
             logToComplianceLog.IsChecked = DeserializedMQSLogServer.loggerSettings.logToComplianceLog;
             logToConsole.IsChecked = DeserializedMQSLogServer.loggerSettings.logToConsole;
@@ -63,7 +67,8 @@ namespace CherwellOVerwatch
             maxFilesBeforeRollover.Text = DeserializedMQSLogServer.loggerSettings.maxFilesBeforeRollover.ToString();
             maxFileSizeInMB.Text = DeserializedMQSLogServer.loggerSettings.maxFileSizeInMB.ToString();
 
-            urlSumoLogicConnectionSettings.Text = DeserializedMQSLogServer.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+            if (DeserializedMQSLogServer.loggerSettings.sumoLogicConnectionSettings.url != null) { urlSumoLogicConnectionSettings.Text = DeserializedMQSLogServer.loggerSettings.sumoLogicConnectionSettings.url.ToString(); }
+            else { urlSumoLogicConnectionSettings.Text = ""; }
             retryInterval.Text = DeserializedMQSLogServer.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
             connectionTimeout.Text = DeserializedMQSLogServer.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
             flushingAccuracy.Text = DeserializedMQSLogServer.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
