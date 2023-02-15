@@ -41,8 +41,8 @@ namespace CherwellOVerwatch
             installed.IsChecked = DeserializedEEMServer.installed;
             lastError.Text = DeserializedEEMServer.lastError.ToString();
             lastErrorDetails.Text = DeserializedEEMServer.lastErrorDetails.ToString();
-            if (DeserializedEEMServer.connection != null) { connection.Text = DeserializedEEMServer.connection.ToString(); }
-            else { connection.Text = ""; }
+            //if (DeserializedEEMServer.connection != null) { connection.Text = DeserializedEEMServer.connection.ToString(); }
+            //else { connection.Text = ""; }
             encryptedPassword.Text = DeserializedEEMServer.encryptedPassword.ToString();
             useDefaultRoleOfUser.IsChecked = DeserializedEEMServer.useDefaultRoleOfUser;
             userId.Text = DeserializedEEMServer.userId.ToString();

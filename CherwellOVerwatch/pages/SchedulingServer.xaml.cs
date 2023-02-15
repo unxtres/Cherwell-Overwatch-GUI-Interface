@@ -40,7 +40,7 @@ namespace CherwellOVerwatch
             installed.IsChecked = DeserializeSchedulingserver.installed;
             lastError.Text = DeserializeSchedulingserver.lastError.ToString();
             lastErrorDetails.Text = DeserializeSchedulingserver.lastErrorDetails.ToString();
-            connection.Text = DeserializeSchedulingserver.connection.ToString();
+            //connection.Text = DeserializeSchedulingserver.connection.ToString();
             encryptedPassword.Text = DeserializeSchedulingserver.encryptedPassword.ToString();
             useDefaultRoleOfUser.IsChecked = DeserializeSchedulingserver.useDefaultRoleOfUser;
             userId.Text = DeserializeSchedulingserver.userId.ToString();
