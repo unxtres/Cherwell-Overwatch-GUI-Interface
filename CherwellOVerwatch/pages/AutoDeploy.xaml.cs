@@ -97,7 +97,7 @@ namespace CherwellOVerwatch
             httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
             httpRequest.ContentType = "application/json";
 
-            var data = @"{""setting"":""{\""serverConfigToolComments\"":\""blabla\"",\""useRest\"":true,\""port\"":85,\""installed\"":true}"",""publish"":true}";
+            var data = @"{""setting"":""{\""autoDeployDir\"":\""\"",\""autoDeploySite\"":\""http://TNAWOJCZYK2019/CherwellAutoDeploy2\"",\""connectionName\"":\""\"",\""displayDebugInfo\"":false,\""installAccounts\"":null,\""installAllUsers\"":false,\""makeDefault\"":true,\""noPrompt\"":true,\""noUserOptions\"":false,\""overwrite\"":true,\""reqMinorReleases\"":false,\""selectedInstallOption\"":3}"",""publish"":true}";
 
             using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
             {
