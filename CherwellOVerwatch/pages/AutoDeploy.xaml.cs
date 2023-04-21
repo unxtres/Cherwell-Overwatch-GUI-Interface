@@ -67,7 +67,11 @@ namespace CherwellOVerwatch
             }
 
             var data = (JObject)JsonConvert.DeserializeObject(json);
-
+            var jsonFile = "AutoDeploy_Deserialized.json";
+            if (data==null)
+                data = new JObject();
+            else
+                File.WriteAllText(jsonFile, data.ToString());
 
             autoDeployDir.Text = data["autoDeployDir"].Value<string>();
             autoDeploySite.Text = data["autoDeploySite"].Value<string>();
