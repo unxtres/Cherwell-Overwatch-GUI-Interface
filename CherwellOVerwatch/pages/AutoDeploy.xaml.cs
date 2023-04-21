@@ -89,6 +89,7 @@ namespace CherwellOVerwatch
 
         private void Button_Save(object sender, RoutedEventArgs e)
         {
+            string url = "http://localhost:5000/api/settings/AutoDeploySettings";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
             httpRequest.Method = "POST";
 
@@ -96,7 +97,7 @@ namespace CherwellOVerwatch
             httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
             httpRequest.ContentType = "application/json";
 
-            var data = @"";
+            var data = @"{""setting"":""{\""serverConfigToolComments\"":\""blabla\"",\""useRest\"":true,\""port\"":85,\""installed\"":true}"",""publish"":true}";
 
             using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
             {
