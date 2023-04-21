@@ -30,10 +30,5 @@ namespace CherwellOVerwatch
         {
             InitializeComponent();
         }
-        private void Button_test(object sender, RoutedEventArgs e)
-        {
-            MainWindow mw = new MainWindow();
-            mw.service_Status();
-        }
     }
 }

@@ -37,42 +37,44 @@ namespace CherwellOVerwatch
 
             EEM_Server DeserializedEEMServerLogs = JsonConvert.DeserializeObject<EEM_Server>(loader.GetResult(url));
 
-            EventLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.eventLogLevel.ToString();
+            eventLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.eventLogLevel.ToString();
             fileLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.fileLogLevel.ToString();
-            if (DeserializedEEMServerLogs.loggerSettings.fileNameOverride != null) { fileNameOverride.Text = DeserializedEEMServerLogs.loggerSettings.fileNameOverride.ToString(); }
-            else { fileNameOverride.Text = ""; }
+            filenameOverride.Text = DeserializedEEMServerLogs.loggerSettings.fileNameOverride.ToString();
             isLoggingEnabled.IsChecked = DeserializedEEMServerLogs.loggerSettings.isLoggingEnabled;
             isServerSettings.IsChecked = DeserializedEEMServerLogs.loggerSettings.isServerSettings;
             logFilePath.Text = DeserializedEEMServerLogs.loggerSettings.logFilePath.ToString();
+            logServerLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.logServerLogLevel.ToString();
+            logToComplianceLog.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToComplianceLog;
+            logToConsole.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToConsole;
+            logToConsoleLevel.Text = DeserializedEEMServerLogs.loggerSettings.logToConsoleLevel.ToString();
+            LogToEventLog.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToEventLog;
+            logToFile.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToFile;
+            logToLogServer.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToLogServer;
+            maxFilesBeforeRollover.Text = DeserializedEEMServerLogs.loggerSettings.maxFilesBeforeRollover.ToString();
+            maxFileSizeInMB.Text = DeserializedEEMServerLogs.loggerSettings.maxFileSizeInMB.ToString();
+            logToSumoLogic.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToSumoLogic;
+            sumoLogicLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicLogLevel.ToString();
+            settingsType.Text = DeserializedEEMServerLogs.loggerSettings.settingsType.ToString();
+
+            //LOG SERVER CONNECTION SETTINGS
 
             ignoreCertErrors.IsChecked = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
             isConfigured.IsChecked = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.isConfigured;
             isServerSettingsConnectionSettings.IsChecked = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.isServerSettings;
             password.Text = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.password.ToString();
-            settingsType.Text = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.settingsType.ToString();
-            connectionUrl.Text = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.url.ToString();
+            settingsTypeConnection.Text = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.settingsType.ToString();
+            urlLogServerConnection.Text = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.url.ToString();
             userName.Text = DeserializedEEMServerLogs.loggerSettings.logServerConnectionSettings.userName.ToString();
-            logServerLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.logServerLogLevel.ToString();
-            logToComplianceLog.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToComplianceLog;
-            logToConsole.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToConsole;
-            logToConsoleLEvel.Text = DeserializedEEMServerLogs.loggerSettings.logToConsoleLevel.ToString();
-            logToEventLog.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToEventLog;
-            logToFile.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToFile;
-            logToLogServer.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToLogServer;
-            maxFilesBeforeRollover.Text = DeserializedEEMServerLogs.loggerSettings.maxFilesBeforeRollover.ToString();
-            maxFileSizeInMB.Text = DeserializedEEMServerLogs.loggerSettings.maxFileSizeInMB.ToString();
 
-            sumoLogicUrl.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+            //SUMO LOGIC CONNECTION SETTINGS
+
+            urlSumoLogic.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.url.ToString();
             retryInterval.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
             connectionTimeout.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
             flushingAccuracy.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
             maxFlushInterval.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
             messagePerRequest.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
-            maxQueSizeBytes.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
-
-            logToSumoLogic.IsChecked = DeserializedEEMServerLogs.loggerSettings.logToSumoLogic;
-            sumoLogicLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicLogLevel.ToString();
-            settingsType.Text = DeserializedEEMServerLogs.loggerSettings.settingsType.ToString();
+            maxQueueSizeBytes.Text = DeserializedEEMServerLogs.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
         }
 
         private void Button_Load(object sender, RoutedEventArgs e)

@@ -34,7 +34,7 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Load(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -66,41 +66,44 @@ namespace CherwellOVerwatch
             //var data = (JObject)JsonConvert.DeserializeObject(json);
             ApplicationServer DeserializedLogger = JsonConvert.DeserializeObject<ApplicationServer>(json);
 
-            EventLogLevel.Text = DeserializedLogger.loggerSettings.eventLogLevel.ToString();
+            eventLogLevel.Text = DeserializedLogger.loggerSettings.eventLogLevel.ToString();
             fileLogLevel.Text = DeserializedLogger.loggerSettings.fileLogLevel.ToString();
-            if (DeserializedLogger.loggerSettings.fileNameOverride != null) { fileNameOverride.Text = DeserializedLogger.loggerSettings.fileNameOverride.ToString(); }
-            else { fileNameOverride.Text = ""; }
+            filenameOverride.Text = DeserializedLogger.loggerSettings.fileNameOverride.ToString();
             isLoggingEnabled.IsChecked = DeserializedLogger.loggerSettings.isLoggingEnabled;
             isServerSettings.IsChecked = DeserializedLogger.loggerSettings.isServerSettings;
             logFilePath.Text = DeserializedLogger.loggerSettings.logFilePath.ToString();
+            logServerLogLevel.Text = DeserializedLogger.loggerSettings.logServerLogLevel.ToString();
+            logToComplianceLog.IsChecked = DeserializedLogger.loggerSettings.logToComplianceLog;
+            logToConsole.IsChecked = DeserializedLogger.loggerSettings.logToConsole;
+            logToConsoleLevel.Text = DeserializedLogger.loggerSettings.logToConsoleLevel.ToString();
+            LogToEventLog.IsChecked = DeserializedLogger.loggerSettings.logToEventLog;
+            logToFile.IsChecked = DeserializedLogger.loggerSettings.logToFile;
+            logToLogServer.IsChecked = DeserializedLogger.loggerSettings.logToLogServer;
+            maxFilesBeforeRollover.Text = DeserializedLogger.loggerSettings.maxFilesBeforeRollover.ToString();
+            maxFileSizeInMB.Text = DeserializedLogger.loggerSettings.maxFileSizeInMB.ToString();
+            logToSumoLogic.IsChecked = DeserializedLogger.loggerSettings.logToSumoLogic;
+            sumoLogicLogLevel.Text = DeserializedLogger.loggerSettings.sumoLogicLogLevel.ToString();
+            settingsType.Text = DeserializedLogger.loggerSettings.settingsType.ToString();
+
+            //LOG SERVER CONNECTION SETTINGS
 
             ignoreCertErrors.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
             isConfigured.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.isConfigured;
             isServerSettingsConnectionSettings.IsChecked = DeserializedLogger.loggerSettings.logServerConnectionSettings.isServerSettings;
             password.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.password.ToString();
-            settingsType.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.settingsType.ToString();
+            settingsTypeConnection.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.settingsType.ToString();
+            urlLogServerConnection.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.url.ToString();
             userName.Text = DeserializedLogger.loggerSettings.logServerConnectionSettings.userName.ToString();
-            logServerLogLevel.Text = DeserializedLogger.loggerSettings.logServerLogLevel.ToString();
-            logToComplianceLog.IsChecked = DeserializedLogger.loggerSettings.logToComplianceLog;
-            logToConsole.IsChecked = DeserializedLogger.loggerSettings.logToConsole;
-            logToConsoleLEvel.Text = DeserializedLogger.loggerSettings.logToConsoleLevel.ToString();
-            logToEventLog.IsChecked = DeserializedLogger.loggerSettings.logToEventLog;
-            logToFile.IsChecked = DeserializedLogger.loggerSettings.logToFile;
-            logToLogServer.IsChecked = DeserializedLogger.loggerSettings.logToLogServer;
-            maxFilesBeforeRollover.Text = DeserializedLogger.loggerSettings.maxFilesBeforeRollover.ToString();
-            maxFileSizeInMB.Text = DeserializedLogger.loggerSettings.maxFileSizeInMB.ToString();
 
-            sumoLogicUrl.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+            //SUMO LOGIC CONNECTION SETTINGS
+
+            urlSumoLogic.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.url.ToString();
             retryInterval.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
             connectionTimeout.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
             flushingAccuracy.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
             maxFlushInterval.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
             messagePerRequest.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
-            maxQueSizeBytes.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
-
-            logToSumoLogic.IsChecked = DeserializedLogger.loggerSettings.logToSumoLogic;
-            sumoLogicLogLevel.Text = DeserializedLogger.loggerSettings.sumoLogicLogLevel.ToString();
-            settingsType.Text = DeserializedLogger.loggerSettings.settingsType.ToString();
+            maxQueueSizeBytes.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
         }
     }
 }

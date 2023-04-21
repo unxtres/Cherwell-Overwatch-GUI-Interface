@@ -8,8 +8,5 @@
       d:DesignHeight="450" d:DesignWidth="695"
       Title="OtherSettings">
 
-    <Grid x:Name="mypage" Background="#FFC5C5C5" Margin="0,0,0,-33">
-        <Button Content="TEST" HorizontalAlignment="Left" VerticalAlignment="Top" Width="190" Click="Button_test" Margin="38,45,0,0" Height="95"/>
-        
-    </Grid>
+    <Grid x:Name="mypage" Background="#FFC5C5C5" Margin="0,0,0,-33"/>
 </Page>
