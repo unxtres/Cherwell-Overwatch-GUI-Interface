@@ -83,5 +83,31 @@ namespace CherwellOVerwatch
 
             selectedInstallOption.Text = data["selectedInstallOption"].Value<string>();
         }
+
+        private void Button_Save(object sender, RoutedEventArgs e)
+        {
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpRequest.Method = "POST";
+
+            httpRequest.Accept = "application/json";
+            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            httpRequest.ContentType = "application/json";
+
+            var data = @"";
+
+            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+            {
+                streamWriter.Write(data);
+            }
+
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+            }
+
+            save_status.Text = httpResponse.StatusCode.ToString();
+
+        }
     }
 }
