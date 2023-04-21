@@ -29,6 +29,7 @@ namespace CherwellOVerwatch
     public partial class AutoDeploy : Page
     {
         public string json;
+        
         public AutoDeploy()
         {
             InitializeComponent();
@@ -55,6 +56,8 @@ namespace CherwellOVerwatch
                 {
                     var result = streamReader.ReadToEnd();
                     json = result;
+                    var jsonFile = "AutoDeploy.json";
+                    File.WriteAllText(jsonFile, json);
                 }
             }
             catch

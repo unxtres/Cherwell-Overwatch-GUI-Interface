@@ -68,7 +68,10 @@ namespace CherwellOVerwatch
 
             eventLogLevel.Text = DeserializedLogger.loggerSettings.eventLogLevel.ToString();
             fileLogLevel.Text = DeserializedLogger.loggerSettings.fileLogLevel.ToString();
-            filenameOverride.Text = DeserializedLogger.loggerSettings.fileNameOverride.ToString();
+            if (DeserializedLogger.loggerSettings.fileNameOverride == null)
+                filenameOverride.Text = "";
+            else
+                filenameOverride.Text = DeserializedLogger.loggerSettings.fileNameOverride.ToString();
             isLoggingEnabled.IsChecked = DeserializedLogger.loggerSettings.isLoggingEnabled;
             isServerSettings.IsChecked = DeserializedLogger.loggerSettings.isServerSettings;
             logFilePath.Text = DeserializedLogger.loggerSettings.logFilePath.ToString();
