@@ -96,7 +96,7 @@ namespace CherwellOVerwatch
             httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
             httpRequest.ContentType = "application/json";
 
-            var data = @"";
+            var data = @"{""setting"":""{\""serverConfigToolComments\"":\""blabla\"",\""useRest\"":true,\""port\"":85,\""installed\"":true}"",""publish"":true}";
 
             using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
             {
