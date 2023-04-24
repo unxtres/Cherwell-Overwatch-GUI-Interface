@@ -24,9 +24,6 @@ using System.ServiceProcess;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class AutoDeploy : Page
     {
         public string json;
@@ -41,13 +38,6 @@ namespace CherwellOVerwatch
             try
             {
                 string url = "http://localhost:5000/api/settings/AutoDeploySettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
@@ -59,13 +49,9 @@ namespace CherwellOVerwatch
                     json = result;
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                // Log the exception to a log file or to the Windows event log.
-                // You can use a logging library such as Serilog or NLog to simplify this process.
-
-                // Display a user-friendly error message to the user.
-                MessageBox.Show("An error occurred while loading data. Please check your network connection and try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Not Connected");
             }
 
             var data = (JObject)JsonConvert.DeserializeObject(json);
@@ -97,7 +83,7 @@ namespace CherwellOVerwatch
         {
             try
             {
-                // Restart the Cherwell Overwatch service
+                // Restart Overwatch service
                 ServiceController service = new ServiceController("Cherwell Overwatch");
                 if (service.Status == ServiceControllerStatus.Running)
                 {
@@ -108,7 +94,7 @@ namespace CherwellOVerwatch
                 service.Start();
                 service.WaitForStatus(ServiceControllerStatus.Running);
 
-                // Build the JSON data based on the UI fields
+                // Build the JSON based on the UI fields
                 var data = new JObject
                 {
                     ["autoDeployDir"] = autoDeployDir.Text,
@@ -133,7 +119,7 @@ namespace CherwellOVerwatch
 
                 var jsonData = JsonConvert.SerializeObject(settingData);
 
-                // Send the HTTP POST request
+                // Send request
                 string url = "http://localhost:5000/api/settings/AutoDeploySettings";
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
