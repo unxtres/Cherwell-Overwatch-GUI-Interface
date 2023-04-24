@@ -20,6 +20,7 @@ using System.Xml.Linq;
 using CherwellOVerwatch.Settings;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System.ServiceProcess;
 
 namespace CherwellOVerwatch
 {
@@ -56,14 +57,15 @@ namespace CherwellOVerwatch
                 {
                     var result = streamReader.ReadToEnd();
                     json = result;
-                    var jsonFile = "AutoDeploy.json";
-                    File.WriteAllText(jsonFile, json);
                 }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Not Connected");
-                throw;
+                // Log the exception to a log file or to the Windows event log.
+                // You can use a logging library such as Serilog or NLog to simplify this process.
+
+                // Display a user-friendly error message to the user.
+                MessageBox.Show("An error occurred while loading data. Please check your network connection and try again.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             var data = (JObject)JsonConvert.DeserializeObject(json);
@@ -93,29 +95,65 @@ namespace CherwellOVerwatch
 
         private void Button_Save(object sender, RoutedEventArgs e)
         {
-            string url = "http://localhost:5000/api/settings/AutoDeploySettings";
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpRequest.Method = "POST";
-
-            httpRequest.Accept = "application/json";
-            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
-            httpRequest.ContentType = "application/json";
-
-            var data = @"{""setting"":""{\""autoDeployDir\"":\""\"",\""autoDeploySite\"":\""http://TNAWOJCZYK2019/CherwellAutoDeploy2\"",\""connectionName\"":\""\"",\""displayDebugInfo\"":false,\""installAccounts\"":null,\""installAllUsers\"":false,\""makeDefault\"":true,\""noPrompt\"":true,\""noUserOptions\"":false,\""overwrite\"":true,\""reqMinorReleases\"":false,\""selectedInstallOption\"":3}"",""publish"":true}";
-
-            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+            try
             {
-                streamWriter.Write(data);
-            }
+                // Restart the Cherwell Overwatch service
+                ServiceController service = new ServiceController("Cherwell Overwatch");
+                if (service.Status == ServiceControllerStatus.Running)
+                {
+                    save_status.Text = "Saving...";
+                    service.Stop();
+                    service.WaitForStatus(ServiceControllerStatus.Stopped);
+                }
+                service.Start();
+                service.WaitForStatus(ServiceControllerStatus.Running);
 
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                // Build the JSON data based on the UI fields
+                var data = new JObject
+                {
+                    ["autoDeployDir"] = autoDeployDir.Text,
+                    ["autoDeploySite"] = autoDeploySite.Text,
+                    ["connectionName"] = connectionName.Text,
+                    ["displayDebugInfo"] = displayDebugInfo.IsChecked,
+                    ["installAccounts"] = installAccounts.Text,
+                    ["installAllUsers"] = installAllUsers.IsChecked,
+                    ["makeDefault"] = makeDefault.IsChecked,
+                    ["noPrompt"] = noPrompt.IsChecked,
+                    ["noUserOptions"] = noUserOptions.IsChecked,
+                    ["overwrite"] = overwrite.IsChecked,
+                    ["reqMinorReleases"] = reqMinorReleases.IsChecked,
+                    ["selectedInstallOption"] = selectedInstallOption.Text,
+                };
+
+                var settingData = new JObject
+                {
+                    ["setting"] = JsonConvert.SerializeObject(data),
+                    ["publish"] = true
+                };
+
+                var jsonData = JsonConvert.SerializeObject(settingData);
+
+                // Send the HTTP POST request
+                string url = "http://localhost:5000/api/settings/AutoDeploySettings";
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "POST";
+
+                httpRequest.Accept = "application/json";
+                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+                httpRequest.ContentType = "application/json";
+
+                using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+                {
+                    streamWriter.Write(jsonData);
+                }
+
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                save_status.Text = httpResponse.StatusCode.ToString();
+            }
+            catch
             {
-                var result = streamReader.ReadToEnd();
+                MessageBox.Show("Not Connected");
             }
-
-            save_status.Text = httpResponse.StatusCode.ToString();
-
         }
     }
 }
