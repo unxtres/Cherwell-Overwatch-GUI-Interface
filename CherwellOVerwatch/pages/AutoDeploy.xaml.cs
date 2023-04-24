@@ -27,7 +27,7 @@ namespace CherwellOVerwatch
     public partial class AutoDeploy : Page
     {
         public string json;
-        
+
         public AutoDeploy()
         {
             InitializeComponent();
@@ -56,7 +56,7 @@ namespace CherwellOVerwatch
 
             var data = (JObject)JsonConvert.DeserializeObject(json);
             var jsonFile = "AutoDeploy_Deserialized.json";
-            if (data==null)
+            if (data == null)
                 data = new JObject();
             else
                 File.WriteAllText(jsonFile, data.ToString());
@@ -81,9 +81,48 @@ namespace CherwellOVerwatch
 
         private void Button_Save(object sender, RoutedEventArgs e)
         {
-            string url = "http://localhost:5000/api/settings/AutoDeploySettings";
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpRequest.Method = "POST";
+            try
+            {
+                // Restart service
+                ServiceController service = new ServiceController("Cherwell Overwatch");
+                if (service.Status == ServiceControllerStatus.Running)
+                {
+                    save_status.Text = "Saving...";
+                    service.Stop();
+                    service.WaitForStatus(ServiceControllerStatus.Stopped);
+                }
+                service.Start();
+                service.WaitForStatus(ServiceControllerStatus.Running);
+
+                // Build JSON
+                var data = new JObject
+                {
+                    ["autoDeployDir"] = autoDeployDir.Text,
+                    ["autoDeploySite"] = autoDeploySite.Text,
+                    ["connectionName"] = connectionName.Text,
+                    ["displayDebugInfo"] = displayDebugInfo.IsChecked,
+                    ["installAccounts"] = installAccounts.Text,
+                    ["installAllUsers"] = installAllUsers.IsChecked,
+                    ["makeDefault"] = makeDefault.IsChecked,
+                    ["noPrompt"] = noPrompt.IsChecked,
+                    ["noUserOptions"] = noUserOptions.IsChecked,
+                    ["overwrite"] = overwrite.IsChecked,
+                    ["reqMinorReleases"] = reqMinorReleases.IsChecked,
+                    ["selectedInstallOption"] = selectedInstallOption.Text,
+                };
+
+                var settingData = new JObject
+                {
+                    ["setting"] = JsonConvert.SerializeObject(data),
+                    ["publish"] = true
+                };
+
+                var jsonData = JsonConvert.SerializeObject(settingData);
+
+                // Send request
+                string url = "http://localhost:5000/api/settings/AutoDeploySettings";
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "POST";
 
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
