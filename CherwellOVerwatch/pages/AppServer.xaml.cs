@@ -135,11 +135,11 @@ namespace CherwellOVerwatch
         {
             try
             {
+                save_status.Text = "Saving...!";
                 // Restart service
                 ServiceController service = new ServiceController("Cherwell Overwatch");
                 if (service.Status == ServiceControllerStatus.Running)
                 {
-                    save_status.Text = "Saving...";
                     service.Stop();
                     service.WaitForStatus(ServiceControllerStatus.Stopped);
                 }
