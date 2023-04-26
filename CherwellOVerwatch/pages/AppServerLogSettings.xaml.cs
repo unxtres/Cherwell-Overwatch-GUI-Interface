@@ -23,9 +23,6 @@ using Newtonsoft.Json.Linq;
 
 namespace CherwellOVerwatch
 {
-    /// <summary>
-    /// Interaction logic for Page1.xaml
-    /// </summary>
     public partial class AppServerLogSettings : Page
     {
         public string json;
@@ -39,13 +36,6 @@ namespace CherwellOVerwatch
             try
             {
                 string url = "http://localhost:5000/api/settings/AppServerSettings";
-                //var request = new HttpRequestMessage
-                //{
-                //    Method = HttpMethod.Get,
-                //    RequestUri = new Uri(url),
-                //    Content = new StringContent("body", Encoding.UTF8, "application/json"),
-                //    Headers = new HttpRequestHeaders()
-                //};
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
@@ -62,8 +52,6 @@ namespace CherwellOVerwatch
                 MessageBox.Show("Not Connected");
                 throw;
             }
-            //string temp;
-            //var data = (JObject)JsonConvert.DeserializeObject(json);
             ApplicationServer DeserializedLogger = JsonConvert.DeserializeObject<ApplicationServer>(json);
 
             eventLogLevel.Text = DeserializedLogger.loggerSettings.eventLogLevel.ToString();
@@ -107,6 +95,11 @@ namespace CherwellOVerwatch
             maxFlushInterval.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
             messagePerRequest.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
             maxQueueSizeBytes.Text = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
+        }
+
+        private void Button_Save(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
