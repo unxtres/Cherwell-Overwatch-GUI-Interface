@@ -64,8 +64,16 @@ namespace CherwellOVerwatch
             disableCompression.IsChecked = DeserializedAppServ.disableCompression;
             installed.IsChecked = DeserializedAppServ.installed;
 
-            lastError.Text = DeserializedAppServ.lastError.ToString();
-            lastErrorDetails.Text = DeserializedAppServ.lastErrorDetails.ToString();
+            if (DeserializedAppServ.lastError == null)
+                lastError.Text = "";
+            else
+                lastError.Text = DeserializedAppServ.lastError.ToString();
+
+            if (DeserializedAppServ.lastErrorDetails != null)
+                lastErrorDetails.Text = DeserializedAppServ.lastErrorDetails.ToString();
+            else
+                lastErrorDetails.Text = "";
+
 
             isHttp.IsChecked = DeserializedAppServ.isHttp;
             isTcp.IsChecked = DeserializedAppServ.isTcp;
