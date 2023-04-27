@@ -10,7 +10,7 @@
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"  Click="Button_Save"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="BROWSER SETTINGS" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="12,64,0,0" TextWrapping="Wrap" Text="Trebuchet Data Source" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="12,85,0,0" TextWrapping="Wrap" Text="Test Mode" VerticalAlignment="Top"/>
@@ -66,6 +66,7 @@
         <CheckBox x:Name="AutoSizeLabels" HorizontalAlignment="Left" Margin="556,191,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="AuthLogFile" HorizontalAlignment="Left" Margin="556,211,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="DefaultAuthMode" HorizontalAlignment="Left" Margin="556,232,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="302,414,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="101"/>
 
     </Grid>
 </Page>

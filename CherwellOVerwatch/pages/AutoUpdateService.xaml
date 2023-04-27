@@ -10,7 +10,7 @@
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="LoadButton_Click"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,39,0,0" TextWrapping="Wrap" Text="Download Path" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,60,0,0" TextWrapping="Wrap" Text="Update Check Interval" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="71,81,0,0" TextWrapping="Wrap" Text="Default Update Check Interval Value" VerticalAlignment="Top"/>
@@ -30,6 +30,7 @@
         <TextBox x:Name="updatePath" HorizontalAlignment="Left" Margin="180,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="278"/>
         <TextBox x:Name="versionFile" HorizontalAlignment="Left" Margin="180,246,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="278"/>
         <TextBox x:Name="currentVersion" HorizontalAlignment="Left" Margin="180,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="278"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="184,414,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="168"/>
 
     </Grid>
 </Page>
