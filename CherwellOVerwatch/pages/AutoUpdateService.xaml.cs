@@ -47,8 +47,10 @@ namespace CherwellOVerwatch
                 updateCheckInterval.Text = DeserializedAutoUpdate.updateCheckInterval.ToString();
                 defaultUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.defaultUpdateCheckIntervalValue.ToString();
                 minimumUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.minimumUpdateCheckIntervalValue.ToString();
+                if (DeserializedAutoUpdate.application.name != null)
+                    name.Text = DeserializedAutoUpdate.application.name.ToString();
+                else name.Text = "";
 
-                name.Text = DeserializedAutoUpdate.application.name.ToString();
                 applicationType.Text = DeserializedAutoUpdate.application.applicationType.ToString();
                 updatePath.Text = DeserializedAutoUpdate.application.updatePath.ToString();
                 versionFile.Text = DeserializedAutoUpdate.application.versionFile.ToString();
