@@ -38,97 +38,86 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string urls = "http://localhost:5000/api/settings/AppServerSettings";
-                var httpRequest = (HttpWebRequest)WebRequest.Create(urls);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+                LoadSettings loader = new LoadSettings();
+                ApplicationServer DeserializedAppServ = JsonConvert.DeserializeObject<ApplicationServer>(json);
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
-                }
+                disableCompression.IsChecked = DeserializedAppServ.disableCompression;
+                installed.IsChecked = DeserializedAppServ.installed;
+
+                if (DeserializedAppServ.lastError == null)
+                    lastError.Text = "";
+                else
+                    lastError.Text = DeserializedAppServ.lastError.ToString();
+
+                if (DeserializedAppServ.lastErrorDetails != null)
+                    lastErrorDetails.Text = DeserializedAppServ.lastErrorDetails.ToString();
+                else
+                    lastErrorDetails.Text = "";
+
+
+                isHttp.IsChecked = DeserializedAppServ.isHttp;
+                isTcp.IsChecked = DeserializedAppServ.isTcp;
+
+                appServerHostMode.Text = DeserializedAppServ.appServerHostMode.ToString();
+                protocol.Text = DeserializedAppServ.protocol.ToString();
+                connection.Text = DeserializedAppServ.connection.ToString();
+
+                enableTcpOption.IsChecked = DeserializedAppServ.enableTcpOption;
+
+                instanceGuid.Text = DeserializedAppServ.instanceGuid.ToString();
+                oldTcpPort.Text = DeserializedAppServ.oldTcpPort.ToString();
+                port.Text = DeserializedAppServ.port.ToString();
+
+                useRest.IsChecked = DeserializedAppServ.useRest;
+
+                securityMode.Text = DeserializedAppServ.securityMode.ToString();
+                serverName.Text = DeserializedAppServ.serverName.ToString();
+                serverConfigToolComments.Text = DeserializedAppServ.serverConfigToolComments.ToString();
+                loggedInUserCacheExpiryMins.Text = DeserializedAppServ.loggedInUserCacheExpiryMins.ToString();
+
+                useRecoveryFile.IsChecked = DeserializedAppServ.useRecoveryFile;
+
+                recoveryFilePath.Text = DeserializedAppServ.recoveryFilePath.ToString();
+                recoveryFileName.Text = DeserializedAppServ.recoveryFileName.ToString();
+                recoveryFilePersistIntervalSeconds.Text = DeserializedAppServ.recoveryFilePersistIntervalSeconds.ToString();
+
+                minMessageSizeToCompressHigh.Text = DeserializedAppServ.minMessageSizeToCompressHigh.ToString();
+                minMessageSizeToCompressLow.Text = DeserializedAppServ.minMessageSizeToCompressLow.ToString();
+                minMessageSizeToCompressMedium.Text = DeserializedAppServ.minMessageSizeToCompressMedium.ToString();
+
+                wcfMaxBufferPoolSize.Text = DeserializedAppServ.wcfMaxBufferPoolSize.ToString();
+                wcfMaxBufferSize.Text = DeserializedAppServ.wcfMaxBufferSize.ToString();
+                wcfMaxReceivedMessageSize.Text = DeserializedAppServ.wcfMaxReceivedMessageSize.ToString();
+                wcfReaderMaxNameTableCharCount.Text = DeserializedAppServ.wcfReaderMaxNameTableCharCount.ToString();
+                wcfReaderMaxStringContentLength.Text = DeserializedAppServ.wcfReaderMaxStringContentLength.ToString();
+                wcfReaderMaxArrayLength.Text = DeserializedAppServ.wcfReaderMaxArrayLength.ToString();
+                wcfOperationTimeoutOverride.Text = DeserializedAppServ.wcfOperationTimeoutOverride.ToString();
+
+                wcfUseMessageCompression.IsChecked = DeserializedAppServ.wcfUseMessageCompression;
+
+                wcfTcpMaxConnections.Text = DeserializedAppServ.wcfTcpMaxConnections.ToString();
+                wcfMaxConcurrentCalls.Text = DeserializedAppServ.wcfMaxConcurrentCalls.ToString();
+                wcfMaxConcurrentInstances.Text = DeserializedAppServ.wcfMaxConcurrentInstances.ToString();
+                wcfMaxConcurrentSessions.Text = DeserializedAppServ.wcfMaxConcurrentSessions.ToString();
+
+                wcfEnablePerformanceCounters.IsChecked = DeserializedAppServ.wcfEnablePerformanceCounters;
+
+                wcfListenBacklog.Text = DeserializedAppServ.wcfListenBacklog.ToString();
+
+                certificateStoreLocation.Text = DeserializedAppServ.certificateStoreLocation.ToString();
+                certificateStoreName.Text = DeserializedAppServ.certificateStoreName.ToString();
+                certificateSubject.Text = DeserializedAppServ.certificateSubject.ToString();
+                certificateThumbprint.Text = DeserializedAppServ.certificateThumbprint.ToString();
+                certificateValidationModeForAutoClient.Text = DeserializedAppServ.certificateValidationModeForAutoClient.ToString();
             }
             catch
             {
                 MessageBox.Show("Not Connected");
-                throw;
             }
-            ApplicationServer DeserializedAppServ = JsonConvert.DeserializeObject<ApplicationServer>(json);
 
-            LoadSettings loader = new LoadSettings();
+            
 
-            var data = (JObject)JsonConvert.DeserializeObject(loader.GetResult(url));
-
-            disableCompression.IsChecked = DeserializedAppServ.disableCompression;
-            installed.IsChecked = DeserializedAppServ.installed;
-
-            if (DeserializedAppServ.lastError == null)
-                lastError.Text = "";
-            else
-                lastError.Text = DeserializedAppServ.lastError.ToString();
-
-            if (DeserializedAppServ.lastErrorDetails != null)
-                lastErrorDetails.Text = DeserializedAppServ.lastErrorDetails.ToString();
-            else
-                lastErrorDetails.Text = "";
-
-
-            isHttp.IsChecked = DeserializedAppServ.isHttp;
-            isTcp.IsChecked = DeserializedAppServ.isTcp;
-
-            appServerHostMode.Text = DeserializedAppServ.appServerHostMode.ToString();
-            protocol.Text = DeserializedAppServ.protocol.ToString();
-            connection.Text = DeserializedAppServ.connection.ToString();
-
-            enableTcpOption.IsChecked = DeserializedAppServ.enableTcpOption;
-
-            instanceGuid.Text = DeserializedAppServ.instanceGuid.ToString();
-            oldTcpPort.Text = DeserializedAppServ.oldTcpPort.ToString();
-            port.Text = DeserializedAppServ.port.ToString();
-
-            useRest.IsChecked = DeserializedAppServ.useRest;
-
-            securityMode.Text = DeserializedAppServ.securityMode.ToString();
-            serverName.Text = DeserializedAppServ.serverName.ToString();
-            serverConfigToolComments.Text = DeserializedAppServ.serverConfigToolComments.ToString();
-            loggedInUserCacheExpiryMins.Text = DeserializedAppServ.loggedInUserCacheExpiryMins.ToString();
-
-            useRecoveryFile.IsChecked = DeserializedAppServ.useRecoveryFile;
-
-            recoveryFilePath.Text = DeserializedAppServ.recoveryFilePath.ToString();
-            recoveryFileName.Text = DeserializedAppServ.recoveryFileName.ToString();
-            recoveryFilePersistIntervalSeconds.Text = DeserializedAppServ.recoveryFilePersistIntervalSeconds.ToString();
-
-            minMessageSizeToCompressHigh.Text = DeserializedAppServ.minMessageSizeToCompressHigh.ToString();
-            minMessageSizeToCompressLow.Text = DeserializedAppServ.minMessageSizeToCompressLow.ToString();
-            minMessageSizeToCompressMedium.Text = DeserializedAppServ.minMessageSizeToCompressMedium.ToString();
-
-            wcfMaxBufferPoolSize.Text = DeserializedAppServ.wcfMaxBufferPoolSize.ToString();
-            wcfMaxBufferSize.Text = DeserializedAppServ.wcfMaxBufferSize.ToString();
-            wcfMaxReceivedMessageSize.Text = DeserializedAppServ.wcfMaxReceivedMessageSize.ToString();
-            wcfReaderMaxNameTableCharCount.Text = DeserializedAppServ.wcfReaderMaxNameTableCharCount.ToString();
-            wcfReaderMaxStringContentLength.Text = DeserializedAppServ.wcfReaderMaxStringContentLength.ToString();
-            wcfReaderMaxArrayLength.Text = DeserializedAppServ.wcfReaderMaxArrayLength.ToString();
-            wcfOperationTimeoutOverride.Text = DeserializedAppServ.wcfOperationTimeoutOverride.ToString();
-
-            wcfUseMessageCompression.IsChecked = DeserializedAppServ.wcfUseMessageCompression;
-
-            wcfTcpMaxConnections.Text = DeserializedAppServ.wcfTcpMaxConnections.ToString();
-            wcfMaxConcurrentCalls.Text = DeserializedAppServ.wcfMaxConcurrentCalls.ToString();
-            wcfMaxConcurrentInstances.Text = DeserializedAppServ.wcfMaxConcurrentInstances.ToString();
-            wcfMaxConcurrentSessions.Text = DeserializedAppServ.wcfMaxConcurrentSessions.ToString();
-
-            wcfEnablePerformanceCounters.IsChecked = DeserializedAppServ.wcfEnablePerformanceCounters;
-
-            wcfListenBacklog.Text = DeserializedAppServ.wcfListenBacklog.ToString();
-
-            certificateStoreLocation.Text = DeserializedAppServ.certificateStoreLocation.ToString();
-            certificateStoreName.Text = DeserializedAppServ.certificateStoreName.ToString();
-            certificateSubject.Text = DeserializedAppServ.certificateSubject.ToString();
-            certificateThumbprint.Text = DeserializedAppServ.certificateThumbprint.ToString();
-            certificateValidationModeForAutoClient.Text = DeserializedAppServ.certificateValidationModeForAutoClient.ToString();
+            
         }
 
         private void Button_Save(object sender, RoutedEventArgs e)
