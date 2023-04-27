@@ -43,23 +43,31 @@ namespace CherwellOVerwatch.Settings
 
         public string GetResult(string url)
         {
-            try
-            {
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpRequest.Accept = "application/json";
+            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
-                {
-                    Result = streamReader.ReadToEnd();
-                }
-            }
-            catch
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
             {
-                MessageBox.Show("Not Connected");
-                throw;
+                Result = streamReader.ReadToEnd();
             }
+            //try
+            //{
+            //    var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            //    httpRequest.Accept = "application/json";
+            //    httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+
+            //    var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            //    using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            //    {
+            //        Result = streamReader.ReadToEnd();
+            //    }
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Not Connected");
+            //}
             return Result;
         }
     }

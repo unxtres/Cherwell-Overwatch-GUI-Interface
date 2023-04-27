@@ -28,50 +28,40 @@ namespace CherwellOVerwatch
 {
     public partial class AutoUpdateService : Page
     {
+        public string url = "http://localhost:5000/api/settings/AutoUpdateServiceSettings";
         public string json;
         public AutoUpdateService()
         {
             InitializeComponent();
         }
 
-        private void LoadButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Load(object sender, RoutedEventArgs e)
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AutoUpdateServiceSettings";
-                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-                httpRequest.Accept = "application/json";
-                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+                LoadSettings loader = new LoadSettings();
+                AutoUpdate DeserializedAutoUpdate = JsonConvert.DeserializeObject<AutoUpdate>(json);
 
-                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                downloadPath.Text = DeserializedAutoUpdate.downloadPath.ToString();
+                updateCheckInterval.Text = DeserializedAutoUpdate.updateCheckInterval.ToString();
+                defaultUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.defaultUpdateCheckIntervalValue.ToString();
+                minimumUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.minimumUpdateCheckIntervalValue.ToString();
+
+                name.Text = DeserializedAutoUpdate.application.name.ToString();
+                applicationType.Text = DeserializedAutoUpdate.application.applicationType.ToString();
+                updatePath.Text = DeserializedAutoUpdate.application.updatePath.ToString();
+                versionFile.Text = DeserializedAutoUpdate.application.versionFile.ToString();
+                if (DeserializedAutoUpdate.application.currentVersion != null)
                 {
-                    var result = streamReader.ReadToEnd();
-                    json = result;
+                    currentVersion.Text = DeserializedAutoUpdate.application.currentVersion.ToString();
                 }
+                else { currentVersion.Text = ""; }
             }
+
             catch
             {
                 MessageBox.Show("Not Connected");
-                throw;
             }
-
-            AutoUpdate DeserializedAutoUpdate = JsonConvert.DeserializeObject<AutoUpdate>(json);
-
-            downloadPath.Text = DeserializedAutoUpdate.downloadPath.ToString();
-            updateCheckInterval.Text = DeserializedAutoUpdate.updateCheckInterval.ToString();
-            defaultUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.defaultUpdateCheckIntervalValue.ToString();
-            minimumUpdateCheckIntervalValue.Text = DeserializedAutoUpdate.minimumUpdateCheckIntervalValue.ToString();
-
-            name.Text = DeserializedAutoUpdate.application.name.ToString();
-            applicationType.Text = DeserializedAutoUpdate.application.applicationType.ToString();
-            updatePath.Text = DeserializedAutoUpdate.application.updatePath.ToString();
-            versionFile.Text = DeserializedAutoUpdate.application.versionFile.ToString();
-            if (DeserializedAutoUpdate.application.currentVersion!= null)
-            {
-                currentVersion.Text = DeserializedAutoUpdate.application.currentVersion.ToString();
-            }
-            else { currentVersion.Text = ""; }
 
         }
 
