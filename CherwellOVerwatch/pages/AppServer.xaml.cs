@@ -39,7 +39,7 @@ namespace CherwellOVerwatch
             try
             {
                 LoadSettings loader = new LoadSettings();
-                ApplicationServer DeserializedAppServ = JsonConvert.DeserializeObject<ApplicationServer>(json);
+                ApplicationServer DeserializedAppServ = JsonConvert.DeserializeObject<ApplicationServer>(loader.GetResult(url));
 
                 disableCompression.IsChecked = DeserializedAppServ.disableCompression;
                 installed.IsChecked = DeserializedAppServ.installed;

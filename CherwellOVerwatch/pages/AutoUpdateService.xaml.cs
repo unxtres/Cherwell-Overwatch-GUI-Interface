@@ -40,7 +40,7 @@ namespace CherwellOVerwatch
             try
             {
                 LoadSettings loader = new LoadSettings();
-                AutoUpdate DeserializedAutoUpdate = JsonConvert.DeserializeObject<AutoUpdate>(json);
+                AutoUpdate DeserializedAutoUpdate = JsonConvert.DeserializeObject<AutoUpdate>(loader.GetResult(url));
 
                 downloadPath.Text = DeserializedAutoUpdate.downloadPath.ToString();
                 updateCheckInterval.Text = DeserializedAutoUpdate.updateCheckInterval.ToString();
