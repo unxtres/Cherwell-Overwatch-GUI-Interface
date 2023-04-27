@@ -41,7 +41,8 @@ namespace CherwellOVerwatch
             try
             {
                 LoadSettings loader = new LoadSettings();
-                Browser_Settings DeserializedBrowserSettings = JsonConvert.DeserializeObject<Browser_Settings>(loader.GetResult(url));
+                json = loader.GetResult(url);
+                Browser_Settings DeserializedBrowserSettings = JsonConvert.DeserializeObject<Browser_Settings>(json);
 
                 TrebuchetDataSource.Text = DeserializedBrowserSettings.trebuchetDataSource.ToString();
                 TestMode.IsChecked = DeserializedBrowserSettings.testMode;
