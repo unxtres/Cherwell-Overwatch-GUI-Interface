@@ -9,7 +9,7 @@
       Title="AutoDeploy">
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
-        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
+        <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save"/>
         <TextBlock HorizontalAlignment="Left" Margin="124,114,0,0" TextWrapping="Wrap" Text="Auto Deploy Dir" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>
         <TextBlock HorizontalAlignment="Left" Margin="124,135,0,0" TextWrapping="Wrap" Text="Auto Deploy Site" VerticalAlignment="Top" RenderTransformOrigin="0.568,1.566"/>

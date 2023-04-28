@@ -26,6 +26,7 @@ namespace CherwellOVerwatch
     public partial class EEMServerLogs : Page
     {
         public string url = "http://localhost:5000/api/settings/EEMServerSettings";
+        public string json;
         public EEMServerLogs()
         {
             InitializeComponent();
@@ -34,8 +35,8 @@ namespace CherwellOVerwatch
         private void loadSettings()
         {
             LoadSettings loader = new LoadSettings();
-
-            EEM_Server DeserializedEEMServerLogs = JsonConvert.DeserializeObject<EEM_Server>(loader.GetResult(url));
+            json = loader.GetResult(url);
+            EEM_Server DeserializedEEMServerLogs = JsonConvert.DeserializeObject<EEM_Server>(loader.GetResult(json));
 
             eventLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.eventLogLevel.ToString();
             fileLogLevel.Text = DeserializedEEMServerLogs.loggerSettings.fileLogLevel.ToString();

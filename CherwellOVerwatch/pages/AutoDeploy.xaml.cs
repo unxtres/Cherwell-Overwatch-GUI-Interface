@@ -33,7 +33,7 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Load(object sender, RoutedEventArgs e)
         {
             try
             {

@@ -36,7 +36,7 @@ namespace CherwellOVerwatch
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Load(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -94,7 +94,7 @@ namespace CherwellOVerwatch
                 service.Start();
                 service.WaitForStatus(ServiceControllerStatus.Running);
 
-                ApplicationServer DeserializedLogger = JsonConvert.DeserializeObject<ApplicationServer>(json);
+                Browser_Settings DeserializedLogger = JsonConvert.DeserializeObject<Browser_Settings>(json);
 
                 // Build JSON
                 var data = new JObject
