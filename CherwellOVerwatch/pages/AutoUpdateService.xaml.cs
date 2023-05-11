@@ -51,14 +51,26 @@ namespace CherwellOVerwatch
                     name.Text = DeserializedAutoUpdate.application.name.ToString();
                 else name.Text = "";
 
-                applicationType.Text = DeserializedAutoUpdate.application.applicationType.ToString();
-                updatePath.Text = DeserializedAutoUpdate.application.updatePath.ToString();
-                versionFile.Text = DeserializedAutoUpdate.application.versionFile.ToString();
+                if (DeserializedAutoUpdate.application.applicationType != null)
+                    applicationType.Text = DeserializedAutoUpdate.application.applicationType.ToString();
+                else
+                    applicationType.Text = "";
+
+                if (DeserializedAutoUpdate.application.updatePath != null)
+                    updatePath.Text = DeserializedAutoUpdate.application.updatePath.ToString();
+                else
+                    updatePath.Text = "";
+
+                if (DeserializedAutoUpdate.application.versionFile != null)
+                    versionFile.Text = DeserializedAutoUpdate.application.versionFile.ToString();
+                else
+                    versionFile.Text = "";
+
                 if (DeserializedAutoUpdate.application.currentVersion != null)
-                {
                     currentVersion.Text = DeserializedAutoUpdate.application.currentVersion.ToString();
-                }
-                else { currentVersion.Text = ""; }
+                else 
+                    currentVersion.Text = "";
+
             }
 
             catch
