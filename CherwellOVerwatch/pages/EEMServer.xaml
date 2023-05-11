@@ -22,7 +22,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="10,171,0,0" TextWrapping="Wrap" Text="Connection" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,192,0,0" TextWrapping="Wrap" Text="Encrypted Password" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,213,0,0" TextWrapping="Wrap" Text="Use Default Role of User" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,0,0,0" TextWrapping="Wrap" Text="User ID" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,235,0,0" TextWrapping="Wrap" Text="User ID" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,255,0,0" TextWrapping="Wrap" Text="Use Windows Login" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,276,0,0" TextWrapping="Wrap" Text="Email Read Limit" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="10,297,0,0" TextWrapping="Wrap" Text="Monitor Repeat Limit" VerticalAlignment="Top"/>
@@ -34,7 +34,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="275,171,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="275,192,0,0" TextWrapping="Wrap" Text="Seconds" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="275,213,0,0" TextWrapping="Wrap" Text="Total Days" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="275,0,0,0" TextWrapping="Wrap" Text="Total Hours" VerticalAlignment="Center" />
+        <TextBlock HorizontalAlignment="Left" Margin="275,235,0,0" TextWrapping="Wrap" Text="Total Hours" VerticalAlignment="Top" />
         <TextBlock HorizontalAlignment="Left" Margin="275,255,0,0" TextWrapping="Wrap" Text="Total Miliseconds" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="275,276,0,0" TextWrapping="Wrap" Text="Total Minutes" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="275,297,0,0" TextWrapping="Wrap" Text="Total Seconds" VerticalAlignment="Top"/>
@@ -45,7 +45,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="493,171,0,0" TextWrapping="Wrap" Text="Minutes" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,192,0,0" TextWrapping="Wrap" Text="Seconds" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,213,0,0" TextWrapping="Wrap" Text="Total Days" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="493,0,0,0" TextWrapping="Wrap" Text="Total Hours" VerticalAlignment="Center"/>
+        <TextBlock HorizontalAlignment="Left" Margin="493,235,0,0" TextWrapping="Wrap" Text="Total Hours" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,255,0,0" TextWrapping="Wrap" Text="Total Miliseconds" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,276,0,0" TextWrapping="Wrap" Text="Total Minutes" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="493,297,0,0" TextWrapping="Wrap" Text="Total Seconds" VerticalAlignment="Top"/>
@@ -56,7 +56,7 @@
         <TextBox x:Name="connection" HorizontalAlignment="Left" Margin="145,169,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="encryptedPassword" HorizontalAlignment="Left" Margin="145,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="useDefaultRoleOfUser" HorizontalAlignment="Left" Margin="145,214,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="userId" HorizontalAlignment="Left" Margin="145,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center" Width="120"/>
+        <TextBox x:Name="userId" HorizontalAlignment="Left" Margin="145,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="useWindowsLogin" HorizontalAlignment="Left" Margin="145,256,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="emailReadLimit" HorizontalAlignment="Left" Margin="145,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="monitorRepeatLimit" HorizontalAlignment="Left" Margin="145,299,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>

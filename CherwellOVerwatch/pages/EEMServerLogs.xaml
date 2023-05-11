@@ -55,7 +55,7 @@
         <CheckBox x:Name="isServerSettings" HorizontalAlignment="Left" Margin="176,169,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="logFilePath" HorizontalAlignment="Left" Margin="176,188,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="logServerLogLevel" HorizontalAlignment="Left" Margin="176,211,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <CheckBox x:Name="logToComplianceLog" HorizontalAlignment="Left" Margin="176,0,0,0" VerticalAlignment="Center"/>
+        <CheckBox x:Name="logToComplianceLog" HorizontalAlignment="Left" Margin="176,232,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="logToConsole" HorizontalAlignment="Left" Margin="176,254,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="logToConsoleLevel" HorizontalAlignment="Left" Margin="176,274,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="LogToEventLog" HorizontalAlignment="Left" Margin="176,297,0,0" VerticalAlignment="Top"/>
