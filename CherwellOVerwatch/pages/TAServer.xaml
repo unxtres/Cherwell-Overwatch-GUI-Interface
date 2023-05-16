@@ -11,7 +11,7 @@
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="NoWrap" Text="TRUSTED AGENT SERVER SETTINGS" VerticalAlignment="Top" FontSize="24"/>
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" IsEnabled="False"/>
         <TextBlock HorizontalAlignment="Left" Margin="190,93,0,0" TextWrapping="NoWrap" Text="DisableCompression" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="190,114,0,0" TextWrapping="NoWrap" Text="Installed" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="190,135,0,0" TextWrapping="NoWrap" Text="Last Error" VerticalAlignment="Top"/>

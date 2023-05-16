@@ -10,6 +10,6 @@
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Click"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" IsEnabled="False"/>
     </Grid>
 </Page>
