@@ -27,6 +27,7 @@ namespace CherwellOVerwatch
     public partial class AutoDeploy : Page
     {
         public string json;
+        public string url = "http://localhost:5000/api/settings/AutoDeploySettings";
 
         public AutoDeploy()
         {
@@ -37,7 +38,6 @@ namespace CherwellOVerwatch
         {
             try
             {
-                string url = "http://localhost:5000/api/settings/AutoDeploySettings";
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
@@ -120,7 +120,6 @@ namespace CherwellOVerwatch
                 var jsonData = JsonConvert.SerializeObject(settingData);
 
                 // Send request
-                string url = "http://localhost:5000/api/settings/AutoDeploySettings";
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
 

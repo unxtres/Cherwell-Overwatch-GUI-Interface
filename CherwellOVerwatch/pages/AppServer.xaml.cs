@@ -115,10 +115,6 @@ namespace CherwellOVerwatch
             {
                 MessageBox.Show("Not Connected");
             }
-
-            
-
-            
         }
 
         private void Button_Save(object sender, RoutedEventArgs e)
@@ -238,7 +234,6 @@ namespace CherwellOVerwatch
                 var jsonData = JsonConvert.SerializeObject(settingData);
 
                 // Send request
-                string url = "http://localhost:5000/api/settings/AppServerSettings";
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
 

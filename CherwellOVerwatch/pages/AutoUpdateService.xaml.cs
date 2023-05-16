@@ -120,7 +120,6 @@ namespace CherwellOVerwatch
                 var jsonData = JsonConvert.SerializeObject(settingData);
 
                 // Send request
-                string url = "http://localhost:5000/api/settings/AutoUpdateServiceSettings";
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
 

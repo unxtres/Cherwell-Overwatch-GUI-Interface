@@ -10,7 +10,7 @@
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" IsEnabled="False"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
         <TextBlock HorizontalAlignment="Left" Margin="190,93,0,0" TextWrapping="NoWrap" Text="DisableCompression" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="190,114,0,0" TextWrapping="NoWrap" Text="Installed" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="190,135,0,0" TextWrapping="NoWrap" Text="Last Error" VerticalAlignment="Top"/>
@@ -34,5 +34,6 @@
         <CheckBox x:Name="useWindowsLogin" HorizontalAlignment="Left" Margin="348,262,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="groupId" HorizontalAlignment="Left" Margin="348,280,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="groupName" HorizontalAlignment="Left" Margin="348,301,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="260,422,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="168"/>
     </Grid>
 </Page>

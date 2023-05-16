@@ -144,10 +144,8 @@ namespace CherwellOVerwatch
                 var jsonData = JsonConvert.SerializeObject(settingData);
 
                 // Send request
-                string url = "http://localhost:5000/api/settings/MessageQueueSettings";
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
-
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
                 httpRequest.ContentType = "application/json";

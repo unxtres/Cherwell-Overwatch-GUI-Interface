@@ -10,7 +10,7 @@
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save" IsEnabled="False"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save"/>
         <TextBlock HorizontalAlignment="Left" Margin="228,160,0,0" TextWrapping="NoWrap" Text="Decrypted Password" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="228,181,0,0" TextWrapping="NoWrap" Text="Encrypted Password" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="228,202,0,0" TextWrapping="NoWrap" Text="Hostname" VerticalAlignment="Top"/>
