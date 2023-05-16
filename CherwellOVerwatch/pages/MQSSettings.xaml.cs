@@ -44,8 +44,7 @@ namespace CherwellOVerwatch
             try
             {
                 LoadSettings loader = new LoadSettings();
-                json = loader.GetResult(url);
-                MQS_Settings DeserializedMQSServer = JsonConvert.DeserializeObject<MQS_Settings>(loader.GetResult(json));
+                MQS_Settings DeserializedMQSServer = JsonConvert.DeserializeObject<MQS_Settings>(loader.GetResult(url));
 
                 decryptedPassword.Text = DeserializedMQSServer.decryptedPassword.ToString();
                 encryptedPassword.Text = DeserializedMQSServer.encryptedPassword.ToString();
