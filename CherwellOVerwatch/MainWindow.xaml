@@ -28,7 +28,7 @@
         <Button Content="TA Hub" HorizontalAlignment="Left" Margin="25,285,0,0" VerticalAlignment="Top" Width="141" Click="Button_TAHub"/>
         <Button Content="TA Server" HorizontalAlignment="Left" Margin="25,312,0,0" VerticalAlignment="Top" Width="141" Click="Button_TAServer"/>
         <Button Content="Web API" HorizontalAlignment="Left" Margin="25,337,0,0" VerticalAlignment="Top" Width="141" Click="Button_API"/>
-        <Button Content="Web Hooks Leader" HorizontalAlignment="Left" Margin="25,362,0,0" VerticalAlignment="Top" Width="141" Click="Button_WHL"/>
+        <!--<Button Content="Web Hooks Leader" HorizontalAlignment="Left" Margin="25,362,0,0" VerticalAlignment="Top" Width="141" Click="Button_WHL"/>-->
         <Button Content="Logs Settings" HorizontalAlignment="Left" Margin="25,422,0,0" VerticalAlignment="Top" Width="141" Click="Button_LogsSettings"/>
         <Button Content="Other Settings" HorizontalAlignment="Left" Margin="25,467,0,0" VerticalAlignment="Top" Width="125"/>
 

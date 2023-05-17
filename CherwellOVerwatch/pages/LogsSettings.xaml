@@ -19,6 +19,6 @@
         <Button Content="TA HUB" HorizontalAlignment="Center" Margin="0,255,0,0" VerticalAlignment="Top" Width="190" Click="Button_TAHubLogs" Height="95"/>
         <Button Content="TA SERVER" HorizontalAlignment="Left" Margin="466,255,0,0" VerticalAlignment="Top" Width="190" Click="Button_TAServerLogs" Height="95"/>
         <Button Content="WEB API" HorizontalAlignment="Left" Margin="38,360,0,0" VerticalAlignment="Top" Width="190" Click="Button_WebApi" Height="95"/>
-        <Button Content="WEB HOOKS LEADER" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Width="190" Click="Button_WebHooks" Height="95"/>
+        <!--<Button Content="WEB HOOKS LEADER" HorizontalAlignment="Center" Margin="0,360,0,0" VerticalAlignment="Top" Width="190" Click="Button_WebHooks" Height="95"/>-->
     </Grid>
 </Page>

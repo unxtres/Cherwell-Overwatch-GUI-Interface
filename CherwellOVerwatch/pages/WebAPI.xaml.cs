@@ -46,144 +46,142 @@ namespace CherwellOVerwatch
             authenticationProvider.Text = DeserializedAPI.authenticationProvider.ToString();
             trebuchetDataSource.Text = DeserializedAPI.trebuchetDataSource.ToString();
             useSamlAdfsRedirect.IsChecked = DeserializedAPI.useSamlAdfsRedirect;
-            idpIsAdfs.IsChecked= DeserializedAPI.idpIsAdfs;
+            idpIsAdfs.IsChecked = DeserializedAPI.idpIsAdfs;
             samlAdfsIdpInitiatedUrl.Text = DeserializedAPI.samlAdfsIdpInitiatedUrl.ToString();
             samlServerTimeAllowance.Text = DeserializedAPI.samlServerTimeAllowance.ToString();
             certificateUserEmail.Text = DeserializedAPI.certificateUserEmail.ToString();
             certSubjectName.Text = DeserializedAPI.certSubjectName.ToString();
-            certIssuer.Text= DeserializedAPI.certIssuer.ToString();
+            certIssuer.Text = DeserializedAPI.certIssuer.ToString();
             certThumbprint.Text = DeserializedAPI.certThumbprint.ToString();
             authorizationCodeExpirationMinutes.Text = DeserializedAPI.authorizationCodeExpirationMinutes.ToString();
             recoveryFilePersistIntervalSeconds.Text = DeserializedAPI.recoveryFilePersistIntervalSeconds.ToString();
             tenant.Text = DeserializedAPI.tenant.ToString();
-            audience.Text= DeserializedAPI.audience.ToString();
-            aadClientId.Text= DeserializedAPI.aadClientId.ToString();
+            audience.Text = DeserializedAPI.audience.ToString();
+            aadClientId.Text = DeserializedAPI.aadClientId.ToString();
             aadClientUserEmail.Text = DeserializedAPI.aadClientUserEmail.ToString();
             grantType.Text = DeserializedAPI.grantType.ToString();
             authorizationUrl.Text = DeserializedAPI.authorizationUrl.ToString();
             useRecoveryFile.IsChecked = DeserializedAPI.useRecoveryFile;
-            recoveryFilePath.Text= DeserializedAPI.recoveryFilePath.ToString();
+            recoveryFilePath.Text = DeserializedAPI.recoveryFilePath.ToString();
             recoveryFileName.Text = DeserializedAPI.recoveryFileName.ToString();
         }
-    }
-    private void Button_Save(object sender, RoutedEventArgs e)
-    {
-        try
+        private void Button_Save(object sender, RoutedEventArgs e)
         {
-            save_status.Text = "Saving...!";
-            // Restart service
-            ServiceController service = new ServiceController("Cherwell Overwatch");
-            if (service.Status == ServiceControllerStatus.Running)
+            try
             {
-                service.Stop();
-                service.WaitForStatus(ServiceControllerStatus.Stopped);
-            }
-            service.Start();
-            service.WaitForStatus(ServiceControllerStatus.Running);
-
-            Browser_Settings DeserializedLogger = JsonConvert.DeserializeObject<Browser_Settings>(json);
-
-            // Build JSON
-            var data = new JObject
-            {
-                ["apiClientId"] = apiClientId?.Text ?? "",
-                ["testMode"] = TestMode?.IsChecked,
-                ["tabContentHeight"] = TabContentHEight?.Text ?? "",
-                ["disableCertificateValidation"] = DisableCertificateValidation?.IsChecked,
-                ["allowUnsafeLabels"] = AllowUnsafeLabels?.IsChecked,
-                ["inlineBrowserDisplayExtensions"] = InLineBrowserDisplayExtensions?.Text ?? "",
-                ["lookupAlwaysEnabled"] = LookupAlwaysEnabled?.IsChecked,
-                ["queryRequestLimit"] = QueryRequestLimit?.Text ?? "",
-                ["useCdn"] = UseCdn?.IsChecked,
-                ["useHttpCompression"] = UseHttpCompression?.IsChecked,
-                ["loadAllFilesIndividually"] = LoadAllFilesIndividually?.IsChecked,
-                ["enableSessionSerialization"] = EnableSessionSerialization?.IsChecked,
-                ["alwaysLoadKeys"] = AlwaysLoadKeys?.IsChecked,
-                ["uiInteractionTimeoutInSeconds"] = UiInteractionTimeoutInSeconds?.Text ?? "",
-                ["allowScriptsInReports"] = AllowScriptsInRecords?.IsChecked,
-                ["disableAnchoring"] = DisableAnchoring?.IsChecked,
-                ["disableSplitters"] = DisableSplitters?.IsChecked,
-                ["useLegacyCompleteResponse"] = UseLegacyCompleteResponse?.IsChecked,
-                ["signalRConnectionTimeoutInSeconds"] = SignalRConnectionTimeoutInSeconds?.Text ?? "",
-                ["signalRDisconnectTimeoutInSeconds"] = SignalRDisconnectTimeoutInSeconds?.Text ?? "",
-                ["signalRKeepAliveInSeconds"] = SignalRKeepAliveInSecconds?.Text ?? "",
-                ["scanditLicenseKey"] = ScanditLicenseKey?.Text ?? "",
-                ["redirectHttpToHttps"] = RedirectHttpToHttps?.IsChecked,
-                ["enableInsecureDeepLinks"] = EnableInsecureDeepLinks?.IsChecked,
-                ["autoSizeLabels"] = AutoSizeLabels?.IsChecked,
-                ["authLogFile"] = AuthLogFile?.Text ?? "",
-                ["defaultAuthMode"] = DefaultAuthMode?.Text ?? "",
-
-                ["loggerSettings"] = DeserializedLogger.loggerSettings == null ? null : new JObject
+                save_status.Text = "Saving...!";
+                // Restart service
+                ServiceController service = new ServiceController("Cherwell Overwatch");
+                if (service.Status == ServiceControllerStatus.Running)
                 {
-                    ["eventLogLevel"] = Convert.ToInt32(DeserializedLogger.loggerSettings.eventLogLevel),
-                    ["fileLogLevel"] = Convert.ToInt32(DeserializedLogger.loggerSettings.fileLogLevel),
-                    ["fileNameOverride"] = Convert.ToString(DeserializedLogger.loggerSettings.fileNameOverride),
-                    ["isLoggingEnabled"] = DeserializedLogger.loggerSettings.isLoggingEnabled,
-                    ["isServerSettings"] = DeserializedLogger.loggerSettings.isServerSettings,
-                    ["logFilePath"] = Convert.ToString(DeserializedLogger.loggerSettings.logFilePath),
-
-                    ["logServerLogLevel"] = Convert.ToInt32(DeserializedLogger.loggerSettings.logServerLogLevel),
-                    ["logToComplianceLog"] = DeserializedLogger.loggerSettings.logToComplianceLog,
-                    ["logToConsole"] = DeserializedLogger.loggerSettings.logToConsole,
-                    ["logToConsoleLevel"] = Convert.ToInt32(DeserializedLogger.loggerSettings.logToConsoleLevel),
-                    ["logToEventLog"] = DeserializedLogger.loggerSettings.logToEventLog,
-                    ["logToFile"] = DeserializedLogger.loggerSettings.logToFile,
-                    ["logToLogServer"] = DeserializedLogger.loggerSettings.logToLogServer,
-                    ["maxFilesBeforeRollover"] = Convert.ToInt32(DeserializedLogger.loggerSettings.maxFilesBeforeRollover),
-                    ["maxFileSizeInMB"] = Convert.ToInt32(DeserializedLogger.loggerSettings.maxFileSizeInMB),
-                    ["logToSumoLogic"] = DeserializedLogger.loggerSettings.logToSumoLogic,
-                    ["sumoLogicLogLevel"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicLogLevel),
-                    ["settingsType"] = Convert.ToInt32(DeserializedLogger.loggerSettings.settingsType),
-                    ["logServerConnectionSettings"] = DeserializedLogger.loggerSettings.logServerConnectionSettings == null ? null : new JObject
-                    {
-                        ["ignoreCertErrors"] = DeserializedLogger.loggerSettings.logServerConnectionSettings.ignoreCertErrors,
-                        ["isConfigured"] = DeserializedLogger.loggerSettings.logServerConnectionSettings.isConfigured,
-                        ["isServerSettings"] = DeserializedLogger.loggerSettings.logServerConnectionSettings.isServerSettings,
-                        ["password"] = Convert.ToString(DeserializedLogger.loggerSettings.logServerConnectionSettings.password),
-                        ["settingsType"] = Convert.ToString(DeserializedLogger.loggerSettings.logServerConnectionSettings.settingsType),
-                        ["url"] = Convert.ToString(DeserializedLogger.loggerSettings.logServerConnectionSettings.url),
-                        ["userName"] = Convert.ToString(DeserializedLogger.loggerSettings.logServerConnectionSettings.userName),
-                    },
-                    ["sumoLogicConnectionSettings"] = DeserializedLogger.loggerSettings.sumoLogicConnectionSettings == null ? null : new JObject
-                    {
-                        ["url"] = Convert.ToString(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.url),
-                        ["retryInterval"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.retryInterval),
-                        ["connectionTimeout"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.connectionTimeout),
-                        ["flushingAccuracy"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy),
-                        ["maxFlushInterval"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval),
-                        ["messagesPerRequest"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest),
-                        ["maxQueueSizeBytes"] = Convert.ToInt32(DeserializedLogger.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes)
-                    }
+                    service.Stop();
+                    service.WaitForStatus(ServiceControllerStatus.Stopped);
                 }
-            };
+                service.Start();
+                service.WaitForStatus(ServiceControllerStatus.Running);
 
-            var settingData = new JObject
-            {
-                ["setting"] = JsonConvert.SerializeObject(data),
-                ["publish"] = true
-            };
+                Web_api DeserializedAPI = JsonConvert.DeserializeObject<Web_api>(json);
 
-            var jsonData = JsonConvert.SerializeObject(settingData);
+                // Build JSON
+                var data = new JObject
+                {
+                    ["apiClientId"] = apiClientId?.Text ?? "",
+                    ["rateLimitingEnabled"] = rateLimitingEnabled?.IsChecked,
+                    ["maxConcurrentRequests"] = maxConcurrentRequests?.Text ?? "",
+                    ["loadFromFileFromBin"] = loadFromFileFromBin?.IsChecked,
+                    ["authenticationProvider"] = authenticationProvider?.Text ?? "",
+                    ["trebuchetDataSource"] = trebuchetDataSource?.Text ?? "",
+                    ["useSamlAdfsRedirect"] = useSamlAdfsRedirect?.IsChecked,
+                    ["idpIsAdfs"] = idpIsAdfs?.IsChecked,
+                    ["samlAdfsIdpInitiatedUrl"] = samlAdfsIdpInitiatedUrl?.Text ?? "",
+                    ["samlServerTimeAllowance"] = samlServerTimeAllowance?.Text ?? "",
+                    ["certificateUserEmail"] = certificateUserEmail?.Text ?? "",
+                    ["certSubjectName"] = certSubjectName?.Text ?? "",
+                    ["certIssuer"] = certIssuer?.Text ?? "",
+                    ["certThumbprint"] = certThumbprint?.Text ?? "",
+                    ["authorizationCodeExpirationMinutes"] = authorizationCodeExpirationMinutes?.Text ?? "",
+                    ["recoveryFilePersistIntervalSeconds"] = recoveryFilePersistIntervalSeconds?.Text ?? "",
+                    ["tenant"] = tenant?.Text ?? "",
+                    ["audience"] = audience?.Text ?? "",
+                    ["aadClientId"] = aadClientId?.Text ?? "",
+                    ["aadClientUserEmail"] = aadClientUserEmail?.Text ?? "",
+                    ["grantType"] = grantType?.Text ?? "",
+                    ["authorizationUrl"] = authorizationUrl?.Text ?? "",
+                    ["useRecoveryFile"] = useRecoveryFile?.IsChecked,
+                    ["recoveryFilePath"] = recoveryFilePath?.Text ?? "",
+                    ["recoveryFileName"] = recoveryFileName?.Text ?? "",
 
-            // Send request
-            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
-            httpRequest.Method = "POST";
-            httpRequest.Accept = "application/json";
-            httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
-            httpRequest.ContentType = "application/json";
+                    ["loggerSettings"] = DeserializedAPI.loggerSettings == null ? null : new JObject
+                    {
+                        ["eventLogLevel"] = Convert.ToInt32(DeserializedAPI.loggerSettings.eventLogLevel),
+                        ["fileLogLevel"] = Convert.ToInt32(DeserializedAPI.loggerSettings.fileLogLevel),
+                        ["fileNameOverride"] = Convert.ToString(DeserializedAPI.loggerSettings.fileNameOverride),
+                        ["isLoggingEnabled"] = DeserializedAPI.loggerSettings.isLoggingEnabled,
+                        ["isServerSettings"] = DeserializedAPI.loggerSettings.isServerSettings,
+                        ["logFilePath"] = Convert.ToString(DeserializedAPI.loggerSettings.logFilePath),
 
-            using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
-            {
-                streamWriter.Write(jsonData);
+                        ["logServerLogLevel"] = Convert.ToInt32(DeserializedAPI.loggerSettings.logServerLogLevel),
+                        ["logToComplianceLog"] = DeserializedAPI.loggerSettings.logToComplianceLog,
+                        ["logToConsole"] = DeserializedAPI.loggerSettings.logToConsole,
+                        ["logToConsoleLevel"] = Convert.ToInt32(DeserializedAPI.loggerSettings.logToConsoleLevel),
+                        ["logToEventLog"] = DeserializedAPI.loggerSettings.logToEventLog,
+                        ["logToFile"] = DeserializedAPI.loggerSettings.logToFile,
+                        ["logToLogServer"] = DeserializedAPI.loggerSettings.logToLogServer,
+                        ["maxFilesBeforeRollover"] = Convert.ToInt32(DeserializedAPI.loggerSettings.maxFilesBeforeRollover),
+                        ["maxFileSizeInMB"] = Convert.ToInt32(DeserializedAPI.loggerSettings.maxFileSizeInMB),
+                        ["logToSumoLogic"] = DeserializedAPI.loggerSettings.logToSumoLogic,
+                        ["sumoLogicLogLevel"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicLogLevel),
+                        ["settingsType"] = Convert.ToInt32(DeserializedAPI.loggerSettings.settingsType),
+                        ["logServerConnectionSettings"] = DeserializedAPI.loggerSettings.logServerConnectionSettings == null ? null : new JObject
+                        {
+                            ["ignoreCertErrors"] = DeserializedAPI.loggerSettings.logServerConnectionSettings.ignoreCertErrors,
+                            ["isConfigured"] = DeserializedAPI.loggerSettings.logServerConnectionSettings.isConfigured,
+                            ["isServerSettings"] = DeserializedAPI.loggerSettings.logServerConnectionSettings.isServerSettings,
+                            ["password"] = Convert.ToString(DeserializedAPI.loggerSettings.logServerConnectionSettings.password),
+                            ["settingsType"] = Convert.ToString(DeserializedAPI.loggerSettings.logServerConnectionSettings.settingsType),
+                            ["url"] = Convert.ToString(DeserializedAPI.loggerSettings.logServerConnectionSettings.url),
+                            ["userName"] = Convert.ToString(DeserializedAPI.loggerSettings.logServerConnectionSettings.userName),
+                        },
+                        ["sumoLogicConnectionSettings"] = DeserializedAPI.loggerSettings.sumoLogicConnectionSettings == null ? null : new JObject
+                        {
+                            ["url"] = Convert.ToString(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.url),
+                            ["retryInterval"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.retryInterval),
+                            ["connectionTimeout"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.connectionTimeout),
+                            ["flushingAccuracy"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy),
+                            ["maxFlushInterval"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval),
+                            ["messagesPerRequest"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest),
+                            ["maxQueueSizeBytes"] = Convert.ToInt32(DeserializedAPI.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes)
+                        }
+                    }
+                };
+
+                var settingData = new JObject
+                {
+                    ["setting"] = JsonConvert.SerializeObject(data),
+                    ["publish"] = true
+                };
+
+                var jsonData = JsonConvert.SerializeObject(settingData);
+
+                // Send request
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "POST";
+                httpRequest.Accept = "application/json";
+                httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
+                httpRequest.ContentType = "application/json";
+
+                using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+                {
+                    streamWriter.Write(jsonData);
+                }
+
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                save_status.Text = httpResponse.StatusCode.ToString();
             }
-
-            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
-            save_status.Text = httpResponse.StatusCode.ToString();
-        }
-        catch
-        {
-            MessageBox.Show("Not Connected");
+            catch
+            {
+                MessageBox.Show("Not Connected");
+            }
         }
     }
 }
