@@ -66,7 +66,7 @@
         <CheckBox x:Name="autoSizeLabels" HorizontalAlignment="Left" Margin="538,191,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="authLogFile" HorizontalAlignment="Left" Margin="534,210,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="defaultAuthMode" HorizontalAlignment="Left" Margin="534,231,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="486,387,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="486,387,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="177"/>
 
     </Grid>
 </Page>

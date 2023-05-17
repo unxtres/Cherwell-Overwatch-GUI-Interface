@@ -103,6 +103,6 @@
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
         <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save"/>
 
-        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="260,422,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="485,391,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="178"/>
     </Grid>
 </Page>

@@ -83,6 +83,6 @@
         <TextBox x:Name="no_totalMilliseconds" HorizontalAlignment="Left" Margin="593,255,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
         <TextBox x:Name="no_totalMinutes" HorizontalAlignment="Left" Margin="593,276,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
         <TextBox x:Name="no_totalSeconds" HorizontalAlignment="Left" Margin="593,297,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="87"/>
-        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="302,414,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="101"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="485,391,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="178"/>
     </Grid>
 </Page>

@@ -30,6 +30,6 @@
         <TextBox x:Name="sharedKey" HorizontalAlignment="Left" Margin="348,217,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="signalRHubUrl" HorizontalAlignment="Left" Margin="348,239,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="useTrustedAgents" HorizontalAlignment="Left" Margin="348,262,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="260,422,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="485,391,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="178"/>
     </Grid>
 </Page>

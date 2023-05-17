@@ -35,7 +35,7 @@
         <CheckBox x:Name="noUserOptions" HorizontalAlignment="Left" Margin="248,283,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="overwrite" HorizontalAlignment="Left" Margin="248,303,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="reqMinorReleases" HorizontalAlignment="Left" Margin="248,325,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="184,414,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="168"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="485,391,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="178"/>
 
     </Grid>
 </Page>

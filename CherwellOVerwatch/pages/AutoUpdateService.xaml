@@ -30,7 +30,7 @@
         <TextBox x:Name="updatePath" HorizontalAlignment="Left" Margin="180,225,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="278"/>
         <TextBox x:Name="versionFile" HorizontalAlignment="Left" Margin="180,246,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="278"/>
         <TextBox x:Name="currentVersion" HorizontalAlignment="Left" Margin="180,267,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="278"/>
-        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="313,414,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="113"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="485,391,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="178"/>
 
     </Grid>
 </Page>
