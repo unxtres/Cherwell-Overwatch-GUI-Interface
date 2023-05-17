@@ -39,8 +39,8 @@ namespace CherwellOVerwatch
             try
             {
                 LoadSettings loader = new LoadSettings();
-
-                EEM_Server DeserializedEEMServer = JsonConvert.DeserializeObject<EEM_Server>(loader.GetResult(url));
+                json = loader.GetResult(url);
+                EEM_Server DeserializedEEMServer = JsonConvert.DeserializeObject<EEM_Server>(json);
 
                 DisableCompression.IsChecked = DeserializedEEMServer.disableCompression;
                 installed.IsChecked = DeserializedEEMServer.installed;
@@ -200,7 +200,6 @@ namespace CherwellOVerwatch
                 // Send request
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
-
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
                 httpRequest.ContentType = "application/json";

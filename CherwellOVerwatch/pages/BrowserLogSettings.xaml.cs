@@ -106,8 +106,6 @@ namespace CherwellOVerwatch
             maxFlushInterval.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
             messagePerRequest.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
             maxQueueSizeBytes.Text = DeserializedBrowserSettings.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
-
-
         }
     }
 }
