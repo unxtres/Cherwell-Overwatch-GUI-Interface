@@ -182,7 +182,6 @@ namespace CherwellOVerwatch
                 // Send request
                 var httpRequest = (HttpWebRequest)WebRequest.Create(url);
                 httpRequest.Method = "POST";
-
                 httpRequest.Accept = "application/json";
                 httpRequest.Headers["Authorization"] = TokenInterface.OWToken;
                 httpRequest.ContentType = "application/json";

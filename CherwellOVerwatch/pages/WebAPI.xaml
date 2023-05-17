@@ -11,7 +11,7 @@
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="NoWrap" Text="WEB API SERVICE SETTINGS" VerticalAlignment="Top" FontSize="24"/>
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" IsEnabled="False"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save"/>
 
         <TextBlock HorizontalAlignment="Left" Margin="53,76,0,0" TextWrapping="Wrap" Text="Api Client Id" VerticalAlignment="Top"/>
         <TextBlock HorizontalAlignment="Left" Margin="53,401,0,0" TextWrapping="Wrap" Text="Authorization Code Expiration Minutes" VerticalAlignment="Top"/>
@@ -64,6 +64,7 @@
         <TextBox x:Name="recoveryFilePath" HorizontalAlignment="Left" Margin="523,223,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="recoveryFileName" HorizontalAlignment="Left" Margin="523,244,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="recoveryFilePersistIntervalSeconds" HorizontalAlignment="Left" Margin="265,422,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="562,391,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="101"/>
 
 
     </Grid>
