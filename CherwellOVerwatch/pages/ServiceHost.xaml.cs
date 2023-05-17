@@ -35,7 +35,7 @@ namespace CherwellOVerwatch
         private void Button_Load(object sender, RoutedEventArgs e)
         {
             LoadSettings loader = new LoadSettings();
-            json = loader.GetResult(url)
+            json = loader.GetResult(url);
             Service_host DeserializedSH = JsonConvert.DeserializeObject<Service_host>(json);
 
             disableCompression.IsChecked = DeserializedSH.disableCompression;
