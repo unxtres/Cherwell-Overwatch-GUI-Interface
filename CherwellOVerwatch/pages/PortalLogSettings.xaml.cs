@@ -36,46 +36,53 @@ namespace CherwellOVerwatch
 
         private void Button_Load(object sender, RoutedEventArgs e)
         {
-            LoadSettings loader = new LoadSettings();
-            json = loader.GetResult(url);
-            Portal_Settings DeserializedPortalLogSettings = JsonConvert.DeserializeObject<Portal_Settings>(json);
+            try
+            {
+                LoadSettings loader = new LoadSettings();
+                json = loader.GetResult(url);
+                Portal_Settings DeserializedPortalLogSettings = JsonConvert.DeserializeObject<Portal_Settings>(json);
 
-            eventLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.eventLogLevel.ToString();
-            fileLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.fileLogLevel.ToString();
-            if (DeserializedPortalLogSettings.loggerSettings.fileNameOverride != null) { fileNameOverride.Text = DeserializedPortalLogSettings.loggerSettings.fileNameOverride.ToString(); }
-            else { fileNameOverride.Text = ""; }
-            isLoggingEnabled.IsChecked = DeserializedPortalLogSettings.loggerSettings.isLoggingEnabled;
-            isLogServerSettings.IsChecked = DeserializedPortalLogSettings.loggerSettings.isServerSettings;
-            logFilePath.Text = DeserializedPortalLogSettings.loggerSettings.logFilePath.ToString();
+                eventLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.eventLogLevel.ToString();
+                fileLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.fileLogLevel.ToString();
+                if (DeserializedPortalLogSettings.loggerSettings.fileNameOverride != null) { fileNameOverride.Text = DeserializedPortalLogSettings.loggerSettings.fileNameOverride.ToString(); }
+                else { fileNameOverride.Text = ""; }
+                isLoggingEnabled.IsChecked = DeserializedPortalLogSettings.loggerSettings.isLoggingEnabled;
+                isLogServerSettings.IsChecked = DeserializedPortalLogSettings.loggerSettings.isServerSettings;
+                logFilePath.Text = DeserializedPortalLogSettings.loggerSettings.logFilePath.ToString();
 
-            ignoreCertErrors.IsChecked = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
-            isConfigured.IsChecked = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.isConfigured;
-            isServerSettingsConnectionSettings.IsChecked = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.isServerSettings;
-            password.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.password.ToString();
-            settingsType.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.settingsType.ToString();
-            urlLogServerConnectionSettings.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.url.ToString();
-            userName.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.userName.ToString();
-            logServerLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.logServerLogLevel.ToString();
-            logToComplianceLog.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToComplianceLog;
-            logToConsole.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToConsole;
-            logToConsoleLevel.Text = DeserializedPortalLogSettings.loggerSettings.logToConsoleLevel.ToString();
-            logToEventLog.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToEventLog;
-            logToFile.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToFile;
-            logToLogServer.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToLogServer;
-            maxFilesBeforeRollover.Text = DeserializedPortalLogSettings.loggerSettings.maxFilesBeforeRollover.ToString();
-            maxFileSizeInMB.Text = DeserializedPortalLogSettings.loggerSettings.maxFileSizeInMB.ToString();
+                ignoreCertErrors.IsChecked = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.ignoreCertErrors;
+                isConfigured.IsChecked = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.isConfigured;
+                isServerSettingsConnectionSettings.IsChecked = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.isServerSettings;
+                password.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.password.ToString();
+                settingsType.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.settingsType.ToString();
+                urlLogServerConnectionSettings.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.url.ToString();
+                userName.Text = DeserializedPortalLogSettings.loggerSettings.logServerConnectionSettings.userName.ToString();
+                logServerLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.logServerLogLevel.ToString();
+                logToComplianceLog.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToComplianceLog;
+                logToConsole.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToConsole;
+                logToConsoleLevel.Text = DeserializedPortalLogSettings.loggerSettings.logToConsoleLevel.ToString();
+                logToEventLog.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToEventLog;
+                logToFile.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToFile;
+                logToLogServer.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToLogServer;
+                maxFilesBeforeRollover.Text = DeserializedPortalLogSettings.loggerSettings.maxFilesBeforeRollover.ToString();
+                maxFileSizeInMB.Text = DeserializedPortalLogSettings.loggerSettings.maxFileSizeInMB.ToString();
 
-            urlSumoLogicConnectionSettings.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.url.ToString();
-            retryInterval.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
-            connectionTimeout.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
-            flushingAccuracy.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
-            maxFlushInterval.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
-            messagesPerRequest.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
-            maxQueueSizeBytes.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
+                urlSumoLogicConnectionSettings.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.url.ToString();
+                retryInterval.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.retryInterval.ToString();
+                connectionTimeout.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.connectionTimeout.ToString();
+                flushingAccuracy.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.flushingAccuracy.ToString();
+                maxFlushInterval.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.maxFlushInterval.ToString();
+                messagesPerRequest.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.messagesPerRequest.ToString();
+                maxQueueSizeBytes.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicConnectionSettings.maxQueueSizeBytes.ToString();
 
-            logToSumoLogic.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToSumoLogic;
-            sumoLogicLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicLogLevel.ToString();
-            settingsType.Text = DeserializedPortalLogSettings.loggerSettings.settingsType.ToString();
+                logToSumoLogic.IsChecked = DeserializedPortalLogSettings.loggerSettings.logToSumoLogic;
+                sumoLogicLogLevel.Text = DeserializedPortalLogSettings.loggerSettings.sumoLogicLogLevel.ToString();
+                settingsType.Text = DeserializedPortalLogSettings.loggerSettings.settingsType.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Not Connected");
+            }
         }
         private void Button_Save(object sender, RoutedEventArgs e)
         {

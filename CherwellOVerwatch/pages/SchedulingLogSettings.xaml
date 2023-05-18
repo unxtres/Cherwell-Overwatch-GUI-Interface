@@ -10,7 +10,7 @@
 
     <Grid Background="#FFC5C5C5" Margin="0,0,0,-33">
         <Button Content="Load" HorizontalAlignment="Left" Margin="485,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Load"/>
-        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" IsEnabled="False"/>
+        <Button Content="Save" HorizontalAlignment="Left" Margin="583,414,0,0" VerticalAlignment="Top" Height="35" Width="80" Click="Button_Save"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="NoWrap" Text="Scheduling Log Settings" VerticalAlignment="Top" FontSize="24"/>
         <TextBlock HorizontalAlignment="Left" Margin="326,240,0,0" TextWrapping="NoWrap" Text="Sumo Logic Connection Settings" VerticalAlignment="Top" FontSize="18"/>
         <TextBlock HorizontalAlignment="Left" Margin="325,48,0,0" TextWrapping="NoWrap" Text="Log Server Connection Settings" VerticalAlignment="Top" FontSize="18"/>
@@ -79,6 +79,7 @@
         <TextBox x:Name="maxFlushInterval" HorizontalAlignment="Left" Margin="453,348,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="messagesPerRequest" HorizontalAlignment="Left" Margin="453,369,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="maxQueueSizeBytes" HorizontalAlignment="Left" Margin="453,390,0,0" TextWrapping="NoWrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="save_status" HorizontalAlignment="Left" Margin="485,453,0,0" TextWrapping="Wrap" Text="Save Status" VerticalAlignment="Top" Width="178"/>
 
 
     </Grid>
